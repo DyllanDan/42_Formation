@@ -1,0 +1,12 @@
+prefix=/opt/X11
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Name: cairo-script-interpreter
+Description: script surface backend for cairo graphics library
+Version: 1.17.6
+Requires: cairo
+Requires.private: libpng, fontconfig >=  2.2.95, freetype2 >=  9.7.3, x11, xext, xrender >=  0.6, xcb >=  1.6, xcb-render >=  1.6, x11-xcb, xcb-shm, gl, pixman-1 >=  0.36.0
+Libs: -L${libdir} -lcairo-script-interpreter
+Libs.private: -lm -ldl -lz
+Cflags: -I${includedir}/cairo

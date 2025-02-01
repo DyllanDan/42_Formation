@@ -1,0 +1,9 @@
+prefix=/opt/X11
+exec_prefix=${prefix}
+includedir=${prefix}/include
+
+Name: X bitmaps
+Description: Bitmaps that are shared between X applications
+Version: 1.1.2
+Cflags: -I${includedir}
+Libs:

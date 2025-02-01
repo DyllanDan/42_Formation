@@ -1,0 +1,13832 @@
+%!PS-Adobe-3.0
+%%Creator: (Apache FOP Version 1.1)
+%%CreationDate: 2023-01-26T11:09:50
+%%LanguageLevel: 3
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%HiResBoundingBox: (atend)
+%%DocumentSuppliedResources: (atend)
+%%EndComments
+%%BeginDefaults
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Version: 1.2 0
+%%Copyright: (Copyright 2001-2003,2010 The Apache Software Foundation. License terms: http://www.apache.org/licenses/LICENSE-2.0)
+%%Title: (Basic set of procedures used by the XML Graphics project \(Batik and FOP\))
+/bd{bind def}bind def
+/ld{load def}bd
+/GR/grestore ld
+/GS/gsave ld
+/RM/rmoveto ld
+/C/curveto ld
+/t/show ld
+/L/lineto ld
+/ML/setmiterlimit ld
+/CT/concat ld
+/f/fill ld
+/N/newpath ld
+/S/stroke ld
+/CC/setcmykcolor ld
+/A/ashow ld
+/cp/closepath ld
+/RC/setrgbcolor ld
+/LJ/setlinejoin ld
+/GC/setgray ld
+/LW/setlinewidth ld
+/M/moveto ld
+/re {4 2 roll M
+1 index 0 rlineto
+0 exch rlineto
+neg 0 rlineto
+cp } bd
+/_ctm matrix def
+/_tm matrix def
+/BT { _ctm currentmatrix pop matrix _tm copy pop 0 0 moveto } bd
+/ET { _ctm setmatrix } bd
+/iTm { _ctm setmatrix _tm concat } bd
+/Tm { _tm astore pop iTm 0 0 moveto } bd
+/ux 0.0 def
+/uy 0.0 def
+/F {
+  /Tp exch def
+  /Tf exch def
+  Tf findfont Tp scalefont setfont
+  /cf Tf def  /cs Tp def
+} bd
+/ULS {currentpoint /uy exch def /ux exch def} bd
+/ULE {
+  /Tcx currentpoint pop def
+  gsave
+  newpath
+  cf findfont cs scalefont dup
+  /FontMatrix get 0 get /Ts exch def /FontInfo get dup
+  /UnderlinePosition get Ts mul /To exch def
+  /UnderlineThickness get Ts mul /Tt exch def
+  ux uy To add moveto  Tcx uy To add lineto
+  Tt setlinewidth stroke
+  grestore
+} bd
+/OLE {
+  /Tcx currentpoint pop def
+  gsave
+  newpath
+  cf findfont cs scalefont dup
+  /FontMatrix get 0 get /Ts exch def /FontInfo get dup
+  /UnderlinePosition get Ts mul /To exch def
+  /UnderlineThickness get Ts mul /Tt exch def
+  ux uy To add cs add moveto Tcx uy To add cs add lineto
+  Tt setlinewidth stroke
+  grestore
+} bd
+/SOE {
+  /Tcx currentpoint pop def
+  gsave
+  newpath
+  cf findfont cs scalefont dup
+  /FontMatrix get 0 get /Ts exch def /FontInfo get dup
+  /UnderlinePosition get Ts mul /To exch def
+  /UnderlineThickness get Ts mul /Tt exch def
+  ux uy To add cs 10 mul 26 idiv add moveto Tcx uy To add cs 10 mul 26 idiv add lineto
+  Tt setlinewidth stroke
+  grestore
+} bd
+/QT {
+/Y22 exch store
+/X22 exch store
+/Y21 exch store
+/X21 exch store
+currentpoint
+/Y21 load 2 mul add 3 div exch
+/X21 load 2 mul add 3 div exch
+/X21 load 2 mul /X22 load add 3 div
+/Y21 load 2 mul /Y22 load add 3 div
+/X22 load /Y22 load curveto
+} bd
+/SSPD {
+dup length /d exch dict def
+{
+/v exch def
+/k exch def
+currentpagedevice k known {
+/cpdv currentpagedevice k get def
+v cpdv ne {
+/upd false def
+/nullv v type /nulltype eq def
+/nullcpdv cpdv type /nulltype eq def
+nullv nullcpdv or
+{
+/upd true def
+} {
+/sametype v type cpdv type eq def
+sametype {
+v type /arraytype eq {
+/vlen v length def
+/cpdvlen cpdv length def
+vlen cpdvlen eq {
+0 1 vlen 1 sub {
+/i exch def
+/obj v i get def
+/cpdobj cpdv i get def
+obj cpdobj ne {
+/upd true def
+exit
+} if
+} for
+} {
+/upd true def
+} ifelse
+} {
+v type /dicttype eq {
+v {
+/dv exch def
+/dk exch def
+/cpddv cpdv dk get def
+dv cpddv ne {
+/upd true def
+exit
+} if
+} forall
+} {
+/upd true def
+} ifelse
+} ifelse
+} if
+} ifelse
+upd true eq {
+d k v put
+} if
+} if
+} if
+} forall
+d length 0 gt {
+d setpagedevice
+} if
+} bd
+%%EndResource
+%%BeginResource: procset (Apache XML Graphics EPS ProcSet) 1.0 0
+%%Version: 1.0 0
+%%Copyright: (Copyright 2002-2003 The Apache Software Foundation. License terms: http://www.apache.org/licenses/LICENSE-2.0)
+%%Title: (EPS procedures used by the Apache XML Graphics project \(Batik and FOP\))
+/BeginEPSF { %def
+/b4_Inc_state save def         % Save state for cleanup
+/dict_count countdictstack def % Count objects on dict stack
+/op_count count 1 sub def      % Count objects on operand stack
+userdict begin                 % Push userdict on dict stack
+/showpage { } def              % Redefine showpage, { } = null proc
+0 setgray 0 setlinecap         % Prepare graphics state
+1 setlinewidth 0 setlinejoin
+10 setmiterlimit [ ] 0 setdash newpath
+/languagelevel where           % If level not equal to 1 then
+{pop languagelevel             % set strokeadjust and
+1 ne                           % overprint to their defaults.
+{false setstrokeadjust false setoverprint
+} if
+} if
+} bd
+/EndEPSF { %def
+count op_count sub {pop} repeat            % Clean up stacks
+countdictstack dict_count sub {end} repeat
+b4_Inc_state restore
+} bd
+%%EndResource
+%%BeginResource: procset (Apache FOP Std ProcSet) 1.0 0
+%%Version: 1.0 0
+%%Copyright: (Copyright 2009 The Apache Software Foundation. License terms: http://www.apache.org/licenses/LICENSE-2.0)
+%%Title: (Basic set of procedures used by Apache FOP)
+/TJ { % Similar but not equal to PDF's TJ operator
+  {
+    dup type /stringtype eq
+    { show }
+    { neg 1000 div 0 rmoveto }
+    ifelse
+  } forall
+} bd
+/ATJ { % As TJ but adds letter-spacing
+  /ATJls exch def
+  {
+    dup type /stringtype eq
+    { ATJls 0 3 2 roll ashow }
+    { neg 1000 div 0 rmoveto }
+    ifelse
+  } forall
+} bd
+%%EndResource
+%%EndProlog
+%%BeginSetup
+%FOPBeginFontDict
+%%IncludeResource: font Courier-Oblique
+%%IncludeResource: font Courier-BoldOblique
+%%IncludeResource: font Courier-Bold
+%%IncludeResource: font ZapfDingbats
+%%IncludeResource: font Symbol
+%%IncludeResource: font Helvetica
+%%IncludeResource: font Helvetica-Oblique
+%%IncludeResource: font Helvetica-Bold
+%%IncludeResource: font Helvetica-BoldOblique
+%%IncludeResource: font Times-Roman
+%%IncludeResource: font Times-Italic
+%%IncludeResource: font Times-Bold
+%%IncludeResource: font Times-BoldItalic
+%%IncludeResource: font Courier
+%FOPEndFontDict
+%%BeginResource: encoding WinAnsiEncoding
+/WinAnsiEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma
+/hyphen /period /slash /zero /one
+/two /three /four /five /six
+/seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at
+/A /B /C /D /E
+/F /G /H /I /J
+/K /L /M /N /O
+/P /Q /R /S /T
+/U /V /W /X /Y
+/Z /bracketleft /backslash /bracketright /asciicircum
+/underscore /quoteleft /a /b /c
+/d /e /f /g /h
+/i /j /k /l /m
+/n /o /p /q /r
+/s /t /u /v /w
+/x /y /z /braceleft /bar
+/braceright /asciitilde /bullet /Euro /bullet
+/quotesinglbase /florin /quotedblbase /ellipsis /dagger
+/daggerdbl /circumflex /perthousand /Scaron /guilsinglleft
+/OE /bullet /Zcaron /bullet /bullet
+/quoteleft /quoteright /quotedblleft /quotedblright /bullet
+/endash /emdash /asciitilde /trademark /scaron
+/guilsinglright /oe /bullet /zcaron /Ydieresis
+/space /exclamdown /cent /sterling /currency
+/yen /brokenbar /section /dieresis /copyright
+/ordfeminine /guillemotleft /logicalnot /sfthyphen /registered
+/macron /degree /plusminus /twosuperior /threesuperior
+/acute /mu /paragraph /middot /cedilla
+/onesuperior /ordmasculine /guillemotright /onequarter /onehalf
+/threequarters /questiondown /Agrave /Aacute /Acircumflex
+/Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave
+/Iacute /Icircumflex /Idieresis /Eth /Ntilde
+/Ograve /Oacute /Ocircumflex /Otilde /Odieresis
+/multiply /Oslash /Ugrave /Uacute /Ucircumflex
+/Udieresis /Yacute /Thorn /germandbls /agrave
+/aacute /acircumflex /atilde /adieresis /aring
+/ae /ccedilla /egrave /eacute /ecircumflex
+/edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex
+/otilde /odieresis /divide /oslash /ugrave
+/uacute /ucircumflex /udieresis /yacute /thorn
+/ydieresis
+] def
+%%EndResource
+%FOPBeginFontReencode
+/Courier-Oblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier-Oblique exch definefont pop
+/Courier-BoldOblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier-BoldOblique exch definefont pop
+/Courier-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier-Bold exch definefont pop
+/Helvetica findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica exch definefont pop
+/Helvetica-Oblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica-Oblique exch definefont pop
+/Helvetica-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica-Bold exch definefont pop
+/Helvetica-BoldOblique findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Helvetica-BoldOblique exch definefont pop
+/Times-Roman findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-Roman exch definefont pop
+/Times-Italic findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-Italic exch definefont pop
+/Times-Bold findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-Bold exch definefont pop
+/Times-BoldItalic findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Times-BoldItalic exch definefont pop
+/Courier findfont
+dup length dict begin
+  {1 index /FID ne {def} {pop pop} ifelse} forall
+  /Encoding WinAnsiEncoding def
+  currentdict
+end
+/Courier exch definefont pop
+%FOPEndFontReencode
+%%EndSetup
+%%Page: 1 1
+%%PageBoundingBox: 0 0 612 792
+%%PageHiResBoundingBox: 0 0 612 792
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-first
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [612 792]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 792] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+[1 0 0 1 156 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GR
+GS
+[1 0 0 1 312 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 727.2] CT
+GR
+GS
+[0 -1 1 0 540 727.2] CT
+GR
+GS
+[1 0 0 1 72 727.2] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GS
+[1 0 0 1 156 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 75.5 10.83 Tm
+(1) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 24.883 F
+1 0 0 -1 68.748 21.287 Tm
+(Xserver Provider for DTrace) t
+/Helvetica 14.4 F
+1 0 0 -1 111.967 49.378 Tm
+(Alan Coopersmith, Oracle Corporation) t
+/Helvetica 10 F
+1 0 0 -1 180.92 67.894 Tm
+(X Server Version 21.1.6) t
+1 0 0 -1 80.115 84.894 Tm
+(Copyright ) t
+/Times-Roman 10 F
+1 0 0 -1 125.685 84.894 Tm
+(\251) t
+/Helvetica 10 F
+1 0 0 -1 133.285 84.894 Tm
+( 2005, 2006, 2007, 2010, 2020 Oracle and/or its affiliates.) t
+/Times-Roman 10 F
+1 0 0 -1 36 106.769 Tm
+(Permission is hereby granted, free of charge, to any person obtaining a copy of this software) t
+1 0 0 -1 36 118.769 Tm
+(and associated documentation files \(the "Software"\), to deal in the Software without restriction,) t
+1 0 0 -1 36 130.769 Tm
+(including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,) t
+1 0 0 -1 36 142.769 Tm
+(and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do) t
+1 0 0 -1 36 154.769 Tm
+(so, subject to the following conditions:) t
+1 0 0 -1 36 176.769 Tm
+(The above copyright notice and this permission notice \(including the next paragraph\) shall be) t
+1 0 0 -1 36 188.769 Tm
+(included in all copies or substantial portions of the Software.) t
+1 0 0 -1 36 210.769 Tm
+(THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,) t
+1 0 0 -1 36 222.769 Tm
+(EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES) t
+1 0 0 -1 36 234.769 Tm
+(OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND) t
+1 0 0 -1 36 246.769 Tm
+(NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS) t
+1 0 0 -1 36 258.769 Tm
+(BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN) t
+1 0 0 -1 36 270.769 Tm
+(ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN) t
+1 0 0 -1 36 282.769 Tm
+(CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE) t
+1 0 0 -1 36 294.769 Tm
+(SOFTWARE.) t
+ET
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Helvetica
+%%+ font Helvetica-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 2 2
+%%PageBoundingBox: 0 0 612 792
+%%PageHiResBoundingBox: 0 0 612 792
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-odd
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [612 792]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 792] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+[1 0 0 1 156 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 20.385 8.33 Tm
+(Xserver Provider for DTrace) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 727.2] CT
+GR
+GS
+[0 -1 1 0 540 727.2] CT
+GR
+GS
+[1 0 0 1 72 727.2] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GS
+[1 0 0 1 156 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 75.5 10.83 Tm
+(2) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 17.28 F
+1 0 0 -1 0 14.783 Tm
+(Table of Contents) t
+/Times-Roman 10 F
+1 0 0 -1 48 37.706 Tm
+(Introduction) t
+1 0 0 -1 100.44 37.706 Tm
+(.) t
+1 0 0 -1 103.44 37.706 Tm
+(.) t
+1 0 0 -1 106.44 37.706 Tm
+(.) t
+1 0 0 -1 109.44 37.706 Tm
+(.) t
+1 0 0 -1 112.44 37.706 Tm
+(.) t
+1 0 0 -1 115.44 37.706 Tm
+(.) t
+1 0 0 -1 118.44 37.706 Tm
+(.) t
+1 0 0 -1 121.44 37.706 Tm
+(.) t
+1 0 0 -1 124.44 37.706 Tm
+(.) t
+1 0 0 -1 127.44 37.706 Tm
+(.) t
+1 0 0 -1 130.44 37.706 Tm
+(.) t
+1 0 0 -1 133.44 37.706 Tm
+(.) t
+1 0 0 -1 136.44 37.706 Tm
+(.) t
+1 0 0 -1 139.44 37.706 Tm
+(.) t
+1 0 0 -1 142.44 37.706 Tm
+(.) t
+1 0 0 -1 145.44 37.706 Tm
+(.) t
+1 0 0 -1 148.44 37.706 Tm
+(.) t
+1 0 0 -1 151.44 37.706 Tm
+(.) t
+1 0 0 -1 154.44 37.706 Tm
+(.) t
+1 0 0 -1 157.44 37.706 Tm
+(.) t
+1 0 0 -1 160.44 37.706 Tm
+(.) t
+1 0 0 -1 163.44 37.706 Tm
+(.) t
+1 0 0 -1 166.44 37.706 Tm
+(.) t
+1 0 0 -1 169.44 37.706 Tm
+(.) t
+1 0 0 -1 172.44 37.706 Tm
+(.) t
+1 0 0 -1 175.44 37.706 Tm
+(.) t
+1 0 0 -1 178.44 37.706 Tm
+(.) t
+1 0 0 -1 181.44 37.706 Tm
+(.) t
+1 0 0 -1 184.44 37.706 Tm
+(.) t
+1 0 0 -1 187.44 37.706 Tm
+(.) t
+1 0 0 -1 190.44 37.706 Tm
+(.) t
+1 0 0 -1 193.44 37.706 Tm
+(.) t
+1 0 0 -1 196.44 37.706 Tm
+(.) t
+1 0 0 -1 199.44 37.706 Tm
+(.) t
+1 0 0 -1 202.44 37.706 Tm
+(.) t
+1 0 0 -1 205.44 37.706 Tm
+(.) t
+1 0 0 -1 208.44 37.706 Tm
+(.) t
+1 0 0 -1 211.44 37.706 Tm
+(.) t
+1 0 0 -1 214.44 37.706 Tm
+(.) t
+1 0 0 -1 217.44 37.706 Tm
+(.) t
+1 0 0 -1 220.44 37.706 Tm
+(.) t
+1 0 0 -1 223.44 37.706 Tm
+(.) t
+1 0 0 -1 226.44 37.706 Tm
+(.) t
+1 0 0 -1 229.44 37.706 Tm
+(.) t
+1 0 0 -1 232.44 37.706 Tm
+(.) t
+1 0 0 -1 235.44 37.706 Tm
+(.) t
+1 0 0 -1 238.44 37.706 Tm
+(.) t
+1 0 0 -1 241.44 37.706 Tm
+(.) t
+1 0 0 -1 244.44 37.706 Tm
+(.) t
+1 0 0 -1 247.44 37.706 Tm
+(.) t
+1 0 0 -1 250.44 37.706 Tm
+(.) t
+1 0 0 -1 253.44 37.706 Tm
+(.) t
+1 0 0 -1 256.44 37.706 Tm
+(.) t
+1 0 0 -1 259.44 37.706 Tm
+(.) t
+1 0 0 -1 262.44 37.706 Tm
+(.) t
+1 0 0 -1 265.44 37.706 Tm
+(.) t
+1 0 0 -1 268.44 37.706 Tm
+(.) t
+1 0 0 -1 271.44 37.706 Tm
+(.) t
+1 0 0 -1 274.44 37.706 Tm
+(.) t
+1 0 0 -1 277.44 37.706 Tm
+(.) t
+1 0 0 -1 280.44 37.706 Tm
+(.) t
+1 0 0 -1 283.44 37.706 Tm
+(.) t
+1 0 0 -1 286.44 37.706 Tm
+(.) t
+1 0 0 -1 289.44 37.706 Tm
+(.) t
+1 0 0 -1 292.44 37.706 Tm
+(.) t
+1 0 0 -1 295.44 37.706 Tm
+(.) t
+1 0 0 -1 298.44 37.706 Tm
+(.) t
+1 0 0 -1 301.44 37.706 Tm
+(.) t
+1 0 0 -1 304.44 37.706 Tm
+(.) t
+1 0 0 -1 307.44 37.706 Tm
+(.) t
+1 0 0 -1 310.44 37.706 Tm
+(.) t
+1 0 0 -1 313.44 37.706 Tm
+(.) t
+1 0 0 -1 316.44 37.706 Tm
+(.) t
+1 0 0 -1 319.44 37.706 Tm
+(.) t
+1 0 0 -1 322.44 37.706 Tm
+(.) t
+1 0 0 -1 325.44 37.706 Tm
+(.) t
+1 0 0 -1 328.44 37.706 Tm
+(.) t
+1 0 0 -1 331.44 37.706 Tm
+(.) t
+1 0 0 -1 334.44 37.706 Tm
+(.) t
+1 0 0 -1 337.44 37.706 Tm
+(.) t
+1 0 0 -1 340.44 37.706 Tm
+(.) t
+1 0 0 -1 343.44 37.706 Tm
+(.) t
+1 0 0 -1 346.44 37.706 Tm
+(.) t
+1 0 0 -1 349.44 37.706 Tm
+(.) t
+1 0 0 -1 352.44 37.706 Tm
+(.) t
+1 0 0 -1 355.44 37.706 Tm
+(.) t
+1 0 0 -1 358.44 37.706 Tm
+(.) t
+1 0 0 -1 361.44 37.706 Tm
+(.) t
+1 0 0 -1 364.44 37.706 Tm
+(.) t
+1 0 0 -1 367.44 37.706 Tm
+(.) t
+1 0 0 -1 370.44 37.706 Tm
+(.) t
+1 0 0 -1 373.44 37.706 Tm
+(.) t
+1 0 0 -1 376.44 37.706 Tm
+(.) t
+1 0 0 -1 379.44 37.706 Tm
+(.) t
+1 0 0 -1 382.44 37.706 Tm
+(.) t
+1 0 0 -1 385.44 37.706 Tm
+(.) t
+1 0 0 -1 388.44 37.706 Tm
+(.) t
+1 0 0 -1 391.44 37.706 Tm
+(.) t
+1 0 0 -1 394.44 37.706 Tm
+(.) t
+1 0 0 -1 397.44 37.706 Tm
+(.) t
+1 0 0 -1 400.44 37.706 Tm
+(.) t
+1 0 0 -1 403.44 37.706 Tm
+(.) t
+1 0 0 -1 406.44 37.706 Tm
+(.) t
+1 0 0 -1 409.44 37.706 Tm
+(.) t
+1 0 0 -1 412.44 37.706 Tm
+(.) t
+1 0 0 -1 415.44 37.706 Tm
+(.) t
+1 0 0 -1 418.44 37.706 Tm
+(.) t
+1 0 0 -1 421.44 37.706 Tm
+(.) t
+1 0 0 -1 424.44 37.706 Tm
+(.) t
+1 0 0 -1 427.44 37.706 Tm
+(.) t
+1 0 0 -1 430.44 37.706 Tm
+(.) t
+1 0 0 -1 433.44 37.706 Tm
+(.) t
+1 0 0 -1 436.44 37.706 Tm
+(.) t
+1 0 0 -1 439.44 37.706 Tm
+(.) t
+1 0 0 -1 442.44 37.706 Tm
+(.) t
+1 0 0 -1 445.44 37.706 Tm
+(.) t
+1 0 0 -1 448.44 37.706 Tm
+(.) t
+1 0 0 -1 451.44 37.706 Tm
+(.) t
+1 0 0 -1 454.44 37.706 Tm
+(.) t
+1 0 0 -1 462.999 37.706 Tm
+(3) t
+1 0 0 -1 48 49.706 Tm
+[(Available ) -1086 (probes)] TJ
+1 0 0 -1 120.126 49.706 Tm
+(.) t
+1 0 0 -1 123.126 49.706 Tm
+(.) t
+1 0 0 -1 126.126 49.706 Tm
+(.) t
+1 0 0 -1 129.126 49.706 Tm
+(.) t
+1 0 0 -1 132.126 49.706 Tm
+(.) t
+1 0 0 -1 135.126 49.706 Tm
+(.) t
+1 0 0 -1 138.126 49.706 Tm
+(.) t
+1 0 0 -1 141.126 49.706 Tm
+(.) t
+1 0 0 -1 144.126 49.706 Tm
+(.) t
+1 0 0 -1 147.126 49.706 Tm
+(.) t
+1 0 0 -1 150.126 49.706 Tm
+(.) t
+1 0 0 -1 153.126 49.706 Tm
+(.) t
+1 0 0 -1 156.126 49.706 Tm
+(.) t
+1 0 0 -1 159.126 49.706 Tm
+(.) t
+1 0 0 -1 162.126 49.706 Tm
+(.) t
+1 0 0 -1 165.126 49.706 Tm
+(.) t
+1 0 0 -1 168.126 49.706 Tm
+(.) t
+1 0 0 -1 171.126 49.706 Tm
+(.) t
+1 0 0 -1 174.126 49.706 Tm
+(.) t
+1 0 0 -1 177.126 49.706 Tm
+(.) t
+1 0 0 -1 180.126 49.706 Tm
+(.) t
+1 0 0 -1 183.126 49.706 Tm
+(.) t
+1 0 0 -1 186.126 49.706 Tm
+(.) t
+1 0 0 -1 189.126 49.706 Tm
+(.) t
+1 0 0 -1 192.126 49.706 Tm
+(.) t
+1 0 0 -1 195.126 49.706 Tm
+(.) t
+1 0 0 -1 198.126 49.706 Tm
+(.) t
+1 0 0 -1 201.126 49.706 Tm
+(.) t
+1 0 0 -1 204.126 49.706 Tm
+(.) t
+1 0 0 -1 207.126 49.706 Tm
+(.) t
+1 0 0 -1 210.126 49.706 Tm
+(.) t
+1 0 0 -1 213.126 49.706 Tm
+(.) t
+1 0 0 -1 216.126 49.706 Tm
+(.) t
+1 0 0 -1 219.126 49.706 Tm
+(.) t
+1 0 0 -1 222.126 49.706 Tm
+(.) t
+1 0 0 -1 225.126 49.706 Tm
+(.) t
+1 0 0 -1 228.126 49.706 Tm
+(.) t
+1 0 0 -1 231.126 49.706 Tm
+(.) t
+1 0 0 -1 234.126 49.706 Tm
+(.) t
+1 0 0 -1 237.126 49.706 Tm
+(.) t
+1 0 0 -1 240.126 49.706 Tm
+(.) t
+1 0 0 -1 243.126 49.706 Tm
+(.) t
+1 0 0 -1 246.126 49.706 Tm
+(.) t
+1 0 0 -1 249.126 49.706 Tm
+(.) t
+1 0 0 -1 252.126 49.706 Tm
+(.) t
+1 0 0 -1 255.126 49.706 Tm
+(.) t
+1 0 0 -1 258.126 49.706 Tm
+(.) t
+1 0 0 -1 261.126 49.706 Tm
+(.) t
+1 0 0 -1 264.126 49.706 Tm
+(.) t
+1 0 0 -1 267.126 49.706 Tm
+(.) t
+1 0 0 -1 270.126 49.706 Tm
+(.) t
+1 0 0 -1 273.126 49.706 Tm
+(.) t
+1 0 0 -1 276.126 49.706 Tm
+(.) t
+1 0 0 -1 279.126 49.706 Tm
+(.) t
+1 0 0 -1 282.126 49.706 Tm
+(.) t
+1 0 0 -1 285.126 49.706 Tm
+(.) t
+1 0 0 -1 288.126 49.706 Tm
+(.) t
+1 0 0 -1 291.126 49.706 Tm
+(.) t
+1 0 0 -1 294.126 49.706 Tm
+(.) t
+1 0 0 -1 297.126 49.706 Tm
+(.) t
+1 0 0 -1 300.126 49.706 Tm
+(.) t
+1 0 0 -1 303.126 49.706 Tm
+(.) t
+1 0 0 -1 306.126 49.706 Tm
+(.) t
+1 0 0 -1 309.126 49.706 Tm
+(.) t
+1 0 0 -1 312.126 49.706 Tm
+(.) t
+1 0 0 -1 315.126 49.706 Tm
+(.) t
+1 0 0 -1 318.126 49.706 Tm
+(.) t
+1 0 0 -1 321.126 49.706 Tm
+(.) t
+1 0 0 -1 324.126 49.706 Tm
+(.) t
+1 0 0 -1 327.126 49.706 Tm
+(.) t
+1 0 0 -1 330.126 49.706 Tm
+(.) t
+1 0 0 -1 333.126 49.706 Tm
+(.) t
+1 0 0 -1 336.126 49.706 Tm
+(.) t
+1 0 0 -1 339.126 49.706 Tm
+(.) t
+1 0 0 -1 342.126 49.706 Tm
+(.) t
+1 0 0 -1 345.126 49.706 Tm
+(.) t
+1 0 0 -1 348.126 49.706 Tm
+(.) t
+1 0 0 -1 351.126 49.706 Tm
+(.) t
+1 0 0 -1 354.126 49.706 Tm
+(.) t
+1 0 0 -1 357.126 49.706 Tm
+(.) t
+1 0 0 -1 360.126 49.706 Tm
+(.) t
+1 0 0 -1 363.126 49.706 Tm
+(.) t
+1 0 0 -1 366.126 49.706 Tm
+(.) t
+1 0 0 -1 369.126 49.706 Tm
+(.) t
+1 0 0 -1 372.126 49.706 Tm
+(.) t
+1 0 0 -1 375.126 49.706 Tm
+(.) t
+1 0 0 -1 378.126 49.706 Tm
+(.) t
+1 0 0 -1 381.126 49.706 Tm
+(.) t
+1 0 0 -1 384.126 49.706 Tm
+(.) t
+1 0 0 -1 387.126 49.706 Tm
+(.) t
+1 0 0 -1 390.126 49.706 Tm
+(.) t
+1 0 0 -1 393.126 49.706 Tm
+(.) t
+1 0 0 -1 396.126 49.706 Tm
+(.) t
+1 0 0 -1 399.126 49.706 Tm
+(.) t
+1 0 0 -1 402.126 49.706 Tm
+(.) t
+1 0 0 -1 405.126 49.706 Tm
+(.) t
+1 0 0 -1 408.126 49.706 Tm
+(.) t
+1 0 0 -1 411.126 49.706 Tm
+(.) t
+1 0 0 -1 414.126 49.706 Tm
+(.) t
+1 0 0 -1 417.126 49.706 Tm
+(.) t
+1 0 0 -1 420.126 49.706 Tm
+(.) t
+1 0 0 -1 423.126 49.706 Tm
+(.) t
+1 0 0 -1 426.126 49.706 Tm
+(.) t
+1 0 0 -1 429.126 49.706 Tm
+(.) t
+1 0 0 -1 432.126 49.706 Tm
+(.) t
+1 0 0 -1 435.126 49.706 Tm
+(.) t
+1 0 0 -1 438.126 49.706 Tm
+(.) t
+1 0 0 -1 441.126 49.706 Tm
+(.) t
+1 0 0 -1 444.126 49.706 Tm
+(.) t
+1 0 0 -1 447.126 49.706 Tm
+(.) t
+1 0 0 -1 450.126 49.706 Tm
+(.) t
+1 0 0 -1 453.126 49.706 Tm
+(.) t
+1 0 0 -1 456.126 49.706 Tm
+(.) t
+1 0 0 -1 462.998 49.706 Tm
+(3) t
+1 0 0 -1 48 61.706 Tm
+[(Data ) -833 (Available ) -833 (in ) -833 (Probe ) -833 (Arguments)] TJ
+1 0 0 -1 197.647 61.706 Tm
+(.) t
+1 0 0 -1 200.647 61.706 Tm
+(.) t
+1 0 0 -1 203.647 61.706 Tm
+(.) t
+1 0 0 -1 206.647 61.706 Tm
+(.) t
+1 0 0 -1 209.647 61.706 Tm
+(.) t
+1 0 0 -1 212.647 61.706 Tm
+(.) t
+1 0 0 -1 215.647 61.706 Tm
+(.) t
+1 0 0 -1 218.647 61.706 Tm
+(.) t
+1 0 0 -1 221.647 61.706 Tm
+(.) t
+1 0 0 -1 224.647 61.706 Tm
+(.) t
+1 0 0 -1 227.647 61.706 Tm
+(.) t
+1 0 0 -1 230.647 61.706 Tm
+(.) t
+1 0 0 -1 233.647 61.706 Tm
+(.) t
+1 0 0 -1 236.647 61.706 Tm
+(.) t
+1 0 0 -1 239.647 61.706 Tm
+(.) t
+1 0 0 -1 242.647 61.706 Tm
+(.) t
+1 0 0 -1 245.647 61.706 Tm
+(.) t
+1 0 0 -1 248.647 61.706 Tm
+(.) t
+1 0 0 -1 251.647 61.706 Tm
+(.) t
+1 0 0 -1 254.647 61.706 Tm
+(.) t
+1 0 0 -1 257.647 61.706 Tm
+(.) t
+1 0 0 -1 260.647 61.706 Tm
+(.) t
+1 0 0 -1 263.647 61.706 Tm
+(.) t
+1 0 0 -1 266.647 61.706 Tm
+(.) t
+1 0 0 -1 269.647 61.706 Tm
+(.) t
+1 0 0 -1 272.647 61.706 Tm
+(.) t
+1 0 0 -1 275.647 61.706 Tm
+(.) t
+1 0 0 -1 278.647 61.706 Tm
+(.) t
+1 0 0 -1 281.647 61.706 Tm
+(.) t
+1 0 0 -1 284.647 61.706 Tm
+(.) t
+1 0 0 -1 287.647 61.706 Tm
+(.) t
+1 0 0 -1 290.647 61.706 Tm
+(.) t
+1 0 0 -1 293.647 61.706 Tm
+(.) t
+1 0 0 -1 296.647 61.706 Tm
+(.) t
+1 0 0 -1 299.647 61.706 Tm
+(.) t
+1 0 0 -1 302.647 61.706 Tm
+(.) t
+1 0 0 -1 305.647 61.706 Tm
+(.) t
+1 0 0 -1 308.647 61.706 Tm
+(.) t
+1 0 0 -1 311.647 61.706 Tm
+(.) t
+1 0 0 -1 314.647 61.706 Tm
+(.) t
+1 0 0 -1 317.647 61.706 Tm
+(.) t
+1 0 0 -1 320.647 61.706 Tm
+(.) t
+1 0 0 -1 323.647 61.706 Tm
+(.) t
+1 0 0 -1 326.647 61.706 Tm
+(.) t
+1 0 0 -1 329.647 61.706 Tm
+(.) t
+1 0 0 -1 332.647 61.706 Tm
+(.) t
+1 0 0 -1 335.647 61.706 Tm
+(.) t
+1 0 0 -1 338.647 61.706 Tm
+(.) t
+1 0 0 -1 341.647 61.706 Tm
+(.) t
+1 0 0 -1 344.647 61.706 Tm
+(.) t
+1 0 0 -1 347.647 61.706 Tm
+(.) t
+1 0 0 -1 350.647 61.706 Tm
+(.) t
+1 0 0 -1 353.647 61.706 Tm
+(.) t
+1 0 0 -1 356.647 61.706 Tm
+(.) t
+1 0 0 -1 359.647 61.706 Tm
+(.) t
+1 0 0 -1 362.647 61.706 Tm
+(.) t
+1 0 0 -1 365.647 61.706 Tm
+(.) t
+1 0 0 -1 368.647 61.706 Tm
+(.) t
+1 0 0 -1 371.647 61.706 Tm
+(.) t
+1 0 0 -1 374.647 61.706 Tm
+(.) t
+1 0 0 -1 377.647 61.706 Tm
+(.) t
+1 0 0 -1 380.647 61.706 Tm
+(.) t
+1 0 0 -1 383.647 61.706 Tm
+(.) t
+1 0 0 -1 386.647 61.706 Tm
+(.) t
+1 0 0 -1 389.647 61.706 Tm
+(.) t
+1 0 0 -1 392.647 61.706 Tm
+(.) t
+1 0 0 -1 395.647 61.706 Tm
+(.) t
+1 0 0 -1 398.647 61.706 Tm
+(.) t
+1 0 0 -1 401.647 61.706 Tm
+(.) t
+1 0 0 -1 404.647 61.706 Tm
+(.) t
+1 0 0 -1 407.647 61.706 Tm
+(.) t
+1 0 0 -1 410.647 61.706 Tm
+(.) t
+1 0 0 -1 413.647 61.706 Tm
+(.) t
+1 0 0 -1 416.647 61.706 Tm
+(.) t
+1 0 0 -1 419.647 61.706 Tm
+(.) t
+1 0 0 -1 422.647 61.706 Tm
+(.) t
+1 0 0 -1 425.647 61.706 Tm
+(.) t
+1 0 0 -1 428.647 61.706 Tm
+(.) t
+1 0 0 -1 431.647 61.706 Tm
+(.) t
+1 0 0 -1 434.647 61.706 Tm
+(.) t
+1 0 0 -1 437.647 61.706 Tm
+(.) t
+1 0 0 -1 440.647 61.706 Tm
+(.) t
+1 0 0 -1 443.647 61.706 Tm
+(.) t
+1 0 0 -1 446.647 61.706 Tm
+(.) t
+1 0 0 -1 449.647 61.706 Tm
+(.) t
+1 0 0 -1 452.647 61.706 Tm
+(.) t
+1 0 0 -1 455.647 61.706 Tm
+(.) t
+1 0 0 -1 462.998 61.706 Tm
+(4) t
+1 0 0 -1 48 73.706 Tm
+(Examples) t
+1 0 0 -1 90.44 73.706 Tm
+(.) t
+1 0 0 -1 93.44 73.706 Tm
+(.) t
+1 0 0 -1 96.44 73.706 Tm
+(.) t
+1 0 0 -1 99.44 73.706 Tm
+(.) t
+1 0 0 -1 102.44 73.706 Tm
+(.) t
+1 0 0 -1 105.44 73.706 Tm
+(.) t
+1 0 0 -1 108.44 73.706 Tm
+(.) t
+1 0 0 -1 111.44 73.706 Tm
+(.) t
+1 0 0 -1 114.44 73.706 Tm
+(.) t
+1 0 0 -1 117.44 73.706 Tm
+(.) t
+1 0 0 -1 120.44 73.706 Tm
+(.) t
+1 0 0 -1 123.44 73.706 Tm
+(.) t
+1 0 0 -1 126.44 73.706 Tm
+(.) t
+1 0 0 -1 129.44 73.706 Tm
+(.) t
+1 0 0 -1 132.44 73.706 Tm
+(.) t
+1 0 0 -1 135.44 73.706 Tm
+(.) t
+1 0 0 -1 138.44 73.706 Tm
+(.) t
+1 0 0 -1 141.44 73.706 Tm
+(.) t
+1 0 0 -1 144.44 73.706 Tm
+(.) t
+1 0 0 -1 147.44 73.706 Tm
+(.) t
+1 0 0 -1 150.44 73.706 Tm
+(.) t
+1 0 0 -1 153.44 73.706 Tm
+(.) t
+1 0 0 -1 156.44 73.706 Tm
+(.) t
+1 0 0 -1 159.44 73.706 Tm
+(.) t
+1 0 0 -1 162.44 73.706 Tm
+(.) t
+1 0 0 -1 165.44 73.706 Tm
+(.) t
+1 0 0 -1 168.44 73.706 Tm
+(.) t
+1 0 0 -1 171.44 73.706 Tm
+(.) t
+1 0 0 -1 174.44 73.706 Tm
+(.) t
+1 0 0 -1 177.44 73.706 Tm
+(.) t
+1 0 0 -1 180.44 73.706 Tm
+(.) t
+1 0 0 -1 183.44 73.706 Tm
+(.) t
+1 0 0 -1 186.44 73.706 Tm
+(.) t
+1 0 0 -1 189.44 73.706 Tm
+(.) t
+1 0 0 -1 192.44 73.706 Tm
+(.) t
+1 0 0 -1 195.44 73.706 Tm
+(.) t
+1 0 0 -1 198.44 73.706 Tm
+(.) t
+1 0 0 -1 201.44 73.706 Tm
+(.) t
+1 0 0 -1 204.44 73.706 Tm
+(.) t
+1 0 0 -1 207.44 73.706 Tm
+(.) t
+1 0 0 -1 210.44 73.706 Tm
+(.) t
+1 0 0 -1 213.44 73.706 Tm
+(.) t
+1 0 0 -1 216.44 73.706 Tm
+(.) t
+1 0 0 -1 219.44 73.706 Tm
+(.) t
+1 0 0 -1 222.44 73.706 Tm
+(.) t
+1 0 0 -1 225.44 73.706 Tm
+(.) t
+1 0 0 -1 228.44 73.706 Tm
+(.) t
+1 0 0 -1 231.44 73.706 Tm
+(.) t
+1 0 0 -1 234.44 73.706 Tm
+(.) t
+1 0 0 -1 237.44 73.706 Tm
+(.) t
+1 0 0 -1 240.44 73.706 Tm
+(.) t
+1 0 0 -1 243.44 73.706 Tm
+(.) t
+1 0 0 -1 246.44 73.706 Tm
+(.) t
+1 0 0 -1 249.44 73.706 Tm
+(.) t
+1 0 0 -1 252.44 73.706 Tm
+(.) t
+1 0 0 -1 255.44 73.706 Tm
+(.) t
+1 0 0 -1 258.44 73.706 Tm
+(.) t
+1 0 0 -1 261.44 73.706 Tm
+(.) t
+1 0 0 -1 264.44 73.706 Tm
+(.) t
+1 0 0 -1 267.44 73.706 Tm
+(.) t
+1 0 0 -1 270.44 73.706 Tm
+(.) t
+1 0 0 -1 273.44 73.706 Tm
+(.) t
+1 0 0 -1 276.44 73.706 Tm
+(.) t
+1 0 0 -1 279.44 73.706 Tm
+(.) t
+1 0 0 -1 282.44 73.706 Tm
+(.) t
+1 0 0 -1 285.44 73.706 Tm
+(.) t
+1 0 0 -1 288.44 73.706 Tm
+(.) t
+1 0 0 -1 291.44 73.706 Tm
+(.) t
+1 0 0 -1 294.44 73.706 Tm
+(.) t
+1 0 0 -1 297.44 73.706 Tm
+(.) t
+1 0 0 -1 300.44 73.706 Tm
+(.) t
+1 0 0 -1 303.44 73.706 Tm
+(.) t
+1 0 0 -1 306.44 73.706 Tm
+(.) t
+1 0 0 -1 309.44 73.706 Tm
+(.) t
+1 0 0 -1 312.44 73.706 Tm
+(.) t
+1 0 0 -1 315.44 73.706 Tm
+(.) t
+1 0 0 -1 318.44 73.706 Tm
+(.) t
+1 0 0 -1 321.44 73.706 Tm
+(.) t
+1 0 0 -1 324.44 73.706 Tm
+(.) t
+1 0 0 -1 327.44 73.706 Tm
+(.) t
+1 0 0 -1 330.44 73.706 Tm
+(.) t
+1 0 0 -1 333.44 73.706 Tm
+(.) t
+1 0 0 -1 336.44 73.706 Tm
+(.) t
+1 0 0 -1 339.44 73.706 Tm
+(.) t
+1 0 0 -1 342.44 73.706 Tm
+(.) t
+1 0 0 -1 345.44 73.706 Tm
+(.) t
+1 0 0 -1 348.44 73.706 Tm
+(.) t
+1 0 0 -1 351.44 73.706 Tm
+(.) t
+1 0 0 -1 354.44 73.706 Tm
+(.) t
+1 0 0 -1 357.44 73.706 Tm
+(.) t
+1 0 0 -1 360.44 73.706 Tm
+(.) t
+1 0 0 -1 363.44 73.706 Tm
+(.) t
+1 0 0 -1 366.44 73.706 Tm
+(.) t
+1 0 0 -1 369.44 73.706 Tm
+(.) t
+1 0 0 -1 372.44 73.706 Tm
+(.) t
+1 0 0 -1 375.44 73.706 Tm
+(.) t
+1 0 0 -1 378.44 73.706 Tm
+(.) t
+1 0 0 -1 381.44 73.706 Tm
+(.) t
+1 0 0 -1 384.44 73.706 Tm
+(.) t
+1 0 0 -1 387.44 73.706 Tm
+(.) t
+1 0 0 -1 390.44 73.706 Tm
+(.) t
+1 0 0 -1 393.44 73.706 Tm
+(.) t
+1 0 0 -1 396.44 73.706 Tm
+(.) t
+1 0 0 -1 399.44 73.706 Tm
+(.) t
+1 0 0 -1 402.44 73.706 Tm
+(.) t
+1 0 0 -1 405.44 73.706 Tm
+(.) t
+1 0 0 -1 408.44 73.706 Tm
+(.) t
+1 0 0 -1 411.44 73.706 Tm
+(.) t
+1 0 0 -1 414.44 73.706 Tm
+(.) t
+1 0 0 -1 417.44 73.706 Tm
+(.) t
+1 0 0 -1 420.44 73.706 Tm
+(.) t
+1 0 0 -1 423.44 73.706 Tm
+(.) t
+1 0 0 -1 426.44 73.706 Tm
+(.) t
+1 0 0 -1 429.44 73.706 Tm
+(.) t
+1 0 0 -1 432.44 73.706 Tm
+(.) t
+1 0 0 -1 435.44 73.706 Tm
+(.) t
+1 0 0 -1 438.44 73.706 Tm
+(.) t
+1 0 0 -1 441.44 73.706 Tm
+(.) t
+1 0 0 -1 444.44 73.706 Tm
+(.) t
+1 0 0 -1 447.44 73.706 Tm
+(.) t
+1 0 0 -1 450.44 73.706 Tm
+(.) t
+1 0 0 -1 453.44 73.706 Tm
+(.) t
+1 0 0 -1 456.44 73.706 Tm
+(.) t
+1 0 0 -1 463 73.706 Tm
+(5) t
+ET
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Helvetica-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 3 3
+%%PageBoundingBox: 0 0 612 792
+%%PageHiResBoundingBox: 0 0 612 792
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-odd
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [612 792]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 792] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+[1 0 0 1 156 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 20.385 8.33 Tm
+(Xserver Provider for DTrace) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 727.2] CT
+GR
+GS
+[0 -1 1 0 540 727.2] CT
+GR
+GS
+[1 0 0 1 72 727.2] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GS
+[1 0 0 1 156 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 75.5 10.83 Tm
+(3) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Helvetica-Bold 20.736 F
+1 0 0 -1 0 17.739 Tm
+(Introduction) t
+/Times-Roman 10 F
+1 0 0 -1 48 42.218 Tm
+[(This ) 480 (page ) 480 (provides ) 480 (details ) 480 (on ) 480 (a ) 480 ] TJ
+0 0 1 RC
+1 0 0 -1 171.765 42.218 Tm
+[(statically ) 480 (defined ) 480 (user ) 480 (application ) 480 (tracing ) 480 (provider)] TJ
+0 GC
+1 0 0 -1 370.711 42.218 Tm
+[( ) 480 ([)] TJ
+1 0 0 -1 376.061 42.218 Tm
+(http://dtrace.org/guide/) t
+1 0 0 -1 48 54.218 Tm
+(chp-usdt.html) t
+1 0 0 -1 103.28 54.218 Tm
+(]) t
+1 0 0 -1 106.61 54.218 Tm
+[( ) -292 (for ) -292 (the ) -292 ] TJ
+0 0 1 RC
+1 0 0 -1 138.868 54.218 Tm
+(DTrace) t
+0 GC
+1 0 0 -1 168.848 54.218 Tm
+[( ) -292 ([)] TJ
+1 0 0 -1 174.97 54.218 Tm
+(http://dtrace.org/blogs/about/) t
+1 0 0 -1 291.36 54.218 Tm
+(]) t
+1 0 0 -1 294.69 54.218 Tm
+[( ) -292 (facility ) -292 (in ) -292 (Solaris)] TJ
+1 0 0 -1 366.958 54.218 Tm
+(\231) t
+1 0 0 -1 376.758 54.218 Tm
+[( ) -292 (10, ) -292 (MacOS ) -292 (X)] TJ
+1 0 0 -1 435.406 54.218 Tm
+(\231) t
+1 0 0 -1 445.206 54.218 Tm
+[( ) -292 (10.5,)] TJ
+1 0 0 -1 48 66.218 Tm
+[(and ) -490 (later ) -490 (releases. ) -490 (This ) -490 (provider ) -490 (instruments ) -490 (various ) -490 (points ) -490 (in ) -490 (the ) -490 (X ) -490 (server, ) -490 (to ) -490 (allow ) -490 
+(tracing ) -490 (what ) -490 (client)] TJ
+1 0 0 -1 48 78.218 Tm
+[(applications ) 225 (are ) 225 (up ) 225 (to. ) 225 (DTrace ) 225 (probes ) 225 (may ) 225 (be ) 225 (used ) 225 (with ) 225 ] TJ
+0 0 1 RC
+1 0 0 -1 270.972 78.218 Tm
+(SystemTap) t
+0 GC
+1 0 0 -1 315.972 78.218 Tm
+[( ) 225 ([)] TJ
+1 0 0 -1 321.577 78.218 Tm
+(http://sourceware.org/systemtap/) t
+1 0 0 -1 452.397 78.218 Tm
+(]) t
+1 0 0 -1 455.727 78.218 Tm
+[( ) 225 (on)] TJ
+1 0 0 -1 48 90.218 Tm
+(GNU/Linux systems.) t
+1 0 0 -1 48 111.223 Tm
+[(The ) -1166 (provider ) -1166 (was ) -1166 (integrated ) -1166 (into ) -1166 (the ) -1166 (X.Org ) -1166 (code ) -1166 (base ) -1166 (with ) -1166 (Solaris ) -1166 (10 ) -1166 (& ) -1166 
+(OpenSolaris ) -1166 (support ) -1166 (for ) -1166 (the)] TJ
+1 0 0 -1 48 123.223 Tm
+[(Xserver ) 827 (1.4 ) 827 (release, ) 827 (released ) 827 (in ) 827 (2007 ) 827 (with ) 827 (X11R7.3. ) 827 (Support ) 827 (for ) 827 (DTrace ) 827 (on ) 827 (MacOS ) 827 (X ) 827 (was ) 827 (added ) 827 
+(in ) 827 (Xserver)] TJ
+1 0 0 -1 48 135.223 Tm
+(1.7.) t
+1 0 0 -1 48 156.228 Tm
+[(These ) 256 (probes ) 256 (expose ) 256 (the ) 256 (request ) 256 (and ) 256 (reply ) 256 (structure ) 256 (of ) 256 (the ) 256 (X ) 256 (protocol ) 256 (between ) 256 (clients ) 256 (and ) 256 (the ) 256 
+(X ) 256 (server, ) 256 (so)] TJ
+1 0 0 -1 48 168.228 Tm
+(an understanding of that basic nature will aid in learning how to use these probes.) t
+/Helvetica-Bold 20.736 F
+1 0 0 -1 0 198.642 Tm
+(Available probes) t
+/Times-Roman 10 F
+1 0 0 -1 48 223.121 Tm
+[(Due ) -740 (to ) -740 (the ) -740 (way ) -740 (User-Defined ) -740 (DTrace ) -740 (probes ) -740 (work, ) -740 (arguments ) -740 (to ) -740 (these ) -740 (probes ) -740 (all ) -740 (bear ) -740 
+(undistinguished)] TJ
+1 0 0 -1 48 235.121 Tm
+[(names ) -78 (of ) -78 ] TJ
+/Courier-Oblique 10 F
+1 0 0 -1 87.036 235.121 Tm
+(arg0) t
+/Times-Roman 10 F
+1 0 0 -1 111.036 235.121 Tm
+[(, ) -78 ] TJ
+/Courier-Oblique 10 F
+1 0 0 -1 116.114 235.121 Tm
+(arg1) t
+/Times-Roman 10 F
+1 0 0 -1 140.114 235.121 Tm
+[(, ) -78 ] TJ
+/Courier-Oblique 10 F
+1 0 0 -1 145.192 235.121 Tm
+(arg2) t
+/Times-Roman 10 F
+1 0 0 -1 169.192 235.121 Tm
+[(, ) -78 (etc. ) -78 (These ) -78 (tables ) -78 (should ) -78 (help ) -78 (you ) -78 (determine ) -78 (what ) -78 (the ) -78 (real ) -78 (data ) -78 (is ) -78 (for ) -78 (each)] TJ
+1 0 0 -1 48 247.121 Tm
+(of the probe arguments.) t
+/Times-Bold 12 F
+1 0 0 -1 48 271.623 Tm
+(Table 1. Probes and their arguments) t
+ET
+GR
+GS
+[1 0 0 1 50.25 281.753] CT
+GS
+-2.25 0.25 M
+-2.5 0 L
+67.75 0 L
+67.75 0.25 L
+67.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.5 0.25 M 67.75 0.25 L S N
+GR
+GS
+67.75 0.25 M
+67.75 16.75 L
+67.5 16.5 L
+67.5 0.5 L
+cp
+clip N
+0.5 LW
+67.75 0.25 M 67.75 16.75 L S N
+GR
+GS
+67.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+67.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 67.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(Probe name) t
+ET
+GR
+GR
+GS
+[1 0 0 1 120.25 281.753] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+102.75 0 L
+102.75 0.25 L
+102.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 102.75 0.25 L S N
+GR
+GS
+102.75 0.25 M
+102.75 16.75 L
+102.5 16.5 L
+102.5 0.5 L
+cp
+clip N
+0.5 LW
+102.75 0.25 M 102.75 16.75 L S N
+GR
+GS
+102.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+102.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 102.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(Description) t
+ET
+GR
+GR
+GS
+[1 0 0 1 225.25 281.753] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+32.75 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg0) t
+ET
+GR
+GR
+GS
+[1 0 0 1 260.25 281.753] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+32.75 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg1) t
+ET
+GR
+GR
+GS
+[1 0 0 1 295.25 281.753] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+32.75 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg2) t
+ET
+GR
+GR
+GS
+[1 0 0 1 330.25 281.753] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+32.75 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg3) t
+ET
+GR
+GR
+GS
+[1 0 0 1 365.25 281.753] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+32.75 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg4) t
+ET
+GR
+GR
+GS
+[1 0 0 1 400.25 281.753] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+32.75 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg5) t
+ET
+GR
+GR
+GS
+[1 0 0 1 435.25 281.753] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+33 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 33 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0 L
+33 16.75 L
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg6) t
+ET
+GR
+GR
+GS
+[1 0 0 1 48.25 298.253] CT
+GS
+-0.25 0.25 M
+69.75 0.25 L
+69.75 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+-0.25 0.25 M 69.75 0.25 L S N
+GR
+GS
+69.75 16.75 M
+-0.25 16.75 L
+0 16.5 L
+69.75 16.5 L
+cp
+clip N
+0.5 LW
+-0.25 16.75 M 69.75 16.75 L S N
+GR
+GS
+-0.25 16.75 M
+-0.5 16.75 L
+-0.5 0.25 L
+-0.25 0.25 L
+0 0.5 L
+0 16.5 L
+cp
+clip N
+0.5 LW
+-0.25 0.25 M -0.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 118 298.253] CT
+GS
+0 0.25 M
+105 0.25 L
+105 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 105 0.25 L S N
+GR
+GS
+105 16.75 M
+0 16.75 L
+0 16.5 L
+105 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 105 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 223 298.253] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 258 298.253] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 293 298.253] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 328 298.253] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 363 298.253] CT
+GS
+0 0.25 M
+35 0.25 L
+34.75 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 0.25 M
+35 16.75 L
+34.75 16.5 L
+34.75 0.5 L
+cp
+clip N
+0.5 LW
+35 0.25 M 35 16.75 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+34.75 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 298.753] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(Request Probes) t
+ET
+GR
+GR
+GS
+[1 0 0 1 400.25 298.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 298.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 16.75 L
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 314.753] CT
+GS
+-2.25 0.25 M
+67.75 0.25 L
+67.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 67.75 0.25 L S N
+GR
+GS
+67.75 0.25 M
+67.75 40.75 L
+67.5 40.5 L
+67.5 0.5 L
+cp
+clip N
+0.5 LW
+67.75 0.25 M 67.75 40.75 L S N
+GR
+GS
+67.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+67.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 67.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.5 40.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(request-start) t
+ET
+GR
+GR
+GS
+[1 0 0 1 120.25 314.753] CT
+GS
+-2.25 0.25 M
+102.75 0.25 L
+102.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 102.75 0.25 L S N
+GR
+GS
+102.75 0.25 M
+102.75 40.75 L
+102.5 40.5 L
+102.5 0.5 L
+cp
+clip N
+0.5 LW
+102.75 0.25 M 102.75 40.75 L S N
+GR
+GS
+102.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+102.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 102.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Called ) -14700 (just ) -14700 (before)] TJ
+1 0 0 -1 0 22.83 Tm
+[(processing ) -6095 (each ) -6095 (client)] TJ
+1 0 0 -1 0 34.83 Tm
+(request.) t
+ET
+GR
+GR
+GS
+[1 0 0 1 225.25 314.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(requestName) t
+ET
+GR
+GR
+GS
+[1 0 0 1 260.25 314.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(requestCode) t
+ET
+GR
+GR
+GS
+[1 0 0 1 295.25 314.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(requestLength) t
+ET
+GR
+GR
+GS
+[1 0 0 1 330.25 314.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 365.25 314.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(requestBuffer) t
+ET
+GR
+GR
+GS
+[1 0 0 1 400.25 314.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 314.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 40.75 L
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 355.253] CT
+GS
+-2.25 0.25 M
+67.75 0.25 L
+67.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 67.75 0.25 L S N
+GR
+GS
+67.75 0.25 M
+67.75 40.75 L
+67.5 40.5 L
+67.5 0.5 L
+cp
+clip N
+0.5 LW
+67.75 0.25 M 67.75 40.75 L S N
+GR
+GS
+67.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+67.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 67.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.5 40.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(request-done) t
+ET
+GR
+GR
+GS
+[1 0 0 1 120.25 355.253] CT
+GS
+-2.25 0.25 M
+102.75 0.25 L
+102.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 102.75 0.25 L S N
+GR
+GS
+102.75 0.25 M
+102.75 40.75 L
+102.5 40.5 L
+102.5 0.5 L
+cp
+clip N
+0.5 LW
+102.75 0.25 M 102.75 40.75 L S N
+GR
+GS
+102.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+102.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 102.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Called ) -18310 (just ) -18310 (after)] TJ
+1 0 0 -1 0 22.83 Tm
+[(processing ) -6095 (each ) -6095 (client)] TJ
+1 0 0 -1 0 34.83 Tm
+(request.) t
+ET
+GR
+GR
+GS
+[1 0 0 1 225.25 355.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(requestName) t
+ET
+GR
+GR
+GS
+[1 0 0 1 260.25 355.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(requestCode) t
+ET
+GR
+GR
+GS
+[1 0 0 1 295.25 355.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(sequenceNumber) t
+ET
+GR
+GR
+GS
+[1 0 0 1 330.25 355.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 365.25 355.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resultCode) t
+ET
+GR
+GR
+GS
+[1 0 0 1 400.25 355.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 355.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 40.75 L
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GR
+GS
+[1 0 0 1 48.25 395.753] CT
+GS
+-0.25 0.25 M
+69.75 0.25 L
+69.75 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+-0.25 0.25 M 69.75 0.25 L S N
+GR
+GS
+69.75 16.75 M
+-0.25 16.75 L
+0 16.5 L
+69.75 16.5 L
+cp
+clip N
+0.5 LW
+-0.25 16.75 M 69.75 16.75 L S N
+GR
+GS
+-0.25 16.75 M
+-0.5 16.75 L
+-0.5 0.25 L
+-0.25 0.25 L
+0 0.5 L
+0 16.5 L
+cp
+clip N
+0.5 LW
+-0.25 0.25 M -0.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 118 395.753] CT
+GS
+0 0.25 M
+105 0.25 L
+105 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 105 0.25 L S N
+GR
+GS
+105 16.75 M
+0 16.75 L
+0 16.5 L
+105 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 105 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 223 395.753] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 258 395.753] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 293 395.753] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 328 395.753] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 363 395.753] CT
+GS
+0 0.25 M
+35 0.25 L
+34.75 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 0.25 M
+35 16.75 L
+34.75 16.5 L
+34.75 0.5 L
+cp
+clip N
+0.5 LW
+35 0.25 M 35 16.75 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+34.75 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 396.253] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(Event Probes) t
+ET
+GR
+GR
+GS
+[1 0 0 1 400.25 395.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 395.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 16.75 L
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 412.253] CT
+GS
+-2.25 0.25 M
+67.75 0.25 L
+67.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 67.75 0.25 L S N
+GR
+GS
+67.75 0.25 M
+67.75 28.75 L
+67.5 28.5 L
+67.5 0.5 L
+cp
+clip N
+0.5 LW
+67.75 0.25 M 67.75 28.75 L S N
+GR
+GS
+67.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+67.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 67.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.5 28.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(send-event) t
+ET
+GR
+GR
+GS
+[1 0 0 1 120.25 412.253] CT
+GS
+-2.25 0.25 M
+102.75 0.25 L
+102.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 102.75 0.25 L S N
+GR
+GS
+102.75 0.25 M
+102.75 28.75 L
+102.5 28.5 L
+102.5 0.5 L
+cp
+clip N
+0.5 LW
+102.75 0.25 M 102.75 28.75 L S N
+GR
+GS
+102.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+102.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 102.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Called ) -2856 (just ) -2856 (before ) -2856 (send)] TJ
+1 0 0 -1 0 22.83 Tm
+(each event to a client.) t
+ET
+GR
+GR
+GS
+[1 0 0 1 225.25 412.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 260.25 412.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(eventCode) t
+ET
+GR
+GR
+GS
+[1 0 0 1 295.25 412.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(eventBuffer) t
+ET
+GR
+GR
+GS
+[1 0 0 1 330.25 412.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 365.25 412.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 400.25 412.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 412.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 28.75 L
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 48.25 440.753] CT
+GS
+-0.25 0.25 M
+69.75 0.25 L
+69.75 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+-0.25 0.25 M 69.75 0.25 L S N
+GR
+GS
+69.75 16.75 M
+-0.25 16.75 L
+0 16.5 L
+69.75 16.5 L
+cp
+clip N
+0.5 LW
+-0.25 16.75 M 69.75 16.75 L S N
+GR
+GS
+-0.25 16.75 M
+-0.5 16.75 L
+-0.5 0.25 L
+-0.25 0.25 L
+0 0.5 L
+0 16.5 L
+cp
+clip N
+0.5 LW
+-0.25 0.25 M -0.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 118 440.753] CT
+GS
+0 0.25 M
+105 0.25 L
+105 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 105 0.25 L S N
+GR
+GS
+105 16.75 M
+0 16.75 L
+0 16.5 L
+105 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 105 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 223 440.753] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 258 440.753] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 293 440.753] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 328 440.753] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 363 440.753] CT
+GS
+0 0.25 M
+35 0.25 L
+34.75 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 0.25 M
+35 16.75 L
+34.75 16.5 L
+34.75 0.5 L
+cp
+clip N
+0.5 LW
+35 0.25 M 35 16.75 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+34.75 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 441.253] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(Client Connection Probes) t
+ET
+GR
+GR
+GS
+[1 0 0 1 400.25 440.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 440.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 16.75 L
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 457.253] CT
+GS
+-2.25 0.25 M
+67.75 0.25 L
+67.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 67.75 0.25 L S N
+GR
+GS
+67.75 0.25 M
+67.75 40.75 L
+67.5 40.5 L
+67.5 0.5 L
+cp
+clip N
+0.5 LW
+67.75 0.25 M 67.75 40.75 L S N
+GR
+GS
+67.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+67.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 67.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.5 40.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(client-connect) t
+ET
+GR
+GR
+GS
+[1 0 0 1 120.25 457.253] CT
+GS
+-2.25 0.25 M
+102.75 0.25 L
+102.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 102.75 0.25 L S N
+GR
+GS
+102.75 0.25 M
+102.75 40.75 L
+102.5 40.5 L
+102.5 0.5 L
+cp
+clip N
+0.5 LW
+102.75 0.25 M 102.75 40.75 L S N
+GR
+GS
+102.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+102.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 102.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Called ) -8043 (when ) -8043 (a ) -8043 (new)] TJ
+1 0 0 -1 0 22.83 Tm
+[(connection ) -8035 (is ) -8035 (opened)] TJ
+1 0 0 -1 0 34.83 Tm
+(from a client) t
+ET
+GR
+GR
+GS
+[1 0 0 1 225.25 457.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 260.25 457.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientFD) t
+ET
+GR
+GR
+GS
+[1 0 0 1 295.25 457.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GR
+GS
+[1 0 0 1 330.25 457.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GR
+GS
+[1 0 0 1 365.25 457.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GR
+GS
+[1 0 0 1 400.25 457.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 457.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 40.75 L
+32.75 40.75 L
+32.5 40.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 40.75 L S N
+GR
+GS
+32.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+32.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 32.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 497.753] CT
+GS
+-2.25 0.25 M
+67.75 0.25 L
+67.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 67.75 0.25 L S N
+GR
+GS
+67.75 0.25 M
+67.75 52.75 L
+67.5 52.5 L
+67.5 0.5 L
+cp
+clip N
+0.5 LW
+67.75 0.25 M 67.75 52.75 L S N
+GR
+GS
+67.75 52.75 M
+-2.25 52.75 L
+-2 52.5 L
+67.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 67.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.5 52.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(client-auth) t
+ET
+GR
+GR
+GS
+[1 0 0 1 120.25 497.753] CT
+GS
+-2.25 0.25 M
+102.75 0.25 L
+102.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 102.75 0.25 L S N
+GR
+GS
+102.75 0.25 M
+102.75 52.75 L
+102.5 52.5 L
+102.5 0.5 L
+cp
+clip N
+0.5 LW
+102.75 0.25 M 102.75 52.75 L S N
+GR
+GS
+102.75 52.75 M
+-2.25 52.75 L
+-2 52.5 L
+102.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 102.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Called ) -12755 (when ) -12755 (client)] TJ
+1 0 0 -1 0 22.83 Tm
+[(authenticates ) -6350 (\(normally)] TJ
+1 0 0 -1 0 34.83 Tm
+[(just ) -9425 (after ) -9425 (connection)] TJ
+1 0 0 -1 0 46.83 Tm
+(opened\)) t
+ET
+GR
+GR
+GS
+[1 0 0 1 225.25 497.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 260.25 497.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientAddr) t
+ET
+GR
+GR
+GS
+[1 0 0 1 295.25 497.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientPid) t
+ET
+GR
+GR
+GS
+[1 0 0 1 330.25 497.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientZoneId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 365.25 497.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GR
+GS
+[1 0 0 1 400.25 497.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 497.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 52.75 L
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 550.253] CT
+GS
+-2.25 0.25 M
+67.75 0.25 L
+67.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 67.75 0.25 L S N
+GR
+GS
+67.75 0.25 M
+67.75 28.75 L
+67.5 28.5 L
+67.5 0.5 L
+cp
+clip N
+0.5 LW
+67.75 0.25 M 67.75 28.75 L S N
+GR
+GS
+67.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+67.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 67.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.5 28.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(client-) t
+1 0 0 -1 0 22.83 Tm
+(disconnect) t
+ET
+GR
+GR
+GS
+[1 0 0 1 120.25 550.253] CT
+GS
+-2.25 0.25 M
+102.75 0.25 L
+102.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 102.75 0.25 L S N
+GR
+GS
+102.75 0.25 M
+102.75 28.75 L
+102.5 28.5 L
+102.5 0.5 L
+cp
+clip N
+0.5 LW
+102.75 0.25 M 102.75 28.75 L S N
+GR
+GS
+102.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+102.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 102.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Called ) -6190 (when ) -6190 (a ) -6190 (client)] TJ
+1 0 0 -1 0 22.83 Tm
+(connection is closed) t
+ET
+GR
+GR
+GS
+[1 0 0 1 225.25 550.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 260.25 550.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 295.25 550.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 330.25 550.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 365.25 550.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 400.25 550.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 550.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 28.75 L
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 48.25 578.753] CT
+GS
+-0.25 0.25 M
+69.75 0.25 L
+69.75 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+-0.25 0.25 M 69.75 0.25 L S N
+GR
+GS
+69.75 16.75 M
+-0.25 16.75 L
+0 16.5 L
+69.75 16.5 L
+cp
+clip N
+0.5 LW
+-0.25 16.75 M 69.75 16.75 L S N
+GR
+GS
+-0.25 16.75 M
+-0.5 16.75 L
+-0.5 0.25 L
+-0.25 0.25 L
+0 0.5 L
+0 16.5 L
+cp
+clip N
+0.5 LW
+-0.25 0.25 M -0.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 118 578.753] CT
+GS
+0 0.25 M
+105 0.25 L
+105 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 105 0.25 L S N
+GR
+GS
+105 16.75 M
+0 16.75 L
+0 16.5 L
+105 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 105 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 223 578.753] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 258 578.753] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 293 578.753] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 328 578.753] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 363 578.753] CT
+GS
+0 0.25 M
+35 0.25 L
+34.75 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 0.25 M
+35 16.75 L
+34.75 16.5 L
+34.75 0.5 L
+cp
+clip N
+0.5 LW
+35 0.25 M 35 16.75 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+34.75 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 579.253] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(Resource Allocation Probes) t
+ET
+GR
+GR
+GS
+[1 0 0 1 400.25 578.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 578.753] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 16.75 L
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 595.253] CT
+GS
+-2.25 0.25 M
+67.75 0.25 L
+67.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 67.75 0.25 L S N
+GR
+GS
+67.75 0.25 M
+67.75 52.75 L
+67.5 52.5 L
+67.5 0.5 L
+cp
+clip N
+0.5 LW
+67.75 0.25 M 67.75 52.75 L S N
+GR
+GS
+67.75 52.75 M
+67.75 53 L
+-2.5 53 L
+-2.25 52.75 L
+-2 52.5 L
+67.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.5 52.75 M 67.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.5 53 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 53 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(resource-alloc) t
+ET
+GR
+GR
+GS
+[1 0 0 1 120.25 595.253] CT
+GS
+-2.25 0.25 M
+102.75 0.25 L
+102.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 102.75 0.25 L S N
+GR
+GS
+102.75 0.25 M
+102.75 52.75 L
+102.5 52.5 L
+102.5 0.5 L
+cp
+clip N
+0.5 LW
+102.75 0.25 M 102.75 52.75 L S N
+GR
+GS
+102.75 52.75 M
+102.75 53 L
+-2.25 53 L
+-2.25 52.75 L
+-2 52.5 L
+102.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 102.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Called ) -8043 (when ) -8043 (a ) -8043 (new)] TJ
+1 0 0 -1 0 22.83 Tm
+[(resource ) -6929 (\(pixmap, ) -6929 (gc,)] TJ
+1 0 0 -1 0 34.83 Tm
+[(colormap, ) -15535 (etc.\) ) -15535 (is)] TJ
+1 0 0 -1 0 46.83 Tm
+(allocated) t
+ET
+GR
+GR
+GS
+[1 0 0 1 225.25 595.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+32.75 53 L
+-2.25 53 L
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resourceId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 260.25 595.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+32.75 53 L
+-2.25 53 L
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resourceTypeId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 295.25 595.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+32.75 53 L
+-2.25 53 L
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resourceValue) t
+ET
+GR
+GR
+GS
+[1 0 0 1 330.25 595.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+32.75 53 L
+-2.25 53 L
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resourceTypeName) t
+ET
+GR
+GR
+GS
+[1 0 0 1 365.25 595.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+32.75 53 L
+-2.25 53 L
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GR
+GS
+[1 0 0 1 400.25 595.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 52.75 L S N
+GR
+GS
+32.75 52.75 M
+32.75 53 L
+-2.25 53 L
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 32.75 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 595.253] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 53 L
+32.75 52.75 L
+32.5 52.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 53 L S N
+GR
+GS
+32.75 52.75 M
+33 53 L
+-2.25 53 L
+-2.25 52.75 L
+-2 52.5 L
+32.5 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 52.75 M 33 52.75 L S N
+GR
+GS
+-2.25 52.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 52.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 52.75 L S N
+GR
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Courier-Oblique
+%%+ font Helvetica-Bold
+%%+ font Times-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 4 4
+%%PageBoundingBox: 0 0 612 792
+%%PageHiResBoundingBox: 0 0 612 792
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-odd
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [612 792]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 792] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+[1 0 0 1 156 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 20.385 8.33 Tm
+(Xserver Provider for DTrace) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 727.2] CT
+GR
+GS
+[0 -1 1 0 540 727.2] CT
+GR
+GS
+[1 0 0 1 72 727.2] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GS
+[1 0 0 1 156 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 75.5 10.83 Tm
+(4) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+[1 0 0 1 50.25 -0.25] CT
+GS
+-2.25 0.25 M
+-2.5 0 L
+67.75 0 L
+67.75 0.25 L
+67.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.5 0.25 M 67.75 0.25 L S N
+GR
+GS
+67.75 0.25 M
+67.75 16.75 L
+67.5 16.5 L
+67.5 0.5 L
+cp
+clip N
+0.5 LW
+67.75 0.25 M 67.75 16.75 L S N
+GR
+GS
+67.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+67.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 67.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(Probe name) t
+ET
+GR
+GR
+GS
+[1 0 0 1 120.25 -0.25] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+102.75 0 L
+102.75 0.25 L
+102.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 102.75 0.25 L S N
+GR
+GS
+102.75 0.25 M
+102.75 16.75 L
+102.5 16.5 L
+102.5 0.5 L
+cp
+clip N
+0.5 LW
+102.75 0.25 M 102.75 16.75 L S N
+GR
+GS
+102.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+102.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 102.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(Description) t
+ET
+GR
+GR
+GS
+[1 0 0 1 225.25 -0.25] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+32.75 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg0) t
+ET
+GR
+GR
+GS
+[1 0 0 1 260.25 -0.25] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+32.75 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg1) t
+ET
+GR
+GR
+GS
+[1 0 0 1 295.25 -0.25] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+32.75 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg2) t
+ET
+GR
+GR
+GS
+[1 0 0 1 330.25 -0.25] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+32.75 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg3) t
+ET
+GR
+GR
+GS
+[1 0 0 1 365.25 -0.25] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+32.75 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg4) t
+ET
+GR
+GR
+GS
+[1 0 0 1 400.25 -0.25] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+32.75 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg5) t
+ET
+GR
+GR
+GS
+[1 0 0 1 435.25 -0.25] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+33 0 L
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 33 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0 L
+33 16.75 L
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(arg6) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 16.25] CT
+GS
+-2.25 0.25 M
+67.75 0.25 L
+67.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 67.75 0.25 L S N
+GR
+GS
+67.75 0.25 M
+67.75 28.75 L
+67.5 28.5 L
+67.5 0.5 L
+cp
+clip N
+0.5 LW
+67.75 0.25 M 67.75 28.75 L S N
+GR
+GS
+67.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+67.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 67.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.5 28.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(resource-free) t
+ET
+GR
+GR
+GS
+[1 0 0 1 120.25 16.25] CT
+GS
+-2.25 0.25 M
+102.75 0.25 L
+102.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 102.75 0.25 L S N
+GR
+GS
+102.75 0.25 M
+102.75 28.75 L
+102.5 28.5 L
+102.5 0.5 L
+cp
+clip N
+0.5 LW
+102.75 0.25 M 102.75 28.75 L S N
+GR
+GS
+102.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+102.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 102.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Called ) 562 (when ) 562 (a ) 562 (resource ) 562 (is)] TJ
+1 0 0 -1 0 22.83 Tm
+(freed) t
+ET
+GR
+GR
+GS
+[1 0 0 1 225.25 16.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resourceId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 260.25 16.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resourceTypeId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 295.25 16.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resourceValue) t
+ET
+GR
+GR
+GS
+[1 0 0 1 330.25 16.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resourceTypeName) t
+ET
+GR
+GR
+GS
+[1 0 0 1 365.25 16.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 400.25 16.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 16.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 28.75 L
+32.75 28.75 L
+32.5 28.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 28.75 L S N
+GR
+GS
+32.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+32.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 32.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GR
+GS
+[1 0 0 1 48.25 44.75] CT
+GS
+-0.25 0.25 M
+69.75 0.25 L
+69.75 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+-0.25 0.25 M 69.75 0.25 L S N
+GR
+GS
+69.75 16.75 M
+-0.25 16.75 L
+0 16.5 L
+69.75 16.5 L
+cp
+clip N
+0.5 LW
+-0.25 16.75 M 69.75 16.75 L S N
+GR
+GS
+-0.25 16.75 M
+-0.5 16.75 L
+-0.5 0.25 L
+-0.25 0.25 L
+0 0.5 L
+0 16.5 L
+cp
+clip N
+0.5 LW
+-0.25 0.25 M -0.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 118 44.75] CT
+GS
+0 0.25 M
+105 0.25 L
+105 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 105 0.25 L S N
+GR
+GS
+105 16.75 M
+0 16.75 L
+0 16.5 L
+105 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 105 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 223 44.75] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 258 44.75] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 293 44.75] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 328 44.75] CT
+GS
+0 0.25 M
+35 0.25 L
+35 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+35 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 363 44.75] CT
+GS
+0 0.25 M
+35 0.25 L
+34.75 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 35 0.25 L S N
+GR
+GS
+35 0.25 M
+35 16.75 L
+34.75 16.5 L
+34.75 0.5 L
+cp
+clip N
+0.5 LW
+35 0.25 M 35 16.75 L S N
+GR
+GS
+35 16.75 M
+0 16.75 L
+0 16.5 L
+34.75 16.5 L
+cp
+clip N
+0.5 LW
+0 16.75 M 35 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 45.25] CT
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.33 Tm
+(Input API probes) t
+ET
+GR
+GR
+GS
+[1 0 0 1 400.25 44.75] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 435.25 44.75] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 16.75 L
+32.75 16.75 L
+32.5 16.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 16.75 L S N
+GR
+GS
+32.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+32.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 32.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GR
+GS
+[1 0 0 1 50.25 61.25] CT
+GS
+-2.25 0.25 M
+67.75 0.25 L
+67.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 67.75 0.25 L S N
+GR
+GS
+67.75 0.25 M
+67.75 64.75 L
+67.5 64.5 L
+67.5 0.5 L
+cp
+clip N
+0.5 LW
+67.75 0.25 M 67.75 64.75 L S N
+GR
+GS
+67.75 64.75 M
+67.75 65 L
+-2.5 65 L
+-2.25 64.75 L
+-2 64.5 L
+67.5 64.5 L
+cp
+clip N
+0.5 LW
+-2.5 64.75 M 67.75 64.75 L S N
+GR
+GS
+-2.25 64.75 M
+-2.5 65 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 65 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(input-event) t
+ET
+GR
+GR
+GS
+[1 0 0 1 120.25 61.25] CT
+GS
+-2.25 0.25 M
+102.75 0.25 L
+102.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 102.75 0.25 L S N
+GR
+GS
+102.75 0.25 M
+102.75 64.75 L
+102.5 64.5 L
+102.5 0.5 L
+cp
+clip N
+0.5 LW
+102.75 0.25 M 102.75 64.75 L S N
+GR
+GS
+102.75 64.75 M
+102.75 65 L
+-2.25 65 L
+-2.25 64.75 L
+-2 64.5 L
+102.5 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 64.75 M 102.75 64.75 L S N
+GR
+GS
+-2.25 64.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 64.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Called ) -5076 (when ) -5076 (an ) -5076 (input)] TJ
+1 0 0 -1 0 22.83 Tm
+[(event ) -1560 (was ) -1560 (submitted ) -1560 (for)] TJ
+1 0 0 -1 0 34.83 Tm
+(processing) t
+ET
+GR
+GR
+GS
+[1 0 0 1 225.25 61.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 64.75 L
+32.5 64.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 64.75 L S N
+GR
+GS
+32.75 64.75 M
+32.75 65 L
+-2.25 65 L
+-2.25 64.75 L
+-2 64.5 L
+32.5 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 64.75 M 32.75 64.75 L S N
+GR
+GS
+-2.25 64.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 64.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(deviceid) t
+ET
+GR
+GR
+GS
+[1 0 0 1 260.25 61.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 64.75 L
+32.5 64.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 64.75 L S N
+GR
+GS
+32.75 64.75 M
+32.75 65 L
+-2.25 65 L
+-2.25 64.75 L
+-2 64.5 L
+32.5 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 64.75 M 32.75 64.75 L S N
+GR
+GS
+-2.25 64.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 64.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(eventtype) t
+ET
+GR
+GR
+GS
+[1 0 0 1 295.25 61.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 64.75 L
+32.5 64.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 64.75 L S N
+GR
+GS
+32.75 64.75 M
+32.75 65 L
+-2.25 65 L
+-2.25 64.75 L
+-2 64.5 L
+32.5 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 64.75 M 32.75 64.75 L S N
+GR
+GS
+-2.25 64.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 64.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(button) t
+/Times-Roman 10 F
+1 0 0 -1 0 22.83 Tm
+(or) t
+/Courier-Oblique 10 F
+1 0 0 -1 0 34.83 Tm
+(keycode) t
+/Times-Roman 10 F
+1 0 0 -1 0 46.83 Tm
+(or) t
+/Courier-Oblique 10 F
+1 0 0 -1 0 58.83 Tm
+(touchid) t
+ET
+GR
+GR
+GS
+[1 0 0 1 330.25 61.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 64.75 L
+32.5 64.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 64.75 L S N
+GR
+GS
+32.75 64.75 M
+32.75 65 L
+-2.25 65 L
+-2.25 64.75 L
+-2 64.5 L
+32.5 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 64.75 M 32.75 64.75 L S N
+GR
+GS
+-2.25 64.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 64.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(flags) t
+ET
+GR
+GR
+GS
+[1 0 0 1 365.25 61.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 64.75 L
+32.5 64.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 64.75 L S N
+GR
+GS
+32.75 64.75 M
+32.75 65 L
+-2.25 65 L
+-2.25 64.75 L
+-2 64.5 L
+32.5 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 64.75 M 32.75 64.75 L S N
+GR
+GS
+-2.25 64.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 64.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(nvalues) t
+ET
+GR
+GR
+GS
+[1 0 0 1 400.25 61.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+32.75 64.75 L
+32.5 64.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 64.75 L S N
+GR
+GS
+32.75 64.75 M
+32.75 65 L
+-2.25 65 L
+-2.25 64.75 L
+-2 64.5 L
+32.5 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 64.75 M 32.75 64.75 L S N
+GR
+GS
+-2.25 64.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 64.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(mask) t
+ET
+GR
+GR
+GS
+[1 0 0 1 435.25 61.25] CT
+GS
+-2.25 0.25 M
+32.75 0.25 L
+32.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 32.75 0.25 L S N
+GR
+GS
+32.75 0.25 M
+33 0.25 L
+33 65 L
+32.75 64.75 L
+32.5 64.5 L
+32.5 0.5 L
+cp
+clip N
+0.5 LW
+32.75 0.25 M 32.75 65 L S N
+GR
+GS
+32.75 64.75 M
+33 65 L
+-2.25 65 L
+-2.25 64.75 L
+-2 64.5 L
+32.5 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 64.75 M 33 64.75 L S N
+GR
+GS
+-2.25 64.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 64.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 64.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(values) t
+ET
+GR
+GR
+GS
+BT
+/Helvetica-Bold 20.736 F
+1 0 0 -1 0 155.739 Tm
+(Data Available in Probe Arguments) t
+/Times-Roman 10 F
+1 0 0 -1 48 183.213 Tm
+[(To ) 28 (access ) 28 (data ) 28 (in ) 28 (arguments ) 28 (of ) 28 (type ) 28 (string, ) 28 (you ) 28 (will ) 28 (need ) 28 (to ) 28 (use ) 28 ] TJ
+0 0 1 RC
+/Courier 10 F
+1 0 0 -1 304.259 183.213 Tm
+(copyinstr\(\)) t
+0 GC
+/Times-Roman 10 F
+1 0 0 -1 370.259 183.213 Tm
+[( ) 28 ([)] TJ
+1 0 0 -1 376.061 183.213 Tm
+(http://dtrace.org/guide/) t
+1 0 0 -1 48 195.213 Tm
+(chp-actsub.html#chp-actsub-copyinstr) t
+1 0 0 -1 201.03 195.213 Tm
+(]) t
+1 0 0 -1 204.36 195.213 Tm
+[(. ) 205 (To ) 205 (access ) 205 (data ) 205 (buffers ) 205 (referenced ) 205 (via ) 205 (uintptr_t's, ) 205 (you ) 205 (will ) 205 (need ) 205 (to)] TJ
+1 0 0 -1 48 207.213 Tm
+(use ) t
+0 0 1 RC
+/Courier 10 F
+1 0 0 -1 63.83 207.213 Tm
+(copyin\(\)) t
+0 GC
+/Times-Roman 10 F
+1 0 0 -1 111.83 207.213 Tm
+( [) t
+1 0 0 -1 117.66 207.213 Tm
+(http://dtrace.org/guide/chp-actsub.html#chp-actsub-copyin) t
+1 0 0 -1 352.63 207.213 Tm
+(]) t
+1 0 0 -1 355.96 207.213 Tm
+(.) t
+/Times-Bold 12 F
+1 0 0 -1 48 235.309 Tm
+(Table 2. Probe Arguments) t
+ET
+GR
+GS
+[1 0 0 1 50.25 249.033] CT
+GS
+-2.25 0.25 M
+-2.5 0 L
+81.75 0 L
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.5 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(Argument name) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 249.033] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+39.75 0 L
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(Type) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 249.033] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+292 0 L
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 292 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(Description) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 265.533] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientAddr) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 265.533] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(string) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 265.533] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(String representing address client connected from) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 282.033] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientFD) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 282.033] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(int) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 282.033] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(X server's file descriptor for server side of each connection) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 298.533] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 298.533] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(int) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 298.533] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Unique integer identifier for each connection to the X server) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 315.033] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientPid) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 315.033] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(pid_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 315.033] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Process id of client, if connection is local \(from ) t
+/Courier 10 F
+1 0 0 -1 192.75 10.83 Tm
+(getpeerucred\(\)) t
+/Times-Roman 10 F
+1 0 0 -1 276.75 10.83 Tm
+(\)) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 331.533] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 28.75 L
+81.5 28.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 28.75 L S N
+GR
+GS
+81.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+81.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 81.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.5 28.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(clientZoneId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 331.533] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 28.75 L
+39.5 28.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 28.75 L S N
+GR
+GS
+39.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+39.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 39.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(zoneid_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 331.533] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 28.75 L
+291.75 28.75 L
+291.5 28.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 28.75 L S N
+GR
+GS
+291.75 28.75 M
+-2.25 28.75 L
+-2 28.5 L
+291.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 291.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Solaris: ) -8465 (Zone ) -8465 (id ) -8465 (of ) -8465 (client, ) -8465 (if ) -8465 (connection ) -8465 (is ) -8465 (local ) -8465 (\(from)] TJ
+/Courier 10 F
+1 0 0 -1 0 22.83 Tm
+(getpeerucred\(\)) t
+/Times-Roman 10 F
+1 0 0 -1 84 22.83 Tm
+(\)) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 360.033] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 40.75 L
+81.5 40.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 40.75 L S N
+GR
+GS
+81.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+81.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 81.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.5 40.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(eventBuffer) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 360.033] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 40.75 L
+39.5 40.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 40.75 L S N
+GR
+GS
+39.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+39.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 39.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(uintptr_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 360.033] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 40.75 L
+291.75 40.75 L
+291.5 40.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 40.75 L S N
+GR
+GS
+291.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+291.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 291.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Pointer ) -16 (to ) -16 (buffer ) -16 (containing ) -16 (X ) -16 (event ) -16 (- ) -16 (decode ) -16 (using ) -16 (structures ) -16 (in ) -16 (<)] TJ
+0 0 1 RC
+/Courier 10 F
+1 0 0 -1 265.5 10.83 Tm
+(X11/) t
+1 0 0 -1 0 22.83 Tm
+(Xproto.h) t
+0 GC
+/Times-Roman 10 F
+1 0 0 -1 48 22.83 Tm
+[( ) -3449 ([)] TJ
+1 0 0 -1 57.279 22.83 Tm
+(https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/blob/) t
+1 0 0 -1 0 34.83 Tm
+(master/include/X11/Xproto.h) t
+1 0 0 -1 117.49 34.83 Tm
+(]) t
+1 0 0 -1 120.82 34.83 Tm
+(> and similar headers for each extension) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 400.533] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(eventCode) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 400.533] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(uint8_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 400.533] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Event number of X event) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 417.033] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resourceId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 417.033] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(uint32_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 417.033] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(X resource id \(XID\)) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 433.533] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resourceTypeId) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 433.533] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(uint32_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 433.533] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Resource type id) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 450.033] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resourceTypeName) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 450.033] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(string) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 450.033] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(String representing X resource type \() t
+/Courier 10 F
+1 0 0 -1 148.02 10.83 Tm
+("PIXMAP") t
+/Times-Roman 10 F
+1 0 0 -1 196.02 10.83 Tm
+(, etc.\)) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 466.533] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resourceValue) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 466.533] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(uintptr_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 466.533] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Pointer to data for X resource) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 483.033] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(resultCode) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 483.033] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(int) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 483.033] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Integer code representing result status of request) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 499.533] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 40.75 L
+81.5 40.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 40.75 L S N
+GR
+GS
+81.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+81.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 81.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.5 40.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(requestBuffer) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 499.533] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 40.75 L
+39.5 40.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 40.75 L S N
+GR
+GS
+39.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+39.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 39.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(uintptr_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 499.533] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 40.75 L
+291.75 40.75 L
+291.5 40.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 40.75 L S N
+GR
+GS
+291.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+291.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 291.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Pointer ) 640 (to ) 640 (buffer ) 640 (containing ) 640 (X ) 640 (request ) 640 (- ) 640 (decode ) 640 (using ) 640 (structures ) 640 (in ) 640 (<)] TJ
+0 0 1 RC
+/Courier 10 F
+1 0 0 -1 265.5 10.83 Tm
+(X11/) t
+1 0 0 -1 0 22.83 Tm
+(Xproto.h) t
+0 GC
+/Times-Roman 10 F
+1 0 0 -1 48 22.83 Tm
+[( ) -3449 ([)] TJ
+1 0 0 -1 57.279 22.83 Tm
+(https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/blob/) t
+1 0 0 -1 0 34.83 Tm
+(master/include/X11/Xproto.h) t
+1 0 0 -1 117.49 34.83 Tm
+(]) t
+1 0 0 -1 120.82 34.83 Tm
+(> and similar headers for each extension) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 540.033] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(requestCode) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 540.033] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(uint8_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 540.033] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Request number of X request or Extension) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 556.533] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(requestName) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 556.533] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(string) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 556.533] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Name of X request or Extension) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 573.033] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(requestLength) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 573.033] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(uint16_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 573.033] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Length of X request) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 589.533] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(sequenceNumber) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 589.533] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(uint32_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 589.533] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Number of X request in in this connection) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 606.033] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(deviceid) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 606.033] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(int) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 606.033] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(The device's numerical ID) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 622.533] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+81.75 17 L
+-2.5 17 L
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.5 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 17 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 17 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(eventtype) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 622.533] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+39.75 17 L
+-2.25 17 L
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(int) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 622.533] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 17 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 17 L S N
+GR
+GS
+291.75 16.75 M
+292 17 L
+-2.25 17 L
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 292 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Protocol event type) t
+ET
+GR
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Courier
+%%+ font Courier-Oblique
+%%+ font Helvetica-Bold
+%%+ font Times-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 5 5
+%%PageBoundingBox: 0 0 612 792
+%%PageHiResBoundingBox: 0 0 612 792
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-odd
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [612 792]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 792] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+[1 0 0 1 156 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 20.385 8.33 Tm
+(Xserver Provider for DTrace) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 727.2] CT
+GR
+GS
+[0 -1 1 0 540 727.2] CT
+GR
+GS
+[1 0 0 1 72 727.2] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GS
+[1 0 0 1 156 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 75.5 10.83 Tm
+(5) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+[1 0 0 1 50.25 -0.25] CT
+GS
+-2.25 0.25 M
+-2.5 0 L
+81.75 0 L
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.5 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(Argument name) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 -0.25] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+39.75 0 L
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(Type) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 -0.25] CT
+GS
+-2.25 0.25 M
+-2.25 0 L
+292 0 L
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 292 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Bold 10 F
+1 0 0 -1 0 10.855 Tm
+(Description) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 16.25] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 40.75 L
+81.5 40.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 40.75 L S N
+GR
+GS
+81.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+81.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 81.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.5 40.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(button,) t
+1 0 0 -1 0 22.83 Tm
+(keycode,) t
+1 0 0 -1 0 34.83 Tm
+(touchid) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 16.25] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 40.75 L
+39.5 40.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 40.75 L S N
+GR
+GS
+39.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+39.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 39.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(uint32_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 16.25] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 40.75 L
+291.75 40.75 L
+291.5 40.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 40.75 L S N
+GR
+GS
+291.75 40.75 M
+-2.25 40.75 L
+-2 40.5 L
+291.5 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 40.75 M 291.75 40.75 L S N
+GR
+GS
+-2.25 40.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 40.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 40.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(The button number, keycode or touch ID) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 56.75] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(flags) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 56.75] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(uint32_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 56.75] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Miscellaneous event-specific server flags) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 73.25] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(nvalues) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 73.25] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(int8_t) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 73.25] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Number of bits in ) t
+/Courier-Oblique 10 F
+1 0 0 -1 73.33 10.83 Tm
+(mask) t
+/Times-Roman 10 F
+1 0 0 -1 97.33 10.83 Tm
+( and number of elements in ) t
+/Courier-Oblique 10 F
+1 0 0 -1 208.98 10.83 Tm
+(values) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 89.75] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 16.75 L
+81.5 16.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 16.75 L S N
+GR
+GS
+81.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+81.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 81.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.5 16.75 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(mask) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 89.75] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 16.75 L
+39.5 16.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 16.75 L S N
+GR
+GS
+39.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+39.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 39.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(uint8_t*) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 89.75] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 16.75 L
+291.75 16.75 L
+291.5 16.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 16.75 L S N
+GR
+GS
+291.75 16.75 M
+-2.25 16.75 L
+-2 16.5 L
+291.5 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 16.75 M 291.75 16.75 L S N
+GR
+GS
+-2.25 16.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 16.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 16.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(Binary mask indicating which indices in ) t
+/Courier-Oblique 10 F
+1 0 0 -1 163.88 10.83 Tm
+(values) t
+/Times-Roman 10 F
+1 0 0 -1 199.88 10.83 Tm
+( contain valid data) t
+ET
+GR
+GR
+GS
+[1 0 0 1 50.25 106.25] CT
+GS
+-2.25 0.25 M
+81.75 0.25 L
+81.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 81.75 0.25 L S N
+GR
+GS
+81.75 0.25 M
+81.75 28.75 L
+81.5 28.5 L
+81.5 0.5 L
+cp
+clip N
+0.5 LW
+81.75 0.25 M 81.75 28.75 L S N
+GR
+GS
+81.75 28.75 M
+81.75 29 L
+-2.5 29 L
+-2.25 28.75 L
+-2 28.5 L
+81.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.5 28.75 M 81.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.5 29 L
+-2.5 0.25 L
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 29 L S N
+GR
+GS
+BT
+/Courier-Oblique 10 F
+1 0 0 -1 0 10.83 Tm
+(values) t
+ET
+GR
+GR
+GS
+[1 0 0 1 134.25 106.25] CT
+GS
+-2.25 0.25 M
+39.75 0.25 L
+39.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 39.75 0.25 L S N
+GR
+GS
+39.75 0.25 M
+39.75 28.75 L
+39.5 28.5 L
+39.5 0.5 L
+cp
+clip N
+0.5 LW
+39.75 0.25 M 39.75 28.75 L S N
+GR
+GS
+39.75 28.75 M
+39.75 29 L
+-2.25 29 L
+-2.25 28.75 L
+-2 28.5 L
+39.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 39.75 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+(double*) t
+ET
+GR
+GR
+GS
+[1 0 0 1 176.25 106.25] CT
+GS
+-2.25 0.25 M
+291.75 0.25 L
+291.5 0.5 L
+-2 0.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M 291.75 0.25 L S N
+GR
+GS
+291.75 0.25 M
+292 0.25 L
+292 29 L
+291.75 28.75 L
+291.5 28.5 L
+291.5 0.5 L
+cp
+clip N
+0.5 LW
+291.75 0.25 M 291.75 29 L S N
+GR
+GS
+291.75 28.75 M
+292 29 L
+-2.25 29 L
+-2.25 28.75 L
+-2 28.5 L
+291.5 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 28.75 M 292 28.75 L S N
+GR
+GS
+-2.25 28.75 M
+-2.25 0.25 L
+-2 0.5 L
+-2 28.5 L
+cp
+clip N
+0.5 LW
+-2.25 0.25 M -2.25 28.75 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 0 10.83 Tm
+[(Valuator ) -1134 (values. ) -1134 (Values ) -1134 (for ) -1134 (indices ) -1134 (for ) -1134 (which ) -1134 (the ) -1134 ] TJ
+/Courier-Oblique 10 F
+1 0 0 -1 208.193 10.83 Tm
+(mask) t
+/Times-Roman 10 F
+1 0 0 -1 232.193 10.83 Tm
+[( ) -1134 (is ) -1134 (not ) -1134 (set ) -1134 (are)] TJ
+1 0 0 -1 0 22.83 Tm
+(undefined) t
+ET
+GR
+GR
+GS
+BT
+/Helvetica-Bold 20.736 F
+1 0 0 -1 0 162.217 Tm
+(Examples) t
+/Times-Bold 12 F
+1 0 0 -1 48 190.761 Tm
+(Example 1. Counting requests by request name) t
+/Times-Roman 10 F
+1 0 0 -1 48 212.943 Tm
+[(This ) 452 (script ) 452 (simply ) 452 (increments ) 452 (a ) 452 (counter ) 452 (for ) 452 (each ) 452 (different ) 452 (request ) 452 (made, ) 452 (and ) 452 (when ) 452 (you ) 452 (exit ) 452 
+(the ) 452 (script ) 452 (\(such)] TJ
+1 0 0 -1 48 224.943 Tm
+(as by hitting ) t
+/Times-Bold 10 F
+1 0 0 -1 99.95 224.943 Tm
+(Control) t
+/Times-Roman 10 F
+1 0 0 -1 133.28 224.943 Tm
+(+) t
+/Times-Bold 10 F
+1 0 0 -1 138.92 224.943 Tm
+(C) t
+/Times-Roman 10 F
+1 0 0 -1 146.14 224.943 Tm
+(\) prints the counts.) t
+/Courier 10 F
+1 0 0 -1 48 258.451 Tm
+(#!/usr/sbin/dtrace -s) t
+1 0 0 -1 48 282.451 Tm
+(Xserver*:::request-start) t
+1 0 0 -1 48 294.451 Tm
+({) t
+1 0 0 -1 48 306.451 Tm
+(    @counts[copyinstr\(arg0\)] = count\(\);) t
+1 0 0 -1 48 318.451 Tm
+(}) t
+1 0 0 -1 48 330.451 Tm
+( ) t
+/Times-Roman 10 F
+1 0 0 -1 48 351.899 Tm
+(The output from a short run may appear as:) t
+/Courier 10 F
+1 0 0 -1 48 385.407 Tm
+(  QueryPointer                                                      1) t
+1 0 0 -1 48 397.407 Tm
+(  CreatePixmap                                                      2) t
+1 0 0 -1 48 409.407 Tm
+(  FreePixmap                                                        2) t
+1 0 0 -1 48 421.407 Tm
+(  PutImage                                                          2) t
+1 0 0 -1 48 433.407 Tm
+(  ChangeGC                                                         10) t
+1 0 0 -1 48 445.407 Tm
+(  CopyArea                                                         10) t
+1 0 0 -1 48 457.407 Tm
+(  CreateGC                                                         14) t
+1 0 0 -1 48 469.407 Tm
+(  FreeGC                                                           14) t
+1 0 0 -1 48 481.407 Tm
+(  RENDER                                                           28) t
+1 0 0 -1 48 493.407 Tm
+(  SetClipRectangles                                                40) t
+1 0 0 -1 48 505.407 Tm
+( ) t
+/Times-Roman 10 F
+1 0 0 -1 48 526.855 Tm
+[(This ) 157 (can ) 157 (be ) 157 (rewritten ) 157 (slightly ) 157 (to ) 157 (cache ) 157 (the ) 157 (string ) 157 (containing ) 157 (the ) 157 (name ) 157 (of ) 157 (the ) 157 (request ) 157 (since ) 157 
+(it ) 157 (will ) 157 (be ) 157 (reused)] TJ
+1 0 0 -1 48 538.855 Tm
+(many times, instead of copying it over and over from the kernel:) t
+/Courier 10 F
+1 0 0 -1 48 572.363 Tm
+(#!/usr/sbin/dtrace -s) t
+1 0 0 -1 48 596.363 Tm
+(string Xrequest[uintptr_t];) t
+1 0 0 -1 48 620.363 Tm
+(Xserver*:::request-start) t
+1 0 0 -1 48 632.363 Tm
+(/Xrequest[arg0] == ""/) t
+1 0 0 -1 48 644.363 Tm
+({) t
+ET
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Courier
+%%+ font Courier-Oblique
+%%+ font Helvetica-Bold
+%%+ font Times-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 6 6
+%%PageBoundingBox: 0 0 612 792
+%%PageHiResBoundingBox: 0 0 612 792
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-odd
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [612 792]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 792] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+[1 0 0 1 156 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 20.385 8.33 Tm
+(Xserver Provider for DTrace) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 727.2] CT
+GR
+GS
+[0 -1 1 0 540 727.2] CT
+GR
+GS
+[1 0 0 1 72 727.2] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GS
+[1 0 0 1 156 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 75.5 10.83 Tm
+(6) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Courier 10 F
+1 0 0 -1 48 8.36 Tm
+(    Xrequest[arg0] = copyinstr\(arg0\);) t
+1 0 0 -1 48 20.36 Tm
+(}) t
+1 0 0 -1 48 44.36 Tm
+(Xserver*:::request-start) t
+1 0 0 -1 48 56.36 Tm
+({) t
+1 0 0 -1 48 68.36 Tm
+(    @counts[Xrequest[arg0]] = count\(\);) t
+1 0 0 -1 48 80.36 Tm
+(}) t
+1 0 0 -1 48 92.36 Tm
+( ) t
+/Times-Bold 12 F
+1 0 0 -1 48 119.318 Tm
+(Example 2. Get average CPU time per request) t
+/Times-Roman 10 F
+1 0 0 -1 48 143.098 Tm
+[(This ) 798 (script ) 798 (records ) 798 (the ) 798 (CPU ) 798 (time ) 798 (used ) 798 (between ) 798 (the ) 798 (probes ) 798 (at ) 798 (the ) 798 (start ) 798 (and ) 798 (end ) 798 (of ) 798 (each ) 798 
+(request ) 798 (and ) 798 (aggregates)] TJ
+1 0 0 -1 48 155.098 Tm
+(it per request type.) t
+/Courier 10 F
+1 0 0 -1 48 190.204 Tm
+(#!/usr/sbin/dtrace -s) t
+1 0 0 -1 48 214.204 Tm
+(Xserver*:::request-start) t
+1 0 0 -1 48 226.204 Tm
+({) t
+1 0 0 -1 48 238.204 Tm
+(    reqstart = vtimestamp;) t
+1 0 0 -1 48 250.204 Tm
+(}) t
+1 0 0 -1 48 274.204 Tm
+(Xserver*:::request-done) t
+1 0 0 -1 48 286.204 Tm
+({) t
+1 0 0 -1 48 298.204 Tm
+(    @times[copyinstr\(arg0\)] = avg\(vtimestamp - reqstart\);) t
+1 0 0 -1 48 310.204 Tm
+(}) t
+1 0 0 -1 48 322.204 Tm
+( ) t
+/Times-Roman 10 F
+1 0 0 -1 48 345.25 Tm
+(The output from a sample run might look like:) t
+/Courier 10 F
+1 0 0 -1 48 380.356 Tm
+(  ChangeGC                                                        889) t
+1 0 0 -1 48 392.356 Tm
+(  MapWindow                                                       907) t
+1 0 0 -1 48 404.356 Tm
+(  SetClipRectangles                                              1319) t
+1 0 0 -1 48 416.356 Tm
+(  PolyPoint                                                      1413) t
+1 0 0 -1 48 428.356 Tm
+(  PolySegment                                                    1434) t
+1 0 0 -1 48 440.356 Tm
+(  PolyRectangle                                                  1828) t
+1 0 0 -1 48 452.356 Tm
+(  FreeCursor                                                     1895) t
+1 0 0 -1 48 464.356 Tm
+(  FreeGC                                                         1950) t
+1 0 0 -1 48 476.356 Tm
+(  CreateGC                                                       2244) t
+1 0 0 -1 48 488.356 Tm
+(  FreePixmap                                                     2246) t
+1 0 0 -1 48 500.356 Tm
+(  GetInputFocus                                                  2249) t
+1 0 0 -1 48 512.356 Tm
+(  TranslateCoords                                                8508) t
+1 0 0 -1 48 524.356 Tm
+(  QueryTree                                                      8846) t
+1 0 0 -1 48 536.356 Tm
+(  GetGeometry                                                    9948) t
+1 0 0 -1 48 548.356 Tm
+(  CreatePixmap                                                  12111) t
+1 0 0 -1 48 560.356 Tm
+(  AllowEvents                                                   14090) t
+1 0 0 -1 48 572.356 Tm
+(  GrabServer                                                    14791) t
+1 0 0 -1 48 584.356 Tm
+(  MIT-SCREEN-SAVER                                              16747) t
+1 0 0 -1 48 596.356 Tm
+(  ConfigureWindow                                               22917) t
+1 0 0 -1 48 608.356 Tm
+(  SetInputFocus                                                 28521) t
+1 0 0 -1 48 620.356 Tm
+(  PutImage                                                     240841) t
+1 0 0 -1 48 644.356 Tm
+( ) t
+ET
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Courier
+%%+ font Times-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 7 7
+%%PageBoundingBox: 0 0 612 792
+%%PageHiResBoundingBox: 0 0 612 792
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-odd
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [612 792]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 792] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+[1 0 0 1 156 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 20.385 8.33 Tm
+(Xserver Provider for DTrace) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 727.2] CT
+GR
+GS
+[0 -1 1 0 540 727.2] CT
+GR
+GS
+[1 0 0 1 72 727.2] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GS
+[1 0 0 1 156 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 75.5 10.83 Tm
+(7) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Times-Bold 12 F
+1 0 0 -1 48 10.026 Tm
+(Example 3. Monitoring clients that connect and disconnect) t
+/Times-Roman 10 F
+1 0 0 -1 48 32.064 Tm
+[(This ) 552 (script ) 552 (simply ) 552 (prints ) 552 (information ) 552 (about ) 552 (each ) 552 (client ) 552 (that ) 552 (connects ) 552 (or ) 552 (disconnects ) 552 (from ) 552 (the ) 552 (server ) 552 
+(while ) 552 (it)] TJ
+1 0 0 -1 48 44.064 Tm
+[(is ) 219 (running. ) 219 (Since ) 219 (the ) 219 (provider ) 219 (is ) 219 (specified ) 219 (as ) 219 ] TJ
+/Courier 10 F
+1 0 0 -1 225.946 44.064 Tm
+(Xserver$1) t
+/Times-Roman 10 F
+1 0 0 -1 279.946 44.064 Tm
+[( ) 219 (instead ) 219 (of ) 219 ] TJ
+/Courier 10 F
+1 0 0 -1 323.449 44.064 Tm
+(Xserver*) t
+/Times-Roman 10 F
+1 0 0 -1 371.449 44.064 Tm
+[( ) 219 (like ) 219 (previous ) 219 (examples,)] TJ
+1 0 0 -1 48 56.064 Tm
+[(it ) 142 (won't ) 142 (monitor ) 142 (all ) 142 (Xserver ) 142 (processes ) 142 (running ) 142 (on ) 142 (the ) 142 (machine, ) 142 (but ) 142 (instead ) 142 (expects ) 142 (the ) 142 (process ) 142 
+(id ) 142 (of ) 142 (the ) 142 (X)] TJ
+1 0 0 -1 48 68.064 Tm
+(server to monitor to be specified as the argument to the script.) t
+/Courier 10 F
+1 0 0 -1 48 101.428 Tm
+(#!/usr/sbin/dtrace -s) t
+1 0 0 -1 48 125.428 Tm
+(Xserver$1:::client-connect) t
+1 0 0 -1 48 137.428 Tm
+({) t
+1 0 0 -1 48 149.428 Tm
+( printf\("** Client Connect: id %d\\n", arg0\);) t
+1 0 0 -1 48 161.428 Tm
+(}) t
+1 0 0 -1 48 185.428 Tm
+(Xserver$1:::client-auth) t
+1 0 0 -1 48 197.428 Tm
+({) t
+1 0 0 -1 48 209.428 Tm
+( printf\("** Client auth'ed: id %d => %s pid %d\\n",) t
+1 0 0 -1 48 221.428 Tm
+(  arg0, copyinstr\(arg1\), arg2\);) t
+1 0 0 -1 48 233.428 Tm
+(}) t
+1 0 0 -1 48 257.428 Tm
+(Xserver$1:::client-disconnect) t
+1 0 0 -1 48 269.428 Tm
+({) t
+1 0 0 -1 48 281.428 Tm
+( printf\("** Client Disconnect: id %d\\n", arg0\);) t
+1 0 0 -1 48 293.428 Tm
+(}) t
+1 0 0 -1 48 305.428 Tm
+( ) t
+/Times-Roman 10 F
+1 0 0 -1 48 326.732 Tm
+(A sample run:) t
+/Courier 10 F
+1 0 0 -1 48 360.096 Tm
+(#) t
+1 0 0 -1 54 360.096 Tm
+( ) t
+/Courier-Bold 10 F
+1 0 0 -1 60 360.096 Tm
+(./foo.d 5790) t
+/Courier 10 F
+1 0 0 -1 48 372.096 Tm
+(dtrace: script './foo.d' matched 4 probes) t
+1 0 0 -1 48 384.096 Tm
+(CPU     ID                    FUNCTION:NAME) t
+1 0 0 -1 48 396.096 Tm
+(  0  15774 CloseDownClient:client-disconnect ** Client Disconnect: id 65) t
+1 0 0 -1 48 420.096 Tm
+(  2  15774 CloseDownClient:client-disconnect ** Client Disconnect: id 64) t
+1 0 0 -1 48 444.096 Tm
+(  0  15773 EstablishNewConnections:client-connect ** Client Connect: id 64) t
+1 0 0 -1 48 468.096 Tm
+(  0  15772            AuthAudit:client-auth ** Client auth'ed: id 64 => local host pid 2034) t
+1 0 0 -1 48 492.096 Tm
+(  0  15773 EstablishNewConnections:client-connect ** Client Connect: id 65) t
+1 0 0 -1 48 516.096 Tm
+(  0  15772            AuthAudit:client-auth ** Client auth'ed: id 65 => local host pid 2034) t
+1 0 0 -1 48 540.096 Tm
+(  0  15774 CloseDownClient:client-disconnect ** Client Disconnect: id 64) t
+1 0 0 -1 48 552.096 Tm
+(   ) t
+1 0 0 -1 48 564.096 Tm
+( ) t
+/Times-Bold 12 F
+1 0 0 -1 48 588.962 Tm
+(Example 4. Monitoring clients creating Pixmaps) t
+/Times-Roman 10 F
+1 0 0 -1 48 611 Tm
+[(This ) 812 (script ) 812 (can ) 812 (be ) 812 (used ) 812 (to ) 812 (determine ) 812 (which ) 812 (clients ) 812 (are ) 812 (creating ) 812 (pixmaps ) 812 (in ) 812 (the ) 812 (X ) 812 (server, ) 812 
+(printing ) 812 (information)] TJ
+1 0 0 -1 48 623 Tm
+(about each client as it connects to help trace it back to the program on the other end of the X connection.) t
+ET
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Courier
+%%+ font Courier-Bold
+%%+ font Times-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 8 8
+%%PageBoundingBox: 0 0 612 792
+%%PageHiResBoundingBox: 0 0 612 792
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-odd
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [612 792]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 792] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+[1 0 0 1 156 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 20.385 8.33 Tm
+(Xserver Provider for DTrace) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 727.2] CT
+GR
+GS
+[0 -1 1 0 540 727.2] CT
+GR
+GS
+[1 0 0 1 72 727.2] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GS
+[1 0 0 1 156 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 75.5 10.83 Tm
+(8) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Courier 10 F
+1 0 0 -1 48 8.36 Tm
+(#!/usr/sbin/dtrace -qs) t
+1 0 0 -1 48 32.36 Tm
+(string Xrequest[uintptr_t];) t
+1 0 0 -1 48 44.36 Tm
+(string Xrestype[uintptr_t];) t
+1 0 0 -1 48 68.36 Tm
+(Xserver$1:::request-start) t
+1 0 0 -1 48 80.36 Tm
+(/Xrequest[arg0] == ""/) t
+1 0 0 -1 48 92.36 Tm
+({) t
+1 0 0 -1 48 104.36 Tm
+( Xrequest[arg0] = copyinstr\(arg0\);) t
+1 0 0 -1 48 116.36 Tm
+(}) t
+1 0 0 -1 48 140.36 Tm
+(Xserver$1:::resource-alloc) t
+1 0 0 -1 48 152.36 Tm
+(/arg3 != 0 && Xrestype[arg3] == ""/) t
+1 0 0 -1 48 164.36 Tm
+({) t
+1 0 0 -1 48 176.36 Tm
+( Xrestype[arg3] = copyinstr\(arg3\);) t
+1 0 0 -1 48 188.36 Tm
+(}) t
+1 0 0 -1 48 224.36 Tm
+(Xserver$1:::request-start) t
+1 0 0 -1 48 236.36 Tm
+(/Xrequest[arg0] == "X_CreatePixmap"/) t
+1 0 0 -1 48 248.36 Tm
+({) t
+1 0 0 -1 48 260.36 Tm
+( printf\("-> %s: client %d\\n", Xrequest[arg0], arg3\);) t
+1 0 0 -1 48 272.36 Tm
+(}) t
+1 0 0 -1 48 296.36 Tm
+(Xserver$1:::request-done) t
+1 0 0 -1 48 308.36 Tm
+(/Xrequest[arg0] == "X_CreatePixmap"/) t
+1 0 0 -1 48 320.36 Tm
+({) t
+1 0 0 -1 48 332.36 Tm
+( printf\("<- %s: client %d\\n", Xrequest[arg0], arg3\);) t
+1 0 0 -1 48 344.36 Tm
+(}) t
+1 0 0 -1 48 368.36 Tm
+(Xserver$1:::resource-alloc) t
+1 0 0 -1 48 380.36 Tm
+(/Xrestype[arg3] == "PIXMAP"/) t
+1 0 0 -1 48 392.36 Tm
+({) t
+1 0 0 -1 48 404.36 Tm
+( printf\("** Pixmap alloc: %08x\\n", arg0\);) t
+1 0 0 -1 48 416.36 Tm
+(}) t
+1 0 0 -1 48 452.36 Tm
+(Xserver$1:::resource-free) t
+1 0 0 -1 48 464.36 Tm
+(/Xrestype[arg3] == "PIXMAP"/) t
+1 0 0 -1 48 476.36 Tm
+({) t
+1 0 0 -1 48 488.36 Tm
+( printf\("** Pixmap free:  %08x\\n", arg0\);) t
+1 0 0 -1 48 500.36 Tm
+(}) t
+1 0 0 -1 48 524.36 Tm
+(Xserver$1:::client-connect) t
+1 0 0 -1 48 536.36 Tm
+({) t
+1 0 0 -1 48 548.36 Tm
+( printf\("** Client Connect: id %d\\n", arg0\);) t
+1 0 0 -1 48 560.36 Tm
+(}) t
+1 0 0 -1 48 584.36 Tm
+(Xserver$1:::client-auth) t
+1 0 0 -1 48 596.36 Tm
+({) t
+1 0 0 -1 48 608.36 Tm
+( printf\("** Client auth'ed: id %d => %s pid %d\\n",) t
+1 0 0 -1 48 620.36 Tm
+(  arg0, copyinstr\(arg1\), arg2\);) t
+1 0 0 -1 48 632.36 Tm
+(}) t
+ET
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Courier
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 9 9
+%%PageBoundingBox: 0 0 612 792
+%%PageHiResBoundingBox: 0 0 612 792
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-odd
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [612 792]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 792] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+[1 0 0 1 156 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 20.385 8.33 Tm
+(Xserver Provider for DTrace) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 727.2] CT
+GR
+GS
+[0 -1 1 0 540 727.2] CT
+GR
+GS
+[1 0 0 1 72 727.2] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GS
+[1 0 0 1 156 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 75.5 10.83 Tm
+(9) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Courier 10 F
+1 0 0 -1 48 8.36 Tm
+(Xserver$1:::client-disconnect) t
+1 0 0 -1 48 20.36 Tm
+({) t
+1 0 0 -1 48 32.36 Tm
+( printf\("** Client Disconnect: id %d\\n", arg0\);) t
+1 0 0 -1 48 44.36 Tm
+(}) t
+1 0 0 -1 48 56.36 Tm
+( ) t
+/Times-Roman 10 F
+1 0 0 -1 48 79.406 Tm
+(Sample output from a run of this script:) t
+/Courier 10 F
+1 0 0 -1 48 114.512 Tm
+(** Client Connect: id 17) t
+1 0 0 -1 48 126.512 Tm
+(** Client auth'ed: id 17 => local host pid 20273) t
+1 0 0 -1 48 138.512 Tm
+(-> X_CreatePixmap: client 17) t
+1 0 0 -1 48 150.512 Tm
+(** Pixmap alloc: 02200009) t
+1 0 0 -1 48 162.512 Tm
+(<- X_CreatePixmap: client 17) t
+1 0 0 -1 48 174.512 Tm
+(-> X_CreatePixmap: client 15) t
+1 0 0 -1 48 186.512 Tm
+(** Pixmap alloc: 01e00180) t
+1 0 0 -1 48 198.512 Tm
+(<- X_CreatePixmap: client 15) t
+1 0 0 -1 48 210.512 Tm
+(-> X_CreatePixmap: client 15) t
+1 0 0 -1 48 222.512 Tm
+(** Pixmap alloc: 01e00181) t
+1 0 0 -1 48 234.512 Tm
+(<- X_CreatePixmap: client 15) t
+1 0 0 -1 48 246.512 Tm
+(-> X_CreatePixmap: client 14) t
+1 0 0 -1 48 258.512 Tm
+(** Pixmap alloc: 01c004c8) t
+1 0 0 -1 48 270.512 Tm
+(<- X_CreatePixmap: client 14) t
+1 0 0 -1 48 282.512 Tm
+(** Pixmap free:  02200009) t
+1 0 0 -1 48 294.512 Tm
+(** Client Disconnect: id 17) t
+1 0 0 -1 48 306.512 Tm
+(** Pixmap free:  01e00180) t
+1 0 0 -1 48 318.512 Tm
+(** Pixmap free:  01e00181) t
+1 0 0 -1 48 330.512 Tm
+(   ) t
+/Times-Bold 12 F
+1 0 0 -1 48 357.47 Tm
+(Example 5. Input API monitoring with SystemTap) t
+/Times-Roman 10 F
+1 0 0 -1 48 381.25 Tm
+[(This ) -790 (script ) -790 (can ) -790 (be ) -790 (used ) -790 (to ) -790 (monitor ) -790 (events ) -790 (submitted ) -790 (by ) -790 (drivers ) -790 (to ) -790 (the ) -790 (server ) -790 (for ) -790 
+(enqueuing. ) -790 (Due ) -790 (to ) -790 (the)] TJ
+1 0 0 -1 48 393.25 Tm
+(integration of the input API probes, some server-enqueued events will show up too.) t
+/Courier 10 F
+1 0 0 -1 48 428.356 Tm
+(  # Compile+run with) t
+1 0 0 -1 48 440.356 Tm
+(  #       stap -g xorg.stp /usr/bin/Xorg) t
+1 0 0 -1 48 452.356 Tm
+(  #) t
+1 0 0 -1 48 488.356 Tm
+(  function print_valuators:string\(nvaluators:long, mask_in:long, valuators_in:long\) %{) t
+1 0 0 -1 48 500.356 Tm
+(   int i;) t
+1 0 0 -1 48 512.356 Tm
+(   unsigned char *mask = \(unsigned char*\)THIS->mask_in;) t
+1 0 0 -1 48 524.356 Tm
+(   double *valuators = \(double*\)THIS->valuators_in;) t
+1 0 0 -1 48 536.356 Tm
+(   char str[128] = {0};) t
+1 0 0 -1 48 548.356 Tm
+(   char *s = str;) t
+1 0 0 -1 48 572.356 Tm
+(  #define BitIsSet\(ptr, bit\) \(\(\(unsigned char*\)\(ptr\)\)[\(bit\)>>3] & \(1 << \(\(bit\) & 7\)\)\)) t
+1 0 0 -1 48 596.356 Tm
+(   s += sprintf\(s, "nval: %d ::", \(int\)THIS->nvaluators\);) t
+1 0 0 -1 48 608.356 Tm
+(   for \(i = 0; i < THIS->nvaluators; i++\)) t
+1 0 0 -1 48 620.356 Tm
+(   {) t
+1 0 0 -1 48 632.356 Tm
+(    s += sprintf\(s, " %d: ", i\);) t
+1 0 0 -1 48 644.356 Tm
+(    if \(BitIsSet\(mask, i\)\)) t
+ET
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Courier
+%%+ font Times-Bold
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Page: 10 10
+%%PageBoundingBox: 0 0 612 792
+%%PageHiResBoundingBox: 0 0 612 792
+%%PageResources: (atend)
+%FOPSimplePageMaster: body-odd
+%%BeginPageSetup
+%FOPBeginSetPageDevice
+<<
+/PageSize [612 792]
+/ImagingBBox null
+>> setpagedevice
+%FOPEndSetPageDevice
+[1 0 0 -1 0 792] CT
+%%EndPageSetup
+GS
+[1 0 0 1 72 36] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+[1 0 0 1 156 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 20.385 8.33 Tm
+(Xserver Provider for DTrace) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 0] CT
+GS
+156 14.25 M
+156 14.5 L
+0 14.5 L
+0 14.25 L
+0 14 L
+156 14 L
+cp
+clip N
+0.5 LW
+0 14.25 M 156 14.25 L S N
+GR
+GR
+GR
+GS
+[0 -1 1 0 72 727.2] CT
+GR
+GS
+[0 -1 1 0 540 727.2] CT
+GR
+GS
+[1 0 0 1 72 727.2] CT
+GS
+[1 0 0 1 0 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GS
+[1 0 0 1 156 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GS
+BT
+/Times-Roman 10 F
+1 0 0 -1 73 10.83 Tm
+(10) t
+ET
+GR
+GR
+GS
+[1 0 0 1 312 14.3] CT
+GS
+0 0.25 M
+0 0 L
+156 0 L
+156 0.25 L
+156 0.5 L
+0 0.5 L
+cp
+clip N
+0.5 LW
+0 0.25 M 156 0.25 L S N
+GR
+GR
+GR
+GS
+[1 0 0 1 72 72] CT
+GS
+BT
+/Courier 10 F
+1 0 0 -1 48 8.36 Tm
+(        s += sprintf\(s, "%d", \(int\)valuators[i]\);) t
+1 0 0 -1 48 20.36 Tm
+(   }) t
+1 0 0 -1 48 44.36 Tm
+(   sprintf\(THIS->__retvalue, "%s", str\);) t
+1 0 0 -1 48 56.36 Tm
+(  %}) t
+1 0 0 -1 48 80.36 Tm
+(  probe process\(@1\).mark\("input__event"\)) t
+1 0 0 -1 48 92.36 Tm
+(  {) t
+1 0 0 -1 48 104.36 Tm
+(      deviceid = $arg1) t
+1 0 0 -1 48 116.36 Tm
+(      type = $arg2) t
+1 0 0 -1 48 128.36 Tm
+(      detail = $arg3) t
+1 0 0 -1 48 140.36 Tm
+(      flags = $arg4) t
+1 0 0 -1 48 152.36 Tm
+(      nvaluators = $arg5) t
+1 0 0 -1 48 176.36 Tm
+(      str = print_valuators\(nvaluators, $arg6, $arg7\)) t
+1 0 0 -1 48 188.36 Tm
+(      printf\("Event: device %d type %d detail %d flags %#x %s\\n",) t
+1 0 0 -1 48 200.36 Tm
+(       deviceid, type, detail, flags, str\);) t
+1 0 0 -1 48 212.36 Tm
+(  }) t
+1 0 0 -1 48 224.36 Tm
+( ) t
+/Times-Roman 10 F
+1 0 0 -1 48 246.33 Tm
+(Sample output from a run of this script:) t
+/Courier 10 F
+1 0 0 -1 48 280.36 Tm
+(Event: device 13 type 4 detail 1 flags 0x0 nval: 0 ::) t
+1 0 0 -1 48 292.36 Tm
+(Event: device 13 type 6 detail 0 flags 0xa nval: 1 :: 0: 1) t
+1 0 0 -1 48 304.36 Tm
+(Event: device 13 type 6 detail 0 flags 0xa nval: 2 :: 0: 2 1: -1) t
+1 0 0 -1 48 316.36 Tm
+(Event: device 13 type 6 detail 0 flags 0xa nval: 2 :: 0: 2 1: -1) t
+1 0 0 -1 48 328.36 Tm
+(Event: device 13 type 6 detail 0 flags 0xa nval: 2 :: 0: 4 1: -3) t
+1 0 0 -1 48 340.36 Tm
+(Event: device 13 type 6 detail 0 flags 0xa nval: 2 :: 0: 3 1: -3) t
+1 0 0 -1 48 352.36 Tm
+(Event: device 13 type 6 detail 0 flags 0xa nval: 2 :: 0: 3 1: -2) t
+1 0 0 -1 48 364.36 Tm
+(Event: device 13 type 6 detail 0 flags 0xa nval: 2 :: 0: 2 1: -2) t
+1 0 0 -1 48 376.36 Tm
+(Event: device 13 type 6 detail 0 flags 0xa nval: 2 :: 0: 2 1: -2) t
+1 0 0 -1 48 388.36 Tm
+(Event: device 13 type 6 detail 0 flags 0xa nval: 2 :: 0: 2 1: -2) t
+1 0 0 -1 48 400.36 Tm
+(Event: device 13 type 6 detail 0 flags 0xa nval: 2 :: 0:  1: -1) t
+1 0 0 -1 48 412.36 Tm
+(Event: device 13 type 6 detail 0 flags 0xa nval: 2 :: 0:  1: -1) t
+1 0 0 -1 48 424.36 Tm
+(Event: device 13 type 5 detail 1 flags 0x0 nval: 0 ::) t
+1 0 0 -1 48 436.36 Tm
+( ) t
+ET
+GR
+GR
+showpage
+%%PageTrailer
+%%PageResources: font Courier
+%%+ font Times-Roman
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%Trailer
+%%Pages: 10
+%%BoundingBox: 0 0 612 792
+%%HiResBoundingBox: 0 0 612 792
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Helvetica
+%%+ font Helvetica-Bold
+%%+ font Times-Bold
+%%+ font Times-Roman
+%%DocumentSuppliedResources: encoding WinAnsiEncoding
+%%+ procset (Apache FOP Std ProcSet) 1.0 0
+%%+ procset (Apache XML Graphics EPS ProcSet) 1.0 0
+%%+ procset (Apache XML Graphics Std ProcSet) 1.2 0
+%%EOF

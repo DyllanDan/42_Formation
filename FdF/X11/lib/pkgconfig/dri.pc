@@ -1,0 +1,9 @@
+prefix=/opt/X11
+includedir=${prefix}/include
+
+dridriverdir=/opt/X11/lib/dri
+
+Name: dri
+Description: Direct Rendering Infrastructure
+Version: 22.2.5
+Cflags: -I${includedir}

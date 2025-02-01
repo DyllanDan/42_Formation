@@ -1,0 +1,35 @@
+.\" $XdotOrg: $
+.\" $XFree86: xc/programs/xsetpointer/xsetpnt.man,v 3.0 1995/12/26 06:10:25 dawes Exp $
+.\"
+.TH xsetpointer 1 "xsetpointer 1.0.1" "X Version 11"
+.SH NAME
+xsetpointer \- set an X Input device as the main pointer
+.SH SYNOPSIS
+.PP
+.B xsetpointer
+\-l
+.PP
+.B xsetpointer
+\-c
+.I device-name
+.PP
+.B xsetpointer
+\+c
+.I device-name
+.SH DESCRIPTION
+.B Xsetpointer
+sets an XInput device as the main pointer.
+.SH OPTIONS
+.TP 8
+.B "-l"
+Lists the available devices.
+.TP 8
+.BI "-c" " device-name"
+Toggles the sending of core input events, for servers which implement a
+virtual core pointer; disables core events.
+.TP 8
+.BI "+c" " device-name"
+Toggles the sending of core input events, for servers which implement a
+virtual core pointer; enables core events.
+.SH AUTHOR
+Frederic Lepied
