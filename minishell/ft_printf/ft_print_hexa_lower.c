@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_print_hexa_lower.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dydaniel <dydaniel@student.42sp.org.b      +#+  +:+       +#+        */
+/*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 14:39:01 by dydaniel          #+#    #+#             */
-/*   Updated: 2024/10/11 14:43:15 by dydaniel         ###   ########.fr       */
+/*   Created: 2024/11/26 16:58:17 by helde-so          #+#    #+#             */
+/*   Updated: 2024/12/02 17:22:27 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "minishell.h"
+#include "ft_printf.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_print_hexa_lower(unsigned long n)
 {
-	int	i;
+	int	count;
 
-	i = 0;
-	while (*s)
-	{
-		i++;
-		s++;
-	}
-	return (i);
+	count = 0;
+	if (n >= 16)
+		count += ft_print_hexa_lower(n / 16);
+	ft_printchar("0123456789abcdef"[n % 16]);
+	return (count + 1);
 }

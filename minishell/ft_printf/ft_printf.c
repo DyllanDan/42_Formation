@@ -3,58 +3,60 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dydaniel <dydaniel@student.42sp.org.b      +#+  +:+       +#+        */
+/*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/02 15:34:40 by dydaniel          #+#    #+#             */
-/*   Updated: 2024/11/04 16:34:45 by dydaniel         ###   ########.fr       */
+/*   Created: 2024/11/22 14:48:45 by helde-so          #+#    #+#             */
+/*   Updated: 2024/12/02 18:38:02 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_conditionals(const char c, int *count, va_list args)
+int	ft_formats(char c, va_list args)
 {
-	if (c == 'd')
-		ft_putnums((long)va_arg(args, int), count, 'f');
-	else if (c == 's')
-		ft_putstr(va_arg(args, char *), count);
-	else if (c == 'c')
-		ft_putchar(va_arg(args, int), count);
-	else if (c == 'p')
-		ft_puthex((unsigned long)va_arg(args, void *), count, 'p');
-	else if (c == 'i')
-		ft_putnums((long)va_arg(args, int), count, 'f');
-	else if (c == 'u')
-		ft_putnums((long)va_arg(args, unsigned int), count, 't');
-	else if (c == 'x')
-		ft_puthex((unsigned long)va_arg(args, unsigned int), count, 'x');
-	else if (c == 'X')
-		ft_puthex((unsigned long)va_arg(args, unsigned int), count, 'X');
-	else if (c == '%')
-		ft_putchar('%', count);
-	else
-		return ;
-}
-
-int	ft_printf(const char *argument, ...)
-{
-	va_list	args;
-	int		count;
+	int	count;
 
 	count = 0;
-	va_start(args, argument);
-	if (!argument)
+	if (c == 'c')
+		count += ft_printchar(va_arg(args, int));
+	else if (c == 's')
+		count += ft_print_string(va_arg(args, char *));
+	else if (c == 'd' || c == 'i')
+		count += ft_print_dec_int(va_arg(args, int));
+	else if (c == 'u')
+		count += ft_print_dec_unsigned(va_arg(args, unsigned int));
+	else if (c == 'x')
+		count += ft_print_hexa_lower(va_arg(args, unsigned int));
+	else if (c == 'X')
+		count += ft_print_hexa_upper(va_arg(args, unsigned int));
+	else if (c == '%')
+		count += ft_printchar('%');
+	else if (c == 'p')
+		count += ft_print_pointer(va_arg(args, void *));
+	return (count);
+}
+
+int	ft_printf(const char *str, ...)
+{
+	int		count;
+	va_list	args;
+	int		i;
+
+	count = 0;
+	i = 0;
+	if (str == NULL)
 		return (-1);
-	while (*argument)
+	va_start(args, str);
+	while (str[i] != '\0')
 	{
-		if (*argument == '%')
+		if (str[i] == '%')
 		{
-			argument++;
-			ft_conditionals(*argument, &count, args);
+			i++;
+			count += ft_formats(str[i], args);
 		}
 		else
-			ft_putchar(*argument, &count);
-		argument++;
+			count += ft_printchar(str[i]);
+		i++;
 	}
 	va_end(args);
 	return (count);

@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dydaniel <dydaniel@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/11 14:39:01 by dydaniel          #+#    #+#             */
-/*   Updated: 2024/10/11 14:43:15 by dydaniel         ###   ########.fr       */
+/*   Created: 2025/06/16 20:49:54 by dydaniel          #+#    #+#             */
+/*   Updated: 2025/06/16 20:49:56 by dydaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "minishell.h"
-
-size_t	ft_strlen(const char *s)
+int ft_isspace(char c)
 {
-	int	i;
-
-	i = 0;
-	while (*s)
-	{
-		i++;
-		s++;
-	}
-	return (i);
+    if (c == '\r' || c == '\t' || c == '\f' ||
+        c == '\n' || c == ' '  || c == '\v')
+        return (1);
+    else
+        return (0);
 }

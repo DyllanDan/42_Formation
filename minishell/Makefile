@@ -5,20 +5,25 @@ LDFLAGS = -lreadline
 DIR_UTILS = utils
 FLAGS = -Wall -Werror -Wextra -I. -I${DIR_PRINT}
 SOURCES = \
-	  $(DIR_PRINT)/ft_isdigit.c \
-	  $(DIR_PRINT)/ft_itoa_long.c \
+	  $(DIR_PRINT)/ft_print_dec_int.c \
+	  $(DIR_PRINT)/ft_print_dec_unsigned.c \
+	  $(DIR_PRINT)/ft_print_hexa_lower.c \
+	  $(DIR_PRINT)/ft_print_hexa_upper.c \
+	  $(DIR_PRINT)/ft_print_pointer.c \
+	  $(DIR_PRINT)/ft_print_string.c \
+	  $(DIR_PRINT)/ft_printchar.c \
 	  $(DIR_PRINT)/ft_printf.c \
-	  $(DIR_PRINT)/ft_putchar.c \
-	  $(DIR_PRINT)/ft_puthex.c \
-	  $(DIR_PRINT)/ft_putnums.c \
-	  $(DIR_PRINT)/ft_putstr.c \
 	  $(DIR_UTILS)/ft_atoi_base.c \
 	  $(DIR_UTILS)/ft_strlcpy.c \
 	  $(DIR_UTILS)/ft_toupper.c \
 	  $(DIR_UTILS)/ft_split.c \
 	  $(DIR_UTILS)/ft_strtrim.c \
 	  $(DIR_UTILS)/ft_strlen.c \
-	  minishell.c
+	  $(DIR_UTILS)/ft_strjoin.c \
+	  $(DIR_UTILS)/ft_strlcat.c \
+	  $(DIR_UTILS)/ft_isspace.c \
+	  minishell.c token.c check_command.c\
+	  configure_signals.c
 
 OBJECTS = $(SOURCES:.c=.o)
 

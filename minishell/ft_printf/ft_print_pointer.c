@@ -1,24 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_print_pointer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dydaniel <dydaniel@student.42sp.org.b      +#+  +:+       +#+        */
+/*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 16:24:22 by dydaniel          #+#    #+#             */
-/*   Updated: 2024/11/09 14:42:14 by dydaniel         ###   ########.fr       */
+/*   Created: 2024/11/26 17:02:52 by helde-so          #+#    #+#             */
+/*   Updated: 2024/11/26 18:21:25 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putstr(char *str, int *count)
+unsigned long	ft_print_pointer(void *p)
 {
-	if (!str)
-		str = "(null)";
-	while (*str)
+	unsigned long	len;
+	unsigned long	pnt;
+
+	if (p == NULL)
 	{
-		ft_putchar(*str, count);
-		str++;
+		ft_print_string("(nil)");
+		return (5);
 	}
+	pnt = (unsigned long)p;
+	ft_print_string("0x");
+	len = ft_print_hexa_lower(pnt);
+	return (len + 2);
 }

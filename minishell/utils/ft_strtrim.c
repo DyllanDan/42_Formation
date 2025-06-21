@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdlib.h>
+ #include "minishell.h"
 
 int	ft_lenstr(const char *str)
 {

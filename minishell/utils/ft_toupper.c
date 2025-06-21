@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+ #include "minishell.h"
 
 int	ft_toupper(int c)
 {

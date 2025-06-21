@@ -3,125 +3,112 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dydaniel <dydaniel@student.42sp.org.b      +#+  +:+       +#+        */
+/*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 16:54:54 by dydaniel          #+#    #+#             */
-/*   Updated: 2025/05/24 16:54:56 by dydaniel         ###   ########.fr       */
+/*   Updated: 2025/06/16 20:16:05 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "minishell.h"  
 
-void show_envp(char **envp) //mostra as variaveis de ambiente
+void print_tokens(char **token)
 {
     int i;
-    int j;
 
     i = 0;
-    while(envp[i])
+    while(token[i])
     {
-        j = 0;
-        while (envp[i][j])
-        {
-            ft_printf("%c", envp[i][j]);
-            j++;
-        }
-        ft_printf("\n");
+        printf("token %i: %s\n", i, token[i]);
         i++;
     }
 }
 
-
-int ft_isspace(char c)
+void show_envp(char **envp)
 {
-    if (c== '\r' || c == '\t' || c == '\f' || \
-				c == '\n' || c== ' ' || c == '\v')
-                return (1);
+    int i;  
+    int j;  
+
+    i = 0;
+    while (envp[i])  
+    {
+        j = 0;
+        while (envp[i][j]) 
+        {
+            ft_printf("%c", envp[i][j]);  
+            j++;
+        }
+        ft_printf("\n"); 
+        i++;
+    }
+}
+
+int a_comma(char *c, char c_text)
+{
+    if (c_text == '"' || c_text == '\'')
+    {
+        *c = c_text;
+        return (1);
+    }
     else
         return (0);
 }
 
-void a_comma(int *j, char *text, int *i)//função que verifica aspas no par, avança i até a próxima aspas e faz j++, caso
-//contrário j = -1 indicando erro
+void recive_inputs(t_data_val *data)
 {
-    while(text[*i])
+    while (1) 
     {
-        if (text[*i] == '"')
+        data->text = readline("abc>>");  
+        if (data->text == NULL)
         {
-            (*j)++;
+            write(STDOUT_FILENO, "exit\n", 5);
+            break;
+        }
+        if (data->text != NULL &&  num_tokens(data->text) > 0)
+            add_history(data->text);
+        if (strcmp(data->text, "exit") == 0)  
+        {
+            rl_clear_history();
+            free(data->text);
+            break;       
+        }
+        divide_arguments(&data->token, data->text);// faz a tokenização
+        data->path = check_path(data->token, data->envp);// pega o caminho absoluto se existir
+        print_tokens(data->token);// visualização dos tokens individuais
+        if (pipe(data->fd) == -1)// NOVO, NECESSÁRIO PARA TRATAR O PIPE
             return ;
-        }
-        (*i)++;
-    }
-    (*j) = -1;
-}
-
-int num_tokens(char *text) // calcular quantidade de termos para mallocar certinho
-{
-    int i;
-    int j;
-
-    i = 0;
-    j = 0;
-    while (text[i])
-    {
-        //check space_char...char_space
-        while (ft_isspace(text[i]))
-            i++;
-        if (!ft_isspace(text[0]) && text[0] != '"')
-            j++;
-        //check aspas
-        if (text[i] == '"')
-        {
-            i++;
-            a_comma(&j, text, &i);
-            if (j == -1)
-                return (-1);
-        }
-        if (i != 0 && text[0] != '"' && ft_isspace(text[i - 1]) && !ft_isspace(text[i]))
-            j++;
-        i++;
-    }
-    return (j);
-}
-
-void divide_arguments(char **token, char *text)//função para separar os espaços *e outras veriicações*
-{
-    int num_tk;
-
-    (void)token;
-    //checar LETRAS MAIUSCULAS, o shell interpreta de uma forma
-    num_tk = num_tokens(text);
-    if (num_tk == -1)
-        ft_printf ("ERROR, open comma!\n");
-}
-
-void    recive_inputs(char **argv, char **envp)// função para receber continuamente os inputs
-{
-    char    *text;
-    char    **token;// variavel que vai armazenar os tokens, vai ser um array de strings
-
-    (void)envp;
-    (void)argv;
-    (void)token;
-    while (1)
-    {
-        text = readline("abc>>");
-        divide_arguments(token, text);
-        if (text[0] == 'x')
-        {
-            free(text);
-            break ;
-        }
-        free(text);
+        data->child_pid = fork();// cria processo filho
+        exc_command(data);// executa o comando
+        free(data->text);
+        free_tokens(&data->token);
     }
 }
 
-//char **envp são variaveis de ambiente, é um array de strings com informações gerais do SHELL
+//inicia e atribui valores da estrutura para enviar para 
+//o resto do programa
+void init_data(t_data_val **data, char **envp, int *fd)
+{
+    (*data)->envp = envp;
+    (*data)->fd[0] = fd[0];
+    (*data)->fd[1] = fd[1];
+    (*data)->path = NULL;
+    (*data)->text = NULL;
+    (*data)->token = NULL;
+    (*data)->child_pid = 0;
+}
+
 int main(int argc, char **argv, char **envp)
 {
-    argc = 0;
-    recive_inputs(argv, envp);
-    ft_printf("\n");
-    return (0);
+    t_data_val *data;
+    int fd[2];
+
+    (void)argc;  
+    (void)argv;
+    data = malloc(sizeof(t_data_val));
+    if (!data)
+        return (0);
+    init_data(&data, envp, fd);//inicia a estrutura  
+    configure_signal();
+    recive_inputs(data);
+    return (0); 
 }

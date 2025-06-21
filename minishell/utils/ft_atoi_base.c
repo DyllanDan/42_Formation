@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../minishell.h"
+ #include "minishell.h"
 
 int	ft_valid_char(char c, int base)
 {
@@ -40,8 +40,8 @@ int	ft_char_value(char c)
 
 long	ft_atoi_base(const char *nptr, int base)
 {
-	long	result;
-	long	sign;
+	int	result;
+	int	sign;
 
 	result = 0;
 	sign = 1;

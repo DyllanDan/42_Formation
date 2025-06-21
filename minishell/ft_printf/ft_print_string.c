@@ -1,19 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_print_string.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dydaniel <dydaniel@student.42sp.org.b      +#+  +:+       +#+        */
+/*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 15:41:40 by dydaniel          #+#    #+#             */
-/*   Updated: 2024/10/11 14:34:19 by dydaniel         ###   ########.fr       */
+/*   Created: 2024/11/26 16:55:41 by helde-so          #+#    #+#             */
+/*   Updated: 2024/11/26 18:18:09 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "ft_printf.h"
+
+int	ft_print_string(char *str)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	int	count;
+	int	i;
+
+	if (str == NULL)
+	{
+		return (write(1, "(null)", 6));
+	}
+	count = 0;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		count = count + ft_printchar(str[i]);
+		i++;
+	}
+	return (count);
 }
