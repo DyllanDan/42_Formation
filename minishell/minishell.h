@@ -35,11 +35,14 @@ typedef struct s_data_val
 {
     int argc;
     char **envp;
-    int fd[2];
+    int **fd;
     char *text;
     char **token;
+    char ***parser;
     char *path;
-    pid_t child_pid;
+    char *envp_path;
+    int num_pipes;
+    pid_t *child_pid;
 }   t_data_val;
 
 
@@ -50,6 +53,8 @@ char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strdup(const char *s);
 int ft_isspace(char c);
 void    configure_signal();
 void    handle_ctrlc(int sig);
@@ -63,4 +68,5 @@ char *check_path(char **token, char **envp);
 void exc_command(t_data_val *data);
 //remove
 void print_tokens(char **token);
+void parse_token(t_data_val **data);
 #endif

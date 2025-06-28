@@ -22,8 +22,10 @@ SOURCES = \
 	  $(DIR_UTILS)/ft_strjoin.c \
 	  $(DIR_UTILS)/ft_strlcat.c \
 	  $(DIR_UTILS)/ft_isspace.c \
+	  $(DIR_UTILS)/ft_strdup.c \
+	  $(DIR_UTILS)/ft_strncmp.c \
 	  minishell.c token.c check_command.c\
-	  configure_signals.c
+	  configure_signals.c pipes_parser.c
 
 OBJECTS = $(SOURCES:.c=.o)
 

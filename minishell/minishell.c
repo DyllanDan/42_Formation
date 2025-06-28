@@ -24,24 +24,24 @@ void print_tokens(char **token)
     }
 }
 
-void show_envp(char **envp)
+char *get_envp_path(char **envp)
 {
-    int i;  
-    int j;  
+    char *envp_path;
+    int i;
 
+    envp_path = NULL;
     i = 0;
-    while (envp[i])  
+    while (envp[i])
     {
-        j = 0;
-        while (envp[i][j]) 
+        if (ft_strncmp(envp[i], "PATH", 4) == 0)
         {
-            ft_printf("%c", envp[i][j]);  
-            j++;
+            envp_path = ft_strdup(envp[i]);
         }
-        ft_printf("\n"); 
         i++;
     }
+    return (envp_path);
 }
+
 
 int a_comma(char *c, char c_text)
 {
@@ -56,8 +56,10 @@ int a_comma(char *c, char c_text)
 
 void recive_inputs(t_data_val *data)
 {
+    int i;
     while (1) 
     {
+        i = 0;
         data->text = readline("abc>>");  
         if (data->text == NULL)
         {
@@ -73,41 +75,37 @@ void recive_inputs(t_data_val *data)
             break;       
         }
         divide_arguments(&data->token, data->text);// faz a tokenização
-        data->path = check_path(data->token, data->envp);// pega o caminho absoluto se existir
-        print_tokens(data->token);// visualização dos tokens individuais
-        if (pipe(data->fd) == -1)// NOVO, NECESSÁRIO PARA TRATAR O PIPE
-            return ;
-        data->child_pid = fork();// cria processo filho
         exc_command(data);// executa o comando
         free(data->text);
         free_tokens(&data->token);
+        free(data->fd);
     }
 }
 
 //inicia e atribui valores da estrutura para enviar para 
 //o resto do programa
-void init_data(t_data_val **data, char **envp, int *fd)
+void init_data(t_data_val **data, char **envp)
 {
     (*data)->envp = envp;
-    (*data)->fd[0] = fd[0];
-    (*data)->fd[1] = fd[1];
-    (*data)->path = NULL;
+    (*data)->fd = NULL;
     (*data)->text = NULL;
     (*data)->token = NULL;
     (*data)->child_pid = 0;
+    (*data)->parser = NULL;
+    (*data)->envp_path = get_envp_path(envp);
+    (*data)->num_pipes = 0;
 }
 
 int main(int argc, char **argv, char **envp)
 {
     t_data_val *data;
-    int fd[2];
 
     (void)argc;  
     (void)argv;
     data = malloc(sizeof(t_data_val));
     if (!data)
         return (0);
-    init_data(&data, envp, fd);//inicia a estrutura  
+    init_data(&data, envp);//inicia a estrutura  
     configure_signal();
     recive_inputs(data);
     return (0); 

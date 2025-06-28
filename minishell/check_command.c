@@ -40,35 +40,60 @@ char *check_path(char **token, char **envp)
 //Executa o comando, os comentados são o inicio do tratamento do pipe
 void exc_command(t_data_val *data)
 {
-    if (!data->path)
+    int i;
+
+    i = 0;
+    parse_token(&data);
+    if (data->parser)
     {
-        free(data->path);
-        free_tokens(&data->token);
-        ft_printf("not founded. \n");
-        return ;
+        while(data->parser[i])
+        {
+            print_tokens(data->parser[i]);
+            i++;
+        }
     }
-    if (data->child_pid == -1)
+    else
+        ft_printf("nao funfou\n");
+    i = 0;
+    while (data->parser && data->parser[i])
     {
-        perror("Failed to create fork.");
-        free(data->path);
-        free_tokens(&data->token);
-        exit(41);
+        free_tokens(&data->parser[i]);
+        i++;
     }
-    else if (data->child_pid == 0)
+    if (data->parser)
     {
-        // dup2(data->fd[1], STDOUT_FILENO);
-        // close(data->fd[0]);
-        execve(data->path, data->token, data->envp);
-        perror("execve failed");
-        exit(EXIT_FAILURE);
+        free(data->parser);
+        data->parser = NULL;
     }
-    else//AQUI É ONDE PRECISA TRATAR OS PIPES e coisas além
-    {
-        waitpid(data->child_pid, NULL, 0);
-        // dup2(data->fd[0], STDIN_FILENO);
-        // close(data->fd[1]);
-        // free(data->path);
-        // data->path = check_path(&data->token[3], data->envp);
-        // execve(data->path, data->token + 2, data->envp);
-    }
+    // if (!data->path)
+    // {
+    //     free(data->path);
+    //     free_tokens(&data->token);
+    //     ft_printf("not founded. \n");
+    //     return ;
+    // }
+    // if (data->child_pid == -1)
+    // {
+    //     perror("Failed to create fork.");
+    //     free(data->path);
+    //     free_tokens(&data->token);
+    //     exit(41);
+    // }
+    // else if (data->child_pid == 0)
+    // {
+    //     // dup2(data->fd[1], STDOUT_FILENO);
+    //     // close(data->fd[0]);
+    //     execve(data->path, data->token, data->envp);
+    //     perror("execve failed");
+    //     exit(EXIT_FAILURE);
+    // }
+    // else//AQUI É ONDE PRECISA TRATAR OS PIPES e coisas além
+    // {
+    //     waitpid(data->child_pid, NULL, 0);
+    //     // dup2(data->fd[0], STDIN_FILENO);
+    //     // close(data->fd[1]);
+    //     // free(data->path);
+    //     // data->path = check_path(&data->token[3], data->envp);
+    //     // execve(data->path, data->token + 2, data->envp);
+    // }
 }
