@@ -24,8 +24,20 @@ SOURCES = \
 	  $(DIR_UTILS)/ft_isspace.c \
 	  $(DIR_UTILS)/ft_strdup.c \
 	  $(DIR_UTILS)/ft_strncmp.c \
+	  $(DIR_UTILS)/ft_isdigit.c\
+	  $(DIR_UTILS)/is_numeric.c\
+	  $(DIR_UTILS)/ft_isalpha.c\
+	  $(DIR_UTILS)/ft_strchr.c\
+	  $(DIR_UTILS)/ft_putstr_fd.c\
+	  $(DIR_UTILS)/ft_substr.c\
+	  $(DIR_UTILS)/ft_isalnum.c\
+	  $(DIR_UTILS)/ft_putchar_fd.c\
 	  minishell.c token.c check_command.c\
-	  configure_signals.c pipes_parser.c
+	  configure_signals.c pipes_parser.c\
+	  execute_builtin_export.c\
+	  execute_builtin.c\
+	  execute_builtin_unset.c
+
 
 OBJECTS = $(SOURCES:.c=.o)
 
