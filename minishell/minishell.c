@@ -56,10 +56,8 @@ int a_comma(char *c, char c_text)
 
 void recive_inputs(t_data_val *data)
 {
-  //  int i;
     while (1) 
     {
-      //  i = 0;
         data->text = readline("abc>>");  
         if (data->text == NULL)
         {
@@ -79,39 +77,6 @@ void recive_inputs(t_data_val *data)
     }
 }
 
-
-/*! dividi a função para chamar a função que executa os builtins
-
-void recive_inputs(t_data_val *data)
-{
-    int i;
-    while (1) 
-    {
-        i = 0;
-        data->text = readline("abc>>");  
-        if (data->text == NULL)
-        {
-            write(STDOUT_FILENO, "exit\n", 5);
-            break;
-        }
-        if (data->text != NULL &&  num_tokens(data->text) > 0)
-            add_history(data->text);
-        if (strcmp(data->text, "exit") == 0)  
-        {
-            rl_clear_history();
-            free(data->text);
-            break;       
-        }
-        divide_arguments(&data->token, data->text);// faz a tokenização-- retirei
-        exc_command(data);// executa o comando -- retirei
-        free(data->text);
-        free_tokens(&data->token);//- retirei
-        free(data->fd);//- retirei
-    }
-}
-
-*/
-
 //inicia e atribui valores da estrutura para enviar para 
 //o resto do programa
 void init_data(t_data_val **data, char **envp)
@@ -124,6 +89,7 @@ void init_data(t_data_val **data, char **envp)
     (*data)->parser = NULL;
     (*data)->envp_path = get_envp_path(envp);
     (*data)->num_pipes = 0;
+    (*data)->cmd_path = NULL;
 }
 
 int main(int argc, char **argv, char **envp)

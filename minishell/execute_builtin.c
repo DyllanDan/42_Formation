@@ -6,7 +6,7 @@
 /*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 19:35:13 by helde-so          #+#    #+#             */
-/*   Updated: 2025/07/08 20:35:39 by helde-so         ###   ########.fr       */
+/*   Updated: 2025/07/05 19:37:11 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,12 +113,9 @@ void ft_echo(t_data_val *data)
 {
 	int i;
 	int new_line;
-	char *trimmed;
-	int len;
 
 	i = 1;
 	new_line = 1;
-
 	while (data->token[i] && ft_strncmp(data->token[i], "-n", 3) == 0)
 	{
 		new_line = 0;
@@ -126,26 +123,15 @@ void ft_echo(t_data_val *data)
 	}
 	while (data->token[i])
 	{
-		if ((data->token[i][0] == '\'' || data->token[i][0] == '"' ) && (data->token[i][ft_strlen(data->token[i]) - 1] == '\'' || data->token[i][0] == '"'))
-		{
-			len = ft_strlen(data->token[i]);
-			trimmed = malloc(sizeof(char) * (len - 2 + 1));
-			if (!trimmed)
-				return;
-			ft_strlcpy(trimmed, data->token[i] + 1, len - 1);
-			ft_printf("%s", trimmed);
-			free(trimmed);
-		}
-		else if (ft_strchr(data->token[i], '$'))
-		{
+        if (data->token[i][0] == '\'' && data->token[i][ft_strlen(data->token[i]) - 1] == '\'')
+			print_single_quoted(data->token[i]);//trata tokens entre aspas simples (')
+		else if (data->token[i][0] == '"' && data->token[i][ft_strlen(data->token[i]) - 1] == '"')
+            print_double_quoted(data->token[i], data->envp);//trata tokens entre aspas duplas (")
+		else if (ft_strchr(data->token[i], '$'))// Caso: variável fora de aspas
 			print_with_expansion(data->token[i], data->envp);
-		}
 		else
-		{
-			ft_printf("%s", data->token[i]);
-		}
-		if (data->token[i + 1])
-			ft_printf(" ");
+			ft_printf("%s", data->token[i]); // Caso: texto simples, sem aspas ou $
+		if (data->token[i + 1]) ft_printf(" ");
 		i++;
 	}
 	if (new_line)
@@ -206,7 +192,8 @@ int run_cd(char *path)
 }
 
 
-
+//função teste
+//falta validações
 char *get_env_value(char *name, char **envp)
 {
 	int     i;
@@ -223,40 +210,7 @@ char *get_env_value(char *name, char **envp)
 	return (""); //retorna string vazia se não encontrar
 }
 
-void print_with_expansion(char *str, char **envp)
-{
-	int i = 0;
 
-	while (str[i])
-	{
-		if (str[i] == '$')
-		{
-			int start = i + 1;
-			int len = 0;
 
-			// pega nome da variável (letras, números e _)
-			while (str[start + len] && (ft_isalnum(str[start + len]) || str[start + len] == '_'))
-				len++;
 
-			if (len > 0)
-			{
-				char *var_name = ft_substr(str, start, len);
-				char *value = get_env_value(var_name, envp);
-				ft_printf("%s", value);
-				free(var_name);
-				i = start + len;
-			}
-			else
-			{
-				// $ sozinho ou inválido (ex: $?)
-				ft_putchar_fd('$', 1);
-				i++;
-			}
-		}
-		else
-		{
-			ft_putchar_fd(str[i], 1);
-			i++;
-		}
-	} 
-}
+

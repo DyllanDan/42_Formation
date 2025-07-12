@@ -43,11 +43,23 @@ typedef struct s_data_val
     char ***parser;
     char *path;
     char *envp_path;
+    char **cmd_path;
     int num_pipes;
     pid_t *child_pid;
 }   t_data_val;
 
+
+//echo utils
+void print_single_quoted(char *token);
+void print_double_quoted(char *token, char **envp);
 void print_with_expansion(char *str, char **envp);
+int  handle_dollar_expansion(char *str, char **envp);
+void print_expanded_var(char *var_name, char **envp);
+
+//quote handling
+char	*complete_unclosed_quote(char *text);
+int		has_unclosed_quote(char *str);
+
 char *get_env_value(char *name, char **envp);
 void ft_unset(char ***envp, char *name);
 void    ft_putstr_fd(const char *s, int fd);
@@ -91,9 +103,13 @@ void free_tokens(char ***token);
 void populate_token(char **token, char *text);
 int size_of_str(char *text);
 int a_comma(char *c, char c_text);
-char *check_path(char **token, char **envp);
+char *check_path(t_data_val *data, char *cmd);
 void exc_command(t_data_val *data);
 void free_parser(t_data_val *data);
+void exec_child_process(t_data_val *data, int i);
+void exec_one_command(t_data_val *data, int *status);
+void get_full_path(t_data_val **data);
+int check_redir_herdoc(char **token);
 //remove
 void print_tokens(char **token);
 void parse_token(t_data_val **data);

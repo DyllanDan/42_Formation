@@ -32,8 +32,10 @@ SOURCES = \
 	  $(DIR_UTILS)/ft_substr.c\
 	  $(DIR_UTILS)/ft_isalnum.c\
 	  $(DIR_UTILS)/ft_putchar_fd.c\
-	  minishell.c token.c check_command.c\
-	  configure_signals.c pipes_parser.c\
+	  $(DIR_UTILS)/quote_utils.c\
+	  $(DIR_UTILS)/echo_utils.c\
+	  minishell.c token.c check_command.c redir_heredoc.c\
+	  configure_signals.c pipes_parser.c get_path.c exec_childs.c\
 	  execute_builtin_export.c\
 	  execute_builtin.c\
 	  execute_builtin_unset.c
