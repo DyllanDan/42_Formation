@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   execute_builtin_unset.c                            :+:      :+:    :+:   */
+/*   cd_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/30 19:35:06 by helde-so          #+#    #+#             */
-/*   Updated: 2025/06/30 19:35:08 by helde-so         ###   ########.fr       */
+/*   Created: 2025/07/26 11:05:52 by helde-so          #+#    #+#             */
+/*   Updated: 2025/07/26 11:06:10 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
-void ft_unset(char ***envp, char *name)
+
+int analize_cd_arguments(t_data_val *d)
 {
-	char **old;
-	char **new;
-	int i;
-	int j;
-	int len;
-	
-	old = *envp;
-	i = 0;
-	j = 0;
-	len = ft_strlen(name);
-	while (old[i])
-		i++;
-	if(!(new = malloc(sizeof(char *) * (i + 1))))
-		return;
-	i = 0;
-	while(old[i])
-	{
-		if(!(ft_strncmp(old[i], name, len) == 0 && old[i][len] == '='))
-			new[j++] = old[i];
-		else
-			free(old[i]);
-		i++;
-	}
-	new[j] = NULL;
-	free(old);
-	*envp= new;
+    char *path;
+    
+    path = d->token[1];
+    if (d->token[2])//muitos argumento 
+    {
+        ft_putstr_fd("cd: too many arguments\n", 2);
+        return 1;
+    }
+    if (!path || !*path)//cd sem argumento vira HOME
+        path = get_env_value("HOME", d->envp);
+    return run_cd(path);   
 }

@@ -49,11 +49,11 @@ void close_fds(int **fd, int i)
 void exc_command(t_data_val *data)
 {
     int i;
-    int j;
+    //int j;
     int status;
 
     i = 0;
-    j = 0;
+    //j = 0;
     parse_token(&data);
     get_full_path(&data);
     data->child_pid = malloc(sizeof(pid_t) * (data->num_pipes + 1));

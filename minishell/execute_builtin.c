@@ -6,7 +6,7 @@
 /*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/30 19:35:13 by helde-so          #+#    #+#             */
-/*   Updated: 2025/07/05 19:37:11 by helde-so         ###   ########.fr       */
+/*   Updated: 2025/07/26 12:04:51 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,21 @@ int execute_builtin(t_data_val *data) //identifica se é um builtin e executa el
     }
     if(ft_strncmp(data->token[0], "cd", 2) == 0)
     {
-        analize_cd_arguments(data);
+        // analize_cd_arguments(data);
+        g_exit_status = analize_cd_arguments(data);
         return (1);
     }
+    if (ft_strncmp(data->token[0], "unset", 5) == 0)
+    {
+        ft_unset_args(data->token, data); // executa unset para todos os args
+        return (1); 
+    }
     if (ft_strncmp(data->token[0], "export", 6) == 0)
-		return (ft_export(data->token, data));
-    return (0);
+		// return (ft_export(data->token, data));
+		g_exit_status = ft_export(data->token, data);
+        return (1);
+    return (0);// não é builtin
+    
 }
 
 //mensagem de permissão
@@ -109,90 +118,56 @@ void ft_env(t_data_val *data)
     }
 }
 
-void ft_echo(t_data_val *data)
-{
-	int i;
-	int new_line;
+/*
 
-	i = 1;
-	new_line = 1;
-	while (data->token[i] && ft_strncmp(data->token[i], "-n", 3) == 0)
-	{
-		new_line = 0;
-		i++;
-	}
-	while (data->token[i])
-	{
-        if (data->token[i][0] == '\'' && data->token[i][ft_strlen(data->token[i]) - 1] == '\'')
-			print_single_quoted(data->token[i]);//trata tokens entre aspas simples (')
-		else if (data->token[i][0] == '"' && data->token[i][ft_strlen(data->token[i]) - 1] == '"')
-            print_double_quoted(data->token[i], data->envp);//trata tokens entre aspas duplas (")
-		else if (ft_strchr(data->token[i], '$'))// Caso: variável fora de aspas
-			print_with_expansion(data->token[i], data->envp);
-		else
-			ft_printf("%s", data->token[i]); // Caso: texto simples, sem aspas ou $
-		if (data->token[i + 1]) ft_printf(" ");
-		i++;
-	}
-	if (new_line)
-		ft_printf("\n");
-}
-
-int analize_cd_arguments(t_data_val *data)
+int analize_cd_arguments(t_data_val *d)
 {
     char *path;
-
-    path = NULL;
-    if(data->token[1] == NULL) 
+    
+    path = d->token[1];
+    if (d->token[2])//muitos argumento 
     {
-        path = getenv("HOME");
-        return (run_cd(path));
+        ft_putstr_fd("cd: too many arguments\n", 2);
+        return 1;
     }
-    if (ft_strncmp(data->token[1], "-", 2) == 0)// cd -
-    {
-        path = getenv("OLDPWD");
-        if (!path)
-        {
-            ft_printf("cd: OLDPWD not set\n");
-            return (1);
-        }
-    ft_printf("%s\n", path);
-    return (run_cd(path));
-    }
-    if(data->token[1][0] == '~')//cd ~ ou ~/Documentos - data->token[1][0]
-    {
-        path = getenv("HOME");
-        return (run_cd(path));
-    }
-    return (run_cd(data->token[1]));
+    if (!path || !*path)//cd sem argumento vira HOME
+        path = get_env_value("HOME", d->envp);
+    return run_cd(path);   
 }
+*/
 
+/*
 int run_cd(char *path)
 {
     char cwd[1024];
     char *oldpwd;
    
-    oldpwd = getcwd(NULL, 0);// aloca dinamicamente o espaço necessário pra armazenar o caminho atual.
+    oldpwd = getcwd(NULL, 0);
+    if (!oldpwd)                       
     {
         perror("cd");
-        return (1);
+        return 1;
     }
-    if(chdir(path) != 0)//chdir() altera o diretório atual do processo para o caminho passado em path.
+
+    if (chdir(path) == -1)             
     {
-        perror("cd");
+        perror("cd");                   
         free(oldpwd);
-        return (1);
+        return 1;
     }
 
-    setenv( "OLDPWD", oldpwd, 1); // coloca o diretorio anterior
+    //atualiza OLDPWD e PWD 
+    setenv("OLDPWD", oldpwd, 1);
     free(oldpwd);
-    getcwd(cwd, sizeof(cwd));  // cwd já está declarado no topo Obter novo diretório atual
-    setenv( "PWD", cwd, 1); // / coloca o novo diretório atual
-    return (0);
+
+    if (getcwd(cwd, sizeof(cwd)))
+        setenv("PWD", cwd, 1);
+
+    return 0;                            
 }
+*/
 
 
-//função teste
 //falta validações
 char *get_env_value(char *name, char **envp)
 {

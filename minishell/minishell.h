@@ -6,7 +6,7 @@
 /*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 20:20:08 by dydaniel          #+#    #+#             */
-/*   Updated: 2025/07/05 18:38:22 by helde-so         ###   ########.fr       */
+/*   Updated: 2025/07/15 20:44:13 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,19 +49,42 @@ typedef struct s_data_val
 }   t_data_val;
 
 
+
+//variavel global
+extern int g_exit_status;
+
+char **duplicate_envp(char **envp);
+
+//validate pipe
+int validate_pipe_syntax(const char *input);
+int starts_with_pipe(const char *input);
+int contains_double_pipe(const char *input);
+int contains_pipe_space_pipe(const char *input);
+int ends_with_pipe(const char *input);
+
+
 //echo utils
 void print_single_quoted(char *token);
 void print_double_quoted(char *token, char **envp);
 void print_with_expansion(char *str, char **envp);
 int  handle_dollar_expansion(char *str, char **envp);
 void print_expanded_var(char *var_name, char **envp);
+char *remove_all_quotes(const char *token);
+
+//unset utils
+int ft_unset_args(char **args, t_data_val *data);
+char **build_new_env(char **old, const char *name);
+void ft_unset(char ***envp, char *name);
+
+
 
 //quote handling
 char	*complete_unclosed_quote(char *text);
 int		has_unclosed_quote(char *str);
+int char_inside_quotes(const char *str, int index);
+
 
 char *get_env_value(char *name, char **envp);
-void ft_unset(char ***envp, char *name);
 void    ft_putstr_fd(const char *s, int fd);
 int     ft_isalpha(int c);
 char   *ft_strchr(const char *s, int c);
@@ -85,6 +108,10 @@ int ft_isalnum(int c);
 
 void	ft_putchar_fd(char c, int fd);
 long	ft_atoi_base(const char *nptr, int base);
+char	*ft_itoa(int n);
+void	*ft_calloc(size_t nmemb, size_t size);
+void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
 char	**ft_split(char const *s, char c);
 char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlen(const char *s);
@@ -100,7 +127,8 @@ void    handle_ctrlc(int sig);
 void divide_arguments(char ***token, char *text);
 int num_tokens(char *text);
 void free_tokens(char ***token);
-void populate_token(char **token, char *text);
+void populate_token(char **token, char *text, int n_token);
+int is_operator(char *text);
 int size_of_str(char *text);
 int a_comma(char *c, char c_text);
 char *check_path(t_data_val *data, char *cmd);

@@ -29,9 +29,9 @@ void close_unused_fd(t_data_val *data, int i)
 
 void exec_child_process(t_data_val *data, int i)
 {
-    int j;
+    //int j;
 
-    j = 0;
+    //j = 0;
     if (i == 0)
     {
         close(data->fd[0][0]);  // fecha leitura que não usa

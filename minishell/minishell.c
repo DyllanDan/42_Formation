@@ -6,7 +6,7 @@
 /*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 16:54:54 by dydaniel          #+#    #+#             */
-/*   Updated: 2025/06/30 15:25:17 by helde-so         ###   ########.fr       */
+/*   Updated: 2025/07/15 20:55:17 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,13 @@ void recive_inputs(t_data_val *data)
             write(STDOUT_FILENO, "exit\n", 5);
             break;
         }
+        data->text = complete_unclosed_quote(data->text);
+        if (validate_pipe_syntax(data->text))
+        {
+            free(data->text);
+            continue;
+        }
+        
         if (data->text != NULL &&  num_tokens(data->text) > 0)
             add_history(data->text);
         if (strcmp(data->text, "exit") == 0)  
@@ -81,7 +88,8 @@ void recive_inputs(t_data_val *data)
 //o resto do programa
 void init_data(t_data_val **data, char **envp)
 {
-    (*data)->envp = envp;
+    // (*data)->envp = envp;
+    (*data)->envp = duplicate_envp(envp);
     (*data)->fd = NULL;
     (*data)->text = NULL;
     (*data)->token = NULL;
