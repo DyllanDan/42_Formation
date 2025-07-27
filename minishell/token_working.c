@@ -16,21 +16,34 @@ int size_of_quote(char *text)
 {
     int i;
     int size;
-    char c;
+    int val;
+    char quote;
 
     i = 1;
     size = 0;
-    c = text[0];
-    while (text[i] != c)
+    quote = text[0];
+    val = 1;
+    while (val == 1)
     {
-        if (text[i] == '\\' && (text[i + 1] == '"' || text[i + 1] == '\''))
-            i += 1;
-        i++;
-        size++;
-    }
-    while (text[++i] && !ft_isspace(text[i]))
-    {
-        size++;
+        while (text[i] && text[i] != quote)
+        {
+            if (text[i] == '\\' && (text[i + 1] == '"' || text[i + 1] == '\''))
+                i += 1;
+            i++;
+            size++;
+        }
+        val = 0;
+        while (text[++i] && !ft_isspace(text[i]))
+        {
+            if (text[i] == '"' || text[i] == '\'')
+            {
+                quote = text[i];
+                i++;
+                val = 1;
+                break ;
+            }
+            size++;
+        }
     }
     return (size);
 }
@@ -38,13 +51,20 @@ int size_of_quote(char *text)
 int size_of_string(char *text)
 {
     int size;
+    char quote;
 
     size = 0;
     while (*text && !ft_isspace(*text))
     {
         if (*text == '"' || *text == '\'')
         {
+            quote = *text;
             text++;
+            while (*text && *text != quote)
+            {
+                text++;
+                size++;
+            }
             if (!*text)
                 break ;
             continue;
@@ -123,10 +143,13 @@ void token_n_copy (char *token_i, int size, char **text)
             (*text)++;
             while (**text != c)
             {
+                if (**text == '\\' && (*(*text + 1) == '\'' || *(*text) + 1 == '"'))
+                    (*text)++;
                 token_i[k] = (**text);
                 k++;
                 (*text)++;
             }
+            (*text)++;
         }
         else
         {
@@ -154,7 +177,6 @@ void populate_token(char **token, char *text, int n_tokens)
         token[i] = malloc(sizeof(char) * (size + 1));
         if (!token[i])
             return ;
-        ft_printf("%i\n", size);
         token_n_copy(token[i], size, &text);
         i++;
     }

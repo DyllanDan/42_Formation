@@ -45,39 +45,6 @@ int num_tokens(char *text)
     return (j);
 }
 
-//VERSAO ANTIGA
-// //Essa função é chamada quando for encontrado ' ou "
-// //independente do que for encontrado é armazenado no char c
-// //size = 1 e i = 1 para ja considerar (e pular) a aspa inicial
-// int size_of_quote(char c, char *text, int *follow_quote)
-// {
-//     int size;
-//     int i;
-
-//     size = 1;
-//     i = 1;
-//     while (text[i])
-//     {
-//         if (text[i + 1] == c && (text[i + 2] == '"' || text[i + 2] == '\''))
-//         {
-//             c = text[i + 2];
-//             i += 2;
-//             *follow_quote += 2;
-//         }
-//         else if (text[i] == c)
-//             break;
-//         size++;
-//         i++;
-//     }
-//     size++;
-//     return (size);
-// }
-
-
-//Essa função é chamada quando for encontrado ' ou "
-//independente do que for encontrado é armazenado no char c
-//size = 1 e i = 1 para ja considerar (e pular) a aspa inicial
-/* token.c */
 int	size_of_quote(char quote, char *s, int *follow_quote)
 {
 	int	i;
@@ -149,44 +116,6 @@ int	size_of_str(char *text)
 	return (i);                   // tamanho do token
 }
 
-
-//!VERSAO ANTIGA
-//Percorre o texto de input e separa por espaços
-//Uma divisão feita para palavras (size_of_str)
-//Outra divisão feita para aspas (size_of_quote)
-// void populate_token(char **token, char *text)
-// {
-//     int j;
-//     int k;
-//     int follow_quote;
-//     char c;
-
-//     k = 0;
-//     follow_quote = 0;
-//     while (*text)
-//     {
-//         if (a_comma(&c, *text))
-//             j = size_of_quote(c, text, &follow_quote);// tamanho do token com aspas
-//         else if (*text)
-//             j = size_of_str(text);// tamanho do token de palavra
-//         token[k] = malloc(sizeof(char) * (j + 1));
-//         if (!token[k])
-//         {
-//             ft_printf("failed\n");
-//             return ;
-//         }
-//         if (*text && follow_quote == 0)
-//             ft_strlcpy(token[k], text, j + 1);//insere o token no array
-//         else 
-//             ft_strcpy_quote(token[k], text, j + 1);
-//         text += (j + follow_quote);
-//         k++;
-//         while (ft_isspace(*text))//ignora qualquer espaçamento
-//             text++;
-//     }
-//     token[k] = NULL;
-// }
-//!nova versao
 void populate_token(char **token, char *text)
 {
     int j;
@@ -213,7 +142,6 @@ void populate_token(char **token, char *text)
             ft_strlcpy(token[k], text, j + 1);//insere o token no array
         else 
             ft_strcpy_quote(token[k], text, j + 1);
-        //text += (j + follow_quote); antes
         text += j;  //!ALTEREI AQUI             
         follow_quote = 0;//!ALTEREI AQUI      
         k++;

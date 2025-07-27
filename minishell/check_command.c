@@ -21,13 +21,9 @@ void handle_command(t_data_val *data)
         free(data->fd);
         return;
     }
-    // if (check_redir_herdoc(data->token))
-    // {
-    //     ft_printf("pode chamar herdioc\n");
-    // }
     exc_command(data);
     free_tokens(&data->token);
-    free(data->fd); 
+    free(data->fd);
 }
 
 void close_fds(int **fd, int i)
