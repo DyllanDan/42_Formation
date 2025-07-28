@@ -29,29 +29,38 @@ void close_unused_fd(t_data_val *data, int i)
 
 void exec_child_process(t_data_val *data, int i)
 {
-    //int j;
+    int redir_heredoc;
 
-    //j = 0;
+    redir_heredoc = check_redir_herdoc(data, i);
     if (i == 0)
     {
-        close(data->fd[0][0]);  // fecha leitura que não usa
-        dup2(data->fd[0][1], STDOUT_FILENO);
-        close(data->fd[0][1]);
+        if (redir_heredoc == NO_RD_HD)
+        {
+            close(data->fd[0][0]);  // fecha leitura que não usa
+            dup2(data->fd[0][1], STDOUT_FILENO);
+            close(data->fd[0][1]);
+        }
         close_unused_fd(data, i);
     }
     else if (i == data->num_pipes) 
     {
-        close(data->fd[i-1][1]); // fecha escrita que não usa
-        dup2(data->fd[i-1][0], STDIN_FILENO);                   
-        close(data->fd[i-1][0]);
+        if (redir_heredoc == NO_RD_HD)
+        {
+            close(data->fd[i-1][1]); // fecha escrita que não usa
+            dup2(data->fd[i-1][0], STDIN_FILENO);                   
+            close(data->fd[i-1][0]);
+        }
         close_unused_fd(data, i);
     }
     else
     {
-        dup2(data->fd[i-1][0], STDIN_FILENO);
-        close(data->fd[i-1][0]);
-        dup2(data->fd[i][1], STDOUT_FILENO);
-        close(data->fd[i][1]);
+        if (redir_heredoc == NO_RD_HD)
+        {
+            dup2(data->fd[i-1][0], STDIN_FILENO);
+            close(data->fd[i-1][0]);
+            dup2(data->fd[i][1], STDOUT_FILENO);
+            close(data->fd[i][1]);
+        }
         close_unused_fd(data, i);
     }
     if (!data->cmd_path)

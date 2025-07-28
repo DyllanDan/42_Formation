@@ -24,6 +24,7 @@
 #include <sys/types.h> 
 #include <sys/wait.h>  
 #include <limits.h>
+#include <fcntl.h> 
 
 /* Estrutura para armazenar dados
 fd[2] -> usado no pipe. Necessário para exercutar comando de |
@@ -48,7 +49,14 @@ typedef struct s_data_val
     pid_t *child_pid;
 }   t_data_val;
 
-
+typedef enum e_redir_heredoc
+{
+    NO_RD_HD,
+    RD_IN,
+    RD_OUT,
+    APPEND,
+    HEREDOC
+}   t_redir_heredoc;
 
 //variavel global
 extern int g_exit_status;
@@ -137,7 +145,8 @@ void free_parser(t_data_val *data);
 void exec_child_process(t_data_val *data, int i);
 void exec_one_command(t_data_val *data, int *status);
 void get_full_path(t_data_val **data);
-int check_redir_herdoc(char **token);
+int check_redir_herdoc(t_data_val *data, int i);
+void change_fd(t_data_val *data, int redir_heredoc, int i, int j);
 //remove
 void print_tokens(char **token);
 void parse_token(t_data_val **data);

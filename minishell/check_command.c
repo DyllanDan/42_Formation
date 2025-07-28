@@ -15,12 +15,12 @@
 void handle_command(t_data_val *data)
 {
     divide_arguments(&data->token, data->text);
-    if (execute_builtin(data))
+    /*if (execute_builtin(data))
     {
         free_tokens(&data->token);
         free(data->fd);
         return;
-    }
+    }*/
     exc_command(data);
     free_tokens(&data->token);
     free(data->fd);
