@@ -49,7 +49,7 @@ SOURCES = \
 	  $(BUILDINS_DIR)/cd_utils.c \
 	  minishell.c token_working.c check_command.c redir_heredoc.c\
 	  configure_signals.c pipes_parser.c get_path.c exec_childs.c\
-	  execute_builtin.c\
+	  execute_builtin.c parser_clear.c\
 	  validate_inputs.c\
 	  duplicate_envp.c
 

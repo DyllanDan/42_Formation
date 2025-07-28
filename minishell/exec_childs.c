@@ -40,6 +40,8 @@ void exec_child_process(t_data_val *data, int i)
             dup2(data->fd[0][1], STDOUT_FILENO);
             close(data->fd[0][1]);
         }
+        else
+            data->parser[i] = clear_parser(data->parser[i]);
         close_unused_fd(data, i);
     }
     else if (i == data->num_pipes) 
@@ -50,6 +52,8 @@ void exec_child_process(t_data_val *data, int i)
             dup2(data->fd[i-1][0], STDIN_FILENO);                   
             close(data->fd[i-1][0]);
         }
+        else
+            data->parser[i] = clear_parser(data->parser[i]);
         close_unused_fd(data, i);
     }
     else
@@ -61,6 +65,8 @@ void exec_child_process(t_data_val *data, int i)
             dup2(data->fd[i][1], STDOUT_FILENO);
             close(data->fd[i][1]);
         }
+        else
+            data->parser[i] = clear_parser(data->parser[i]);
         close_unused_fd(data, i);
     }
     if (!data->cmd_path)
@@ -78,9 +84,22 @@ void exec_child_process(t_data_val *data, int i)
 
 void exec_one_command(t_data_val *data, int *status)
 {
+    int i;
+
+    i = 0;
     data->child_pid[0] = fork();
     if (data->child_pid[0] == 0)
     {
+        while (data->token[i])
+        {
+            if (data->token[i][0] == '>' || data->token[i][0] == '<')
+            {
+                solo_command_redir_heredoc(data->token, i);
+                break;
+            }
+            i++;
+        }
+        data->token = clear_parser(data->token);
         execve(data->cmd_path[0], data->token, data->envp);
         perror("execve");
         exit(EXIT_FAILURE);

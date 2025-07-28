@@ -76,3 +76,45 @@ void change_fd(t_data_val *data, int redir_heredoc, int i, int j)
         dup2(file_fd, STDIN_FILENO);
     close(file_fd);
 }
+
+
+int solo_command_redir_heredoc(char **token, int i)
+{
+    int flag;
+    int file_fd;
+
+    flag = NO_RD_HD;
+    while(token[i])
+    {
+        if (!ft_strncmp(token[i], "<<", 3))
+        {
+            flag = HEREDOC;
+            i++;
+        }
+        else if (!ft_strncmp(token[i], ">>", 3))
+        {
+            flag = APPEND;
+            file_fd = open(token[i + 1], O_WRONLY | O_CREAT | O_APPEND, 0644);
+            i++;
+        }
+        else if (!ft_strncmp(token[i], "<", 2))
+        {
+            flag = RD_IN;
+            file_fd = open(token[i + 1], O_RDONLY);
+            i++;
+        }
+        else if (!ft_strncmp(token[i], ">", 2))
+        {
+            flag = RD_OUT;
+            file_fd = open(token[i + 1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+            i++;
+        }
+        if (flag == RD_OUT || flag == APPEND)
+            dup2(file_fd, STDOUT_FILENO);
+        else if (flag == RD_IN)
+            dup2(file_fd, STDIN_FILENO);
+        close(file_fd);
+        i++;
+    }
+    return (flag);
+}

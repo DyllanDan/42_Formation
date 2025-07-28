@@ -147,6 +147,8 @@ void exec_one_command(t_data_val *data, int *status);
 void get_full_path(t_data_val **data);
 int check_redir_herdoc(t_data_val *data, int i);
 void change_fd(t_data_val *data, int redir_heredoc, int i, int j);
+char **clear_parser(char **parser);
+int solo_command_redir_heredoc(char **token, int i);
 //remove
 void print_tokens(char **token);
 void parse_token(t_data_val **data);
