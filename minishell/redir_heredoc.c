@@ -24,7 +24,7 @@ int check_redir_herdoc(t_data_val *data, int i)
         if (!ft_strncmp(data->parser[i][j], "<<", 3))
         {
             flag = HEREDOC;
-            change_fd(data, flag, i, j);
+            heredoc(data->parser[i][j + 1]);
             j++;
         }
         else if (!ft_strncmp(data->parser[i][j], ">>", 3))
@@ -54,6 +54,7 @@ void change_fd(t_data_val *data, int redir_heredoc, int i, int j)
 {
     int file_fd;
 
+    file_fd = 0;
     if (!data->parser[i][j + 1])
     {
         ft_printf("Syntax error with abscense of token\n");
