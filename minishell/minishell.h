@@ -149,6 +149,12 @@ int check_redir_herdoc(t_data_val *data, int i);
 void change_fd(t_data_val *data, int redir_heredoc, int i, int j);
 char **clear_parser(char **parser);
 int solo_command_redir_heredoc(char **token, int i);
+void pipe_heredoc(t_data_val *data, char **parser, int j, int i);
+void solo_heredoc_fd(char **token, int i, int *fd);
+void close_unused_fd(t_data_val *data, int i);
+void first_pipe(t_data_val *data, int flag, int i);
+void middles_pipe(t_data_val *data, int flag, int i);
+void last_pipe(t_data_val *data, int flag, int i);
 //remove
 void print_tokens(char **token);
 void parse_token(t_data_val **data);

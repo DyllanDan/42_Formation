@@ -33,51 +33,18 @@ void exec_child_process(t_data_val *data, int i)
 
     redir_heredoc = check_redir_herdoc(data, i);
     if (i == 0)
-    {
-        if (redir_heredoc == NO_RD_HD)
-        {
-            close(data->fd[0][0]);  // fecha leitura que não usa
-            dup2(data->fd[0][1], STDOUT_FILENO);
-            close(data->fd[0][1]);
-        }
-        else
-            data->parser[i] = clear_parser(data->parser[i]);
-        close_unused_fd(data, i);
-    }
+        first_pipe(data, redir_heredoc, i);
     else if (i == data->num_pipes) 
-    {
-        if (redir_heredoc == NO_RD_HD)
-        {
-            close(data->fd[i-1][1]); // fecha escrita que não usa
-            dup2(data->fd[i-1][0], STDIN_FILENO);                   
-            close(data->fd[i-1][0]);
-        }
-        else
-            data->parser[i] = clear_parser(data->parser[i]);
-        close_unused_fd(data, i);
-    }
+        last_pipe(data, redir_heredoc, i);
     else
-    {
-        if (redir_heredoc == NO_RD_HD)
-        {
-            dup2(data->fd[i-1][0], STDIN_FILENO);
-            close(data->fd[i-1][0]);
-            dup2(data->fd[i][1], STDOUT_FILENO);
-            close(data->fd[i][1]);
-        }
-        else
-            data->parser[i] = clear_parser(data->parser[i]);
-        close_unused_fd(data, i);
-    }
+        middles_pipe(data, redir_heredoc, i);
     if (!data->cmd_path)
     {
-        ft_printf("command not found: %s\n", data->parser[i][0]);
+        printf("command not found: %s\n", data->parser[i][0]);
         exit(127);
     }
     else
-    {
         execve(data->cmd_path[i], data->parser[i], data->envp);
-    }
     perror("execve falhou");
     exit(EXIT_FAILURE);
 }
@@ -85,8 +52,10 @@ void exec_child_process(t_data_val *data, int i)
 void exec_one_command(t_data_val *data, int *status)
 {
     int i;
+    int flag;
 
     i = 0;
+    flag = NO_RD_HD;
     data->child_pid[0] = fork();
     if (data->child_pid[0] == 0)
     {
@@ -94,12 +63,13 @@ void exec_one_command(t_data_val *data, int *status)
         {
             if (data->token[i][0] == '>' || data->token[i][0] == '<')
             {
-                solo_command_redir_heredoc(data->token, i);
+                flag = solo_command_redir_heredoc(data->token, i);
                 break;
             }
             i++;
         }
-        data->token = clear_parser(data->token);
+        if (flag != NO_RD_HD)
+            data->token = clear_parser(data->token);
         execve(data->cmd_path[0], data->token, data->envp);
         perror("execve");
         exit(EXIT_FAILURE);

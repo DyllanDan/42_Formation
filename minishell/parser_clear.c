@@ -12,6 +12,22 @@
 
 # include "minishell.h"
 
+
+void args_to_clear(char **parser, int *args, int i)
+{
+    while(parser[i])
+    {
+        if (parser[i][0] == '>' || parser[i][0] == '<')
+            i += 2;
+        else
+        {
+            i++;
+            (*args)++;
+        }
+    }
+}
+
+
 char **clear_parser(char **parser)
 {
     int i;
@@ -20,23 +36,13 @@ char **clear_parser(char **parser)
 
     i = 0;
     args = 0;
-    while(parser[i])
-    {
-        if (parser[i][0] == '>' || parser[i][0] == '<')
-            i++;
-        else
-        {
-            i++;
-            args++;
-        }
-    }
+    args_to_clear(parser, &args, i);
     cleaned = malloc(sizeof(char *) * (args + 1));
-    i = 0;
     args = 0;
     while (parser[i])
     {
         if (parser[i][0] == '>' || parser[i][0] == '<')
-            i++;
+            i += 2;
         else
         {
             cleaned[args] = ft_strdup(parser[i]);
