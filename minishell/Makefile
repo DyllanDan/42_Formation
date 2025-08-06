@@ -52,7 +52,7 @@ SOURCES = \
 	  exec_pipes.c solo_redir_heredoc.c\
 	  execute_builtin.c parser_clear.c heredoc.c\
 	  validate_inputs.c\
-	  duplicate_envp.c
+	  duplicate_envp.c free_data.c
 
 
 OBJECTS = $(SOURCES:.c=.o)

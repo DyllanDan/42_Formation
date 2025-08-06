@@ -155,6 +155,7 @@ void close_unused_fd(t_data_val *data, int i);
 void first_pipe(t_data_val *data, int flag, int i);
 void middles_pipe(t_data_val *data, int flag, int i);
 void last_pipe(t_data_val *data, int flag, int i);
+void free_data(t_data_val *data);
 //remove
 void print_tokens(char **token);
 void parse_token(t_data_val **data);
