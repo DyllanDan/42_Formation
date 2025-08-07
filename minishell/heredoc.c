@@ -48,7 +48,7 @@ void	solo_heredoc_fd(char **token, int i, int *fd)
 		if (!hd_line)
 			break ;
 		size = ft_strlen(delimiter);
-		if (ft_strncmp(delimiter, hd_line, size + 1) == 0)
+		if (ft_strcmp(delimiter, hd_line) == 0)
 			break ;
 		size = ft_strlen(hd_line);
 		write(pipe_fd[1], hd_line, size);
