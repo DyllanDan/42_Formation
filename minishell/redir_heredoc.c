@@ -74,18 +74,8 @@ void	change_fd(t_data_val *data, int redir_heredoc, int i, int j)
 		exit(EXIT_FAILURE);
 	}
 	if (redir_heredoc == RD_OUT || redir_heredoc == APPEND)
-	{
-		close(data->fd[i][1]);
-		data->fd[i][1] = file_fd;
 		dup2(file_fd, STDOUT_FILENO);
-	}
 	else if (redir_heredoc == RD_IN)
-	{
-		/*if (i != 0)
-			i--;*/
-		close(data->fd[i][0]);
-		data->fd[i][0] = file_fd;
 		dup2(file_fd, STDIN_FILENO);
-	}
 	close(file_fd);
 }

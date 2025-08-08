@@ -190,7 +190,7 @@ void	divide_arguments(char ***token, char *text)
 	if (!(*token))
 		return ;
 	populate_token(*token, text, n_tokens);
-	print_tokens(*token);
+	//print_tokens(*token);
 }
 
 void	free_tokens(char ***token)
