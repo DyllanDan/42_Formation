@@ -80,7 +80,6 @@ void recive_inputs(t_data_val *data)
             break;       
         }
         handle_command(data);
-        free_data(data);
     }
 }
 
@@ -98,6 +97,7 @@ void init_data(t_data_val **data, char **envp)
     (*data)->cmd_path = NULL;
     (*data)->child_pid = NULL;
     (*data)->num_pipes = 0;
+    (*data)->last_exit = 0;
 }
 
 int main(int argc, char **argv, char **envp)
@@ -112,6 +112,8 @@ int main(int argc, char **argv, char **envp)
     init_data(&data, envp);//inicia a estrutura  
     configure_signal();
     recive_inputs(data);
+    if (data->envp)
+		free_tokens(&data->envp);
     free(data);
     return (0); 
 }

@@ -47,6 +47,7 @@ typedef struct s_data_val
     char **cmd_path;
     int num_pipes;
     pid_t *child_pid;
+    int last_exit;
 }   t_data_val;
 
 typedef enum e_redir_heredoc
@@ -57,6 +58,18 @@ typedef enum e_redir_heredoc
     APPEND,
     HEREDOC
 }   t_redir_heredoc;
+
+typedef enum e_builtin_flag
+{
+    NO_BUILTIN,
+    CD,
+    ECHO,
+    EXPORT,
+    PWD,
+    ENV,
+    UNSET,
+    EXIT
+}   t_builtin_flag;
 
 //variavel global
 extern int g_exit_status;
@@ -73,11 +86,12 @@ int ends_with_pipe(const char *input);
 
 //echo utils
 void print_single_quoted(char *token);
-void print_double_quoted(char *token, char **envp);
-void print_with_expansion(char *str, char **envp);
-int  handle_dollar_expansion(char *str, char **envp);
+void print_double_quoted(char *token, t_data_val *data);
+void print_with_expansion(char *str, t_data_val *data);
+int  handle_dollar_expansion(char *str, t_data_val *data);
 void print_expanded_var(char *var_name, char **envp);
 char *remove_all_quotes(const char *token);
+int	was_single_quoted(const char *cmdline, const char *token);
 
 //unset utils
 int ft_unset_args(char **args, t_data_val *data);
@@ -91,6 +105,7 @@ char	*complete_unclosed_quote(char *text);
 int		has_unclosed_quote(char *str);
 int char_inside_quotes(const char *str, int index);
 
+int check_builtin(char *cmd);
 
 char *get_env_value(char *name, char **envp);
 void    ft_putstr_fd(const char *s, int fd);
@@ -98,22 +113,24 @@ int     ft_isalpha(int c);
 char   *ft_strchr(const char *s, int c);
 char   *ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
-int execute_builtin(t_data_val *data);
+int execute_builtin(t_data_val *data, char **token);
 void	add_new_var(char ***envp, char *arg);
 int	replace_existing_var(char **envp, char *name, char *arg);
 void	update_env(char ***envp, char *arg);
 int is_valid_identifier(char *arg);
 int	ft_export(char **args, t_data_val *data);
-int analize_cd_arguments(t_data_val *data);
+int analize_cd_arguments(t_data_val *data, char **token);
 int run_cd(char *path);
-void ft_echo(t_data_val *data);
-void ft_env(t_data_val *data);
-void ft_pwd(t_data_val *data);
-int ft_exit(t_data_val *data);
+void ft_echo(t_data_val *data, char **parser_i);
+void ft_env(t_data_val *data, char **parser_i);
+void ft_pwd(void);
+int ft_exit(char **parser_i);
 int ft_isnumeric(const char *str);
 int	ft_isdigit(int c);
 int ft_isalnum(int c);
 
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+int ft_isnumeric_with_sign(const char *s);
 void	ft_putchar_fd(char c, int fd);
 long	ft_atoi_base(const char *nptr, int base);
 char	*ft_itoa(int n);
@@ -157,6 +174,8 @@ void first_pipe(t_data_val *data, int flag, int i);
 void middles_pipe(t_data_val *data, int flag, int i);
 void last_pipe(t_data_val *data, int flag, int i);
 void free_data(t_data_val *data);
+void	free_fd(int ***fd);
+void free_after_command(t_data_val *data);
 //remove
 void print_tokens(char **token);
 void parse_token(t_data_val **data);

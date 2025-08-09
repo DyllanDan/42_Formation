@@ -12,74 +12,94 @@
 
 #include "minishell.h"
 
-int execute_builtin(t_data_val *data) //identifica se é um builtin e executa ele se for.
-{
-    char **args = data->token;
-    int i;
 
-    i = 0;
-    while (args[i] && ft_strchr(args[i], '='))
-        i++;
-    if (!args[i])
-        return (0);
-    if(ft_strncmp(data->token[0], "exit", 5) == 0)
-        return (ft_exit(data));
-    if(ft_strncmp(data->token[0], "pwd", 4) == 0)
+int check_builtin(char *cmd)
+{
+    int flag_builtin;
+
+    flag_builtin = NO_BUILTIN;
+    if (!ft_strcmp(cmd, "cd"))
+        flag_builtin = CD;
+    else if (!ft_strcmp(cmd, "echo"))
+        flag_builtin = ECHO;
+    else if (!ft_strcmp(cmd, "export"))
+        flag_builtin = EXPORT;
+    else if (!ft_strcmp(cmd, "pwd"))
+        flag_builtin = PWD;
+    else if (!ft_strcmp(cmd, "env"))
+        flag_builtin = ENV;        
+    else if (!ft_strcmp(cmd, "unset"))
+        flag_builtin = UNSET;
+    else if (!ft_strcmp(cmd, "exit"))
+        flag_builtin = EXIT;
+    return (flag_builtin);
+}
+
+int execute_builtin(t_data_val *data, char **token) //identifica se é um builtin e executa ele se for.
+{
+    int j;
+    int flag;
+
+    j = 0;
+    flag = check_builtin(token[0]);
+    if (flag == EXIT)
+        return (ft_exit(token));
+    if(flag == PWD)
     {
-        ft_pwd(data);
+        ft_pwd();
         return (1); 
     }
-     if(ft_strncmp(data->token[0], "env", 3) == 0)
+    if(flag == ENV)
     {
-        ft_env(data);
+        ft_env(data, token);
         return (1);
     }
-    if (ft_strncmp(data->token[0], "echo", 4) == 0)
+    if (flag == ECHO)
     {
-        ft_echo(data);
+        ft_echo(data, token);
         return (1);
     }
-    if(ft_strncmp(data->token[0], "cd", 2) == 0)
+    if(flag == CD)
     {
-        // analize_cd_arguments(data);
-        g_exit_status = analize_cd_arguments(data);
+        g_exit_status = analize_cd_arguments(data, token);
         return (1);
     }
-    if (ft_strncmp(data->token[0], "unset", 5) == 0)
+    if (flag == UNSET)
     {
-        ft_unset_args(data->token, data); // executa unset para todos os args
+        ft_unset_args(token, data); // executa unset para todos os args
         return (1); 
     }
-    if (ft_strncmp(data->token[0], "export", 6) == 0)
-		// return (ft_export(data->token, data));
-		g_exit_status = ft_export(data->token, data);
+    if (flag == EXPORT)
+    {
+		g_exit_status = ft_export(token, data);
         return (1);
-    return (0);// não é builtin
+    }
+    return (0);
     
 }
 
 //mensagem de permissão
-int ft_exit(t_data_val *data)
+int ft_exit(char **parser_i)
 {
     int exit_code;
 
-    if (data->token[2])
+    if (parser_i[2])
     {
         ft_printf("exit\n");
         ft_printf("minishell: exit: too many arguments\n");
         return (1);
     }
-    else if (data->token[1])
+    else if (parser_i[1])
     {
-        if (ft_isnumeric(data->token[1]))
+        if (ft_isnumeric(parser_i[1]))
         {
-            exit_code = ft_atoi_base(data->token[1], 10);
+            exit_code = ft_atoi_base(parser_i[1], 10);
             exit(exit_code);
         }
         else
         {
             ft_printf("exit\n");
-            ft_printf("exit: %s: numeric argument required\n", data->token[1]);
+            ft_printf("exit: %s: numeric argument required\n", parser_i[1]);
             exit(255);
         }
     }
@@ -87,7 +107,7 @@ int ft_exit(t_data_val *data)
     return (0);
 }
 
-void ft_pwd(t_data_val *data)
+/*void ft_pwd(t_data_val *data)
 {
     char cwd[1024];
     (void)data;
@@ -98,77 +118,30 @@ void ft_pwd(t_data_val *data)
     }
     ft_putstr_fd(cwd, 1);
     ft_putstr_fd("\n", 1);
-}
+}*/
 
-// há outro erro de permissão denied
-void ft_env(t_data_val *data)
+void ft_env(t_data_val *data, char **token)
 {
     int i;
 
-    if(data->token[1])
-    {
-        ft_printf("env: %s: No such file or directory\n", data->token[1]);
-        return ;
-    }
     i = 0;
-    while(data->envp[i])
+    if (token[1])
+    {
+        ft_putstr_fd("env: ", 2);
+        ft_putstr_fd(token[1], 2);
+        ft_putstr_fd(": No such file or directory\n", 2);
+        data->last_exit = 127;         
+        return;
+    }
+    printf("aqui\n");
+    while (data->envp[i])
     {
         ft_printf("%s\n", data->envp[i]);
         i++;
     }
+    data->last_exit = 0; 
 }
 
-/*
-
-int analize_cd_arguments(t_data_val *d)
-{
-    char *path;
-    
-    path = d->token[1];
-    if (d->token[2])//muitos argumento 
-    {
-        ft_putstr_fd("cd: too many arguments\n", 2);
-        return 1;
-    }
-    if (!path || !*path)//cd sem argumento vira HOME
-        path = get_env_value("HOME", d->envp);
-    return run_cd(path);   
-}
-*/
-
-/*
-int run_cd(char *path)
-{
-    char cwd[1024];
-    char *oldpwd;
-   
-    oldpwd = getcwd(NULL, 0);
-    if (!oldpwd)                       
-    {
-        perror("cd");
-        return 1;
-    }
-
-    if (chdir(path) == -1)             
-    {
-        perror("cd");                   
-        free(oldpwd);
-        return 1;
-    }
-
-    //atualiza OLDPWD e PWD 
-    setenv("OLDPWD", oldpwd, 1);
-    free(oldpwd);
-
-    if (getcwd(cwd, sizeof(cwd)))
-        setenv("PWD", cwd, 1);
-
-    return 0;                            
-}
-*/
-
-
-//falta validações
 char *get_env_value(char *name, char **envp)
 {
 	int     i;
@@ -182,7 +155,7 @@ char *get_env_value(char *name, char **envp)
 			return (envp[i] + len + 1); // pula o "NAME=" e retorna valor
 		i++;
 	}
-	return (""); //retorna string vazia se não encontrar
+	return ("");
 }
 
 

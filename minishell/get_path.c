@@ -54,6 +54,7 @@ void	get_full_path(t_data_val **data)
 	i = 0;
 	if ((*data)->parser)
 	{
+
 		(*data)->cmd_path = \
 			malloc(sizeof(char *) * ((*data)->num_pipes + 2));
 		while (i <= (*data)->num_pipes)

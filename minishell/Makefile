@@ -39,14 +39,16 @@ SOURCES = \
 	  $(DIR_UTILS)/ft_calloc.c\
 	  $(DIR_UTILS)/ft_bzero.c\
 	  $(DIR_UTILS)/ft_memset.c\
+	  $(DIR_UTILS)/ft_strnstr.c\
 	  $(BUILDINS_DIR)/echo.c \
 	  $(BUILDINS_DIR)/echo_utils.c \
 	  $(BUILDINS_DIR)/unset.c \
-	  $(BUILDINS_DIR)/unset_utils.c \
 	  $(BUILDINS_DIR)/export.c \
 	  $(BUILDINS_DIR)/export_utils.c \
 	  $(BUILDINS_DIR)/cd.c \
 	  $(BUILDINS_DIR)/cd_utils.c \
+	  $(BUILDINS_DIR)/exit.c \
+	  $(BUILDINS_DIR)/pwd.c \
 	  minishell.c token_working.c handle_command.c redir_heredoc.c\
 	  configure_signals.c pipes_parser.c get_path.c exec_childs.c\
 	  exec_pipes.c solo_redir_heredoc.c\

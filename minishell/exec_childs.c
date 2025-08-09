@@ -38,6 +38,11 @@ void	exec_child_process(t_data_val *data, int i)
 		last_pipe(data, redir_heredoc, i);
 	else
 		middles_pipe(data, redir_heredoc, i);
+	if (check_builtin(data->parser[i][0]))
+	{
+		execute_builtin(data, data->parser[i]);
+		exit(data->last_exit);
+	}
 	if (!data->cmd_path)
 	{
 		printf("command not found: %s\n", data->parser[i][0]);
@@ -69,11 +74,16 @@ void	exec_one_command(t_data_val *data, int *status)
 			}
 			i++;
 		}
+		
 		if (flag != NO_RD_HD)
 			data->token = clear_parser(data->token);
+		if (check_builtin(data->token[0]))
+		{
+			execute_builtin(data, data->token);
+			exit(0);
+		}
 		execve(data->cmd_path[0], data->token, data->envp);
 		perror("execve");
-		free_data(data);
 		exit(EXIT_FAILURE);
 	}
 	else if (data->child_pid[0] > 0)

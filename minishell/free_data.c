@@ -52,8 +52,6 @@ void	free_data_aux(t_data_val *data)
 
 void	free_data(t_data_val *data)
 {
-	if (data->envp)
-		free_tokens(&data->envp);
 	if (data->text)
 		free(data->text);
 	if (data->token)
