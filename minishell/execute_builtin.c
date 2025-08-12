@@ -12,7 +12,6 @@
 
 #include "minishell.h"
 
-
 int check_builtin(char *cmd)
 {
     int flag_builtin;
@@ -35,15 +34,8 @@ int check_builtin(char *cmd)
     return (flag_builtin);
 }
 
-int execute_builtin(t_data_val *data, char **token) //identifica se é um builtin e executa ele se for.
+int builtin_pack_1(t_data_val *data, char **token, int flag)
 {
-    int j;
-    int flag;
-
-    j = 0;
-    flag = check_builtin(token[0]);
-    if (flag == EXIT)
-        return (ft_exit(token));
     if(flag == PWD)
     {
         ft_pwd();
@@ -64,6 +56,10 @@ int execute_builtin(t_data_val *data, char **token) //identifica se é um builti
         g_exit_status = analize_cd_arguments(data, token);
         return (1);
     }
+    return (0);
+}
+int builtin_pack_2(t_data_val *data, char **token, int flag)
+{
     if (flag == UNSET)
     {
         ft_unset_args(token, data); // executa unset para todos os args
@@ -75,7 +71,21 @@ int execute_builtin(t_data_val *data, char **token) //identifica se é um builti
         return (1);
     }
     return (0);
-    
+}
+
+
+int execute_builtin(t_data_val *data, char **token) //identifica se é um builtin e executa ele se for.
+{
+    int j;
+    int flag;
+
+    j = 0;
+    flag = check_builtin(token[0]);
+    if (flag == EXIT)
+        return (ft_exit(token));
+    else if (builtin_pack_1(data, token, flag) || builtin_pack_2(data, token, flag))
+        return (1);
+    return (0);
 }
 
 //mensagem de permissão

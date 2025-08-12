@@ -55,6 +55,29 @@ void	exec_child_process(t_data_val *data, int i)
 	exit(EXIT_FAILURE);
 }
 
+void one_command_child(t_data_val *data, int i, int flag)
+{
+	while (data->token[i])
+	{
+		if (data->token[i][0] == '>' || data->token[i][0] == '<')
+		{
+			flag = solo_command_redir_heredoc(data->token, i);
+			break ;
+		}
+		i++;
+	}
+	if (flag != NO_RD_HD)
+		data->token = clear_parser(data->token);
+	if (check_builtin(data->token[0]))
+	{
+		execute_builtin(data, data->token);
+		exit(0);
+	}
+	execve(data->cmd_path[0], data->token, data->envp);
+	perror("execve");
+	exit(EXIT_FAILURE);
+}
+
 void	exec_one_command(t_data_val *data, int *status)
 {
 	int	i;
@@ -64,28 +87,7 @@ void	exec_one_command(t_data_val *data, int *status)
 	flag = NO_RD_HD;
 	data->child_pid[0] = fork();
 	if (data->child_pid[0] == 0)
-	{
-		while (data->token[i])
-		{
-			if (data->token[i][0] == '>' || data->token[i][0] == '<')
-			{
-				flag = solo_command_redir_heredoc(data->token, i);
-				break ;
-			}
-			i++;
-		}
-		
-		if (flag != NO_RD_HD)
-			data->token = clear_parser(data->token);
-		if (check_builtin(data->token[0]))
-		{
-			execute_builtin(data, data->token);
-			exit(0);
-		}
-		execve(data->cmd_path[0], data->token, data->envp);
-		perror("execve");
-		exit(EXIT_FAILURE);
-	}
+		one_command_child(data, i, flag);
 	else if (data->child_pid[0] > 0)
 		waitpid(data->child_pid[0], status, 0);
 	else

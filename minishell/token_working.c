@@ -12,6 +12,23 @@
 
 #include "minishell.h"
 
+void size_of_quote_aux(char *text, int *i, int *size, int *val)
+{
+	char quote;
+
+	while (text[++(*i)] && !ft_isspace(text[*i]))
+	{
+		if (text[*i] == '"' || text[*i] == '\'')
+		{
+			quote = text[*i];
+			(*i)++;
+			*val = 1;
+			break ;
+		}
+		(*size)++;
+	}
+}
+
 int	size_of_quote(char *text)
 {
 	int		i;
@@ -33,17 +50,7 @@ int	size_of_quote(char *text)
 			size++;
 		}
 		val = 0;
-		while (text[++i] && !ft_isspace(text[i]))
-		{
-			if (text[i] == '"' || text[i] == '\'')
-			{
-				quote = text[i];
-				i++;
-				val = 1;
-				break ;
-			}
-			size++;
-		}
+		size_of_quote_aux(text, &i, &size, &val);
 	}
 	return (size);
 }
@@ -126,28 +133,34 @@ int	size_of_token(char *text)
 		return (size_of_string(text));
 }
 
+void token_n_copy_aux(char **token_i, char **text, int *k)
+{
+	char c;
+
+	c = **text;
+	(*text)++;
+	while (**text != c)
+	{
+		if (**text == '\\' && (*(*text + 1) == '\'' || \
+					*(*text) + 1 == '"'))
+			(*text)++;
+		(*token_i)[*k] = (**text);
+		(*k)++;
+		(*text)++;
+	}
+	(*text)++;
+}
+
 void	token_n_copy(char *token_i, int size, char **text)
 {
 	int		k;
-	char	c;
 
 	k = 0;
 	while (k < size)
 	{
 		if (**text == '\'' || **text == '"')
 		{
-			c = **text;
-			(*text)++;
-			while (**text != c)
-			{
-				if (**text == '\\' && (*(*text + 1) == '\'' || \
-							*(*text) + 1 == '"'))
-					(*text)++;
-				token_i[k] = (**text);
-				k++;
-				(*text)++;
-			}
-			(*text)++;
+			token_n_copy_aux(&token_i, text, &k);
 		}
 		else
 		{
@@ -190,7 +203,6 @@ void	divide_arguments(char ***token, char *text)
 	if (!(*token))
 		return ;
 	populate_token(*token, text, n_tokens);
-	//print_tokens(*token);
 }
 
 void	free_tokens(char ***token)
