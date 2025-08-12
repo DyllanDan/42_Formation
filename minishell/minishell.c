@@ -43,17 +43,6 @@ char *get_envp_path(char **envp)
 }
 
 
-int a_comma(char *c, char c_text)
-{
-    if (c_text == '"' || c_text == '\'')
-    {
-        *c = c_text;
-        return (1);
-    }
-    else
-        return (0);
-}
-
 void recive_inputs(t_data_val *data)
 {
     while (1) 

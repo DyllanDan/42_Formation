@@ -6,38 +6,38 @@
 /*   By: dydaniel <dydaniel@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 16:16:16 by dydaniel          #+#    #+#             */
-/*   Updated: 2025/08/05 22:05:13 by dydaniel         ###   ########.fr       */
+/*   Updated: 2025/08/11 21:56:19 by dydaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-void check_redir_herdoc_aux(t_data_val *data, int *flag, int *j, int i)
+void	check_redir_herdoc_aux(t_data_val *data, int *flag, int *j, int i)
 {
 	if (!ft_strncmp(data->parser[i][*j], "<<", 3))
-		{
-			*flag = HEREDOC;
-			pipe_heredoc(data, data->parser[i], *j, i);
-			(*j)++;
-		}
-		else if (!ft_strncmp(data->parser[i][*j], ">>", 3))
-		{
-			*flag = APPEND;
-			change_fd(data, *flag, i, *j);
-			(*j)++;
-		}
-		else if (!ft_strncmp(data->parser[i][*j], "<", 2))
-		{
-			*flag = RD_IN;
-			change_fd(data, *flag, i, *j);
-			(*j)++;
-		}
-		else if (!ft_strncmp(data->parser[i][*j], ">", 2))
-		{
-			*flag = RD_OUT;
-			change_fd(data, *flag, i, *j);
-			(*j)++;
-		}
+	{
+		*flag = HEREDOC;
+		pipe_heredoc(data, data->parser[i], *j, i);
+		(*j)++;
+	}
+	else if (!ft_strncmp(data->parser[i][*j], ">>", 3))
+	{
+		*flag = APPEND;
+		change_fd(data, *flag, i, *j);
+		(*j)++;
+	}
+	else if (!ft_strncmp(data->parser[i][*j], "<", 2))
+	{
+		*flag = RD_IN;
+		change_fd(data, *flag, i, *j);
+		(*j)++;
+	}
+	else if (!ft_strncmp(data->parser[i][*j], ">", 2))
+	{
+		*flag = RD_OUT;
+		change_fd(data, *flag, i, *j);
+		(*j)++;
+	}
 }
 
 int	check_redir_herdoc(t_data_val *data, int i)
@@ -55,8 +55,8 @@ int	check_redir_herdoc(t_data_val *data, int i)
 	return (flag);
 }
 
-void	open_file(int *file_fd, int redir_heredoc,\
-	 char *file_name)
+void	open_file(int *file_fd, int redir_heredoc, \
+		char *file_name)
 {
 	if (redir_heredoc == RD_OUT)
 		*file_fd = open(file_name, O_WRONLY | \

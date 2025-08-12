@@ -49,7 +49,7 @@ SOURCES = \
 	  $(BUILDINS_DIR)/cd_utils.c \
 	  $(BUILDINS_DIR)/exit.c \
 	  $(BUILDINS_DIR)/pwd.c \
-	  minishell.c token_working.c handle_command.c redir_heredoc.c\
+	  minishell.c token_working.c token_aux.c handle_command.c redir_heredoc.c\
 	  configure_signals.c pipes_parser.c get_path.c exec_childs.c\
 	  exec_pipes.c solo_redir_heredoc.c\
 	  execute_builtin.c parser_clear.c heredoc.c\

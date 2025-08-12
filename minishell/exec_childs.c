@@ -6,7 +6,7 @@
 /*   By: dydaniel <dydaniel@student.42sp.org.b      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/12 10:21:09 by dydaniel          #+#    #+#             */
-/*   Updated: 2025/08/05 22:39:19 by dydaniel         ###   ########.fr       */
+/*   Updated: 2025/08/11 22:16:05 by dydaniel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	exec_child_process(t_data_val *data, int i)
 	exit(EXIT_FAILURE);
 }
 
-void one_command_child(t_data_val *data, int i, int flag)
+void	one_command_child(t_data_val *data, int i, int flag)
 {
 	while (data->token[i])
 	{

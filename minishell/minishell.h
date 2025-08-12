@@ -155,8 +155,6 @@ int num_tokens(char *text);
 void free_tokens(char ***token);
 void populate_token(char **token, char *text, int n_token);
 int is_operator(char *text);
-int size_of_str(char *text);
-int a_comma(char *c, char c_text);
 char *check_path(t_data_val *data, char *cmd);
 void exc_command(t_data_val *data);
 void free_parser(t_data_val *data);
@@ -176,6 +174,8 @@ void last_pipe(t_data_val *data, int flag, int i);
 void free_data(t_data_val *data);
 void	free_fd(int ***fd);
 void free_after_command(t_data_val *data);
+int	size_of_string(char *text);
+int	size_of_quote(char *text);
 //remove
 void print_tokens(char **token);
 void parse_token(t_data_val **data);
