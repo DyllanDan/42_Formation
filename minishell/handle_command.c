@@ -52,6 +52,9 @@ void	close_fds(int **fd, int i)
 
 void	exec_pipes(t_data_val *data, int i, int *status)
 {
+	int j;
+
+	j = 0;
 	while (i <= data->num_pipes)
 	{
 		data->child_pid[i] = fork();
@@ -62,7 +65,7 @@ void	exec_pipes(t_data_val *data, int i, int *status)
 		i++;
 	}
 	i = 0;
-	while (data->fd[i] && i < data->num_pipes)
+	while (data->fd[i] && i <= data->num_pipes)
 	{
 		close(data->fd[i][0]);
 		close(data->fd[i][1]);
@@ -72,7 +75,16 @@ void	exec_pipes(t_data_val *data, int i, int *status)
 	while (data->child_pid[i] && i <= data->num_pipes)
 	{
 		waitpid(data->child_pid[i], status, 0);
-		if (i == data->num_pipes && WIFEXITED(*status))
+		if (WIFEXITED(*status) && WEXITSTATUS(*status) != 0)
+		{
+			j = i;
+			while(j <= data->num_pipes)
+			{
+				kill(data->child_pid[j], SIGKILL);
+				j++;
+			}
+		}
+		else if (i == data->num_pipes && WIFEXITED(*status))
 			data->last_exit = WEXITSTATUS(*status);
 		//change_signal_exec(data, status);
 		i++;

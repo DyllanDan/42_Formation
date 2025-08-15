@@ -21,13 +21,13 @@ int	run_cd(char *path)
 	if (!oldpwd)
 	{
 		perror("cd");
-		return (1);
+		exit(1);
 	}
 	if (chdir(path) == -1)
 	{
 		perror("cd");
 		free(oldpwd);
-		return (1);
+		exit(1);
 	}
 	setenv("OLDPWD", oldpwd, 1);//Não é função autorizada
 	free(oldpwd);

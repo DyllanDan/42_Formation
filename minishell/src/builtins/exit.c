@@ -18,25 +18,22 @@ int	ft_exit(char **parser_i)
 
 	if (parser_i[2])
 	{
-		ft_printf("exit\n");
-		ft_printf("minishell: exit: too many arguments\n");
-		return (1);
+		perror("too many arguments");
+		exit(1);
 	}
 	else if (parser_i[1])
 	{
-		if (ft_isnumeric(parser_i[1]))
-		{
-			exit_code = ft_atoi_base(parser_i[1], 10);
+		exit_code = ft_atoi_base(parser_i[1], 10);
+		if (exit_code > 0)
 			exit(exit_code);
-		}
+		else if (exit_code < 0)
+			exit(156);
 		else
 		{
-			ft_printf("exit\n");
-			ft_printf("exit: %s: numeric argument required\n", \
-					parser_i[1]);
-			exit(255);
+			perror("numeric argument required");
+			exit(2);
 		}
 	}
-	exit(0);
+	exit(1);
 	return (0);
 }

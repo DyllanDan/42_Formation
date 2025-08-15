@@ -31,7 +31,8 @@ void	exec_child_process(t_data_val *data, int i)
 {
 	int	redir_heredoc;
 
-	configure_signal_childs();
+	signal(SIGINT, SIG_DFL);
+	signal(SIGQUIT, SIG_DFL);
 	redir_heredoc = check_redir_herdoc(data, i);
 	if (i == 0)
 		first_pipe(data, redir_heredoc, i);
@@ -73,13 +74,13 @@ void	one_command_child(t_data_val *data, int i, int flag)
 		data->token = clear_parser(data->token);
 	if (check_builtin(data->token[0]))
 	{
-		execute_builtin(data, data->token);
-		exit(0);
+		if (execute_builtin(data, data->token) == 1)
+			exit(0);
 	}
 	if (!data->cmd_path[0])
 	{
 		perror("command not found");
-		exit(1);
+		exit(127);
 	}
 	execve(data->cmd_path[0], data->token, data->envp);
 	perror("execve");

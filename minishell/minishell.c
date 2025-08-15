@@ -62,12 +62,6 @@ void receive_inputs(t_data_val *data)
         }
         if (data->text != NULL &&  num_tokens(data->text) > 0)
             add_history(data->text);
-        if (strcmp(data->text, "exit") == 0)  
-        {
-            rl_clear_history();
-            free_data(data);
-            break;       
-        }
         handle_command(data);
     }
 }

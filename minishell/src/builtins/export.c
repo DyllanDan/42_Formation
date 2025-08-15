@@ -29,7 +29,6 @@ int	ft_export(char **parser_i, t_data_val *data)
 	status = 0;
 	i = 1;
 	tmp = NULL;
-
 	while(parser_i[i])
 	{
 		if (!is_valid_identifier(parser_i[i]))

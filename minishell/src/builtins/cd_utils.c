@@ -20,8 +20,8 @@ int	analize_cd_arguments(t_data_val *data, char **token)
 	path = token[1];
 	if (token[2])
 	{
-		ft_putstr_fd("cd: too many arguments\n", 2);
-		return (1);
+		//ft_putstr_fd("cd: too many arguments\n", 2);
+		exit(1);
 	}
 	if (!path || !*path)
 		path = get_env_value("HOME", data->envp);
