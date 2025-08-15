@@ -6,7 +6,7 @@
 /*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/24 16:54:54 by dydaniel          #+#    #+#             */
-/*   Updated: 2025/07/15 20:55:17 by helde-so         ###   ########.fr       */
+/*   Updated: 2025/08/13 19:29:35 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char *get_envp_path(char **envp)
 }
 
 
-void recive_inputs(t_data_val *data)
+void receive_inputs(t_data_val *data)
 {
     while (1) 
     {
@@ -72,8 +72,6 @@ void recive_inputs(t_data_val *data)
     }
 }
 
-//inicia e atribui valores da estrutura para enviar para 
-//o resto do programa
 void init_data(t_data_val **data, char **envp)
 {
     (*data)->envp = duplicate_envp(envp);
@@ -100,7 +98,7 @@ int main(int argc, char **argv, char **envp)
         return (0);
     init_data(&data, envp);//inicia a estrutura  
     configure_signal();
-    recive_inputs(data);
+    receive_inputs(data);
     if (data->envp)
 		free_tokens(&data->envp);
     free(data);

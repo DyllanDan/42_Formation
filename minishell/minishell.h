@@ -6,7 +6,7 @@
 /*   By: helde-so <helde-so@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 20:20:08 by dydaniel          #+#    #+#             */
-/*   Updated: 2025/08/11 23:04:32 by dydaniel         ###   ########.fr       */
+/*   Updated: 2025/08/13 22:40:31 by helde-so         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define MINISHELL_H
 
 # include <stdlib.h>
+# include <string.h>
 # include <stdio.h>
 # include <stddef.h>
 # include <readline/readline.h>
@@ -24,7 +25,9 @@
 # include <sys/types.h> 
 # include <sys/wait.h>  
 # include <limits.h>
-# include <fcntl.h> 
+# include <fcntl.h>
+# include <errno.h>
+
 
 typedef struct s_data_val
 {
@@ -73,7 +76,9 @@ int		char_inside_quotes(const char *str, int index);
 
 //PREPROCESSORS
 char	*get_env_value(char *name, char **envp);
+void	change_signal_exec(t_data_val *data, int *status);
 void	configure_signal(void);
+void	configure_signal_childs(void);
 
 //validate pipe
 int		validate_pipe_syntax(const char *input);
@@ -90,13 +95,12 @@ int		execute_builtin(t_data_val *data, char **token);
 void	ft_echo(t_data_val *data, char **parser_i);
 
 //echo utils
-void	print_single_quoted(char *token);
-void	print_double_quoted(char *token, t_data_val *data);
 void	print_with_expansion(char *str, t_data_val *data);
 int		handle_dollar_expansion(char *str, t_data_val *data);
 void	print_expanded_var(char *var_name, char **envp);
-char	*remove_all_quotes(const char *token);
-int		was_single_quoted(const char *cmdline, const char *token);
+int 	token_was_single_quoted_advance(const char **cursor, const char *token);
+void 	expand_loop(char *str, t_data_val *data);
+
 
 //unset
 void	ft_unset(char ***envp, char *name);
@@ -164,6 +168,7 @@ int		size_of_string(char *text);
 int		size_of_quote(char *text);
 char	*check_path(t_data_val *data, char *cmd);
 void	get_full_path(t_data_val **data);
+void	change_dolar_sign(char ***token);
 
 //PARSER
 void	parse_token(t_data_val **data);
